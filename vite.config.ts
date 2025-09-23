@@ -12,7 +12,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/starter-pack/',
+  base: process.env.NODE_ENV === 'production' ? '/craftvue/' : '/',
   plugins: [
     vue(),
     checker({
@@ -25,8 +25,8 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
         {
-          '@/app/utils/classes': ['getClasses'],
-          '@/app/utils': ['getImageUrl']
+          '@/utils/classes': ['getClasses'],
+          '@/utils': ['getImageUrl']
         },
       ],
       dts: './auto-imports.d.ts',
@@ -97,7 +97,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/app/styles/mixins.scss" as *;`,
+        additionalData: `@use "@/styles/mixins.scss" as *;`,
       },
     },
   },

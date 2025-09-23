@@ -1,4 +1,4 @@
-import { PrimeVueClasses } from '@/app/types/components-classes'
+import { PrimeVueClasses } from '@/types/components-classes'
 
 export const getClasses = (mainClass: string): PrimeVueClasses => {
   return {
