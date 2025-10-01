@@ -12,6 +12,11 @@ on:
       - '.github/workflows/CI.yml'
       - 'package.json'
       - 'pnpm-lock.yaml'
+      - '.eslintignore'
+      - 'eslint.config.*'
+      - '.prettierrc*'
+      - 'tsconfig*.json'
+      - 'vite.config.*'
 
   pull_request:
     branches:
@@ -22,6 +27,11 @@ on:
       - '.github/workflows/CI.yml'
       - 'package.json'
       - 'pnpm-lock.yaml'
+      - '.eslintignore'
+      - 'eslint.config.*'
+      - '.prettierrc*'
+      - 'tsconfig*.json'
+      - 'vite.config.*'
 
 jobs:
   # Подготовка окружения и установка зависимостей
