@@ -101,7 +101,7 @@ jobs:
           path: node_modules
 
       - name: Проверка линтером
-        run: pnpm run eslint . --fix
+        run: npx eslint . --fix
 
   # Проверка типов TypeScript
   typecheck:
