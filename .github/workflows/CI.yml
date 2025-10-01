@@ -68,11 +68,25 @@ jobs:
       - name: Установка зависимостей
         run: pnpm install --frozen-lockfile
 
+      - name: Проверка установки ESLint
+        run: |
+          echo "Checking ESLint installation..."
+          ls -la node_modules/.bin/eslint || echo "ESLint not found"
+          echo "ESLint version:"
+          npx eslint --version || echo "ESLint not executable"
+
       - name: Сохранение node_modules
         uses: actions/upload-artifact@v4
         with:
           name: node-modules
           path: node_modules
+          retention-days: 1
+
+      - name: Сохранение pnpm-lock.yaml
+        uses: actions/upload-artifact@v4
+        with:
+          name: pnpm-lock
+          path: pnpm-lock.yaml
           retention-days: 1
 
   # Проверка кода линтером
@@ -95,12 +109,23 @@ jobs:
           cache: 'pnpm'
 
       - name: Восстановление node_modules
-        uses: dawidd6/action-download-artifact@v11
+        uses: actions/download-artifact@v4
         with:
-          workflow: CI.yml
-          name: ci-artifacts
+          name: node-modules
           path: node_modules
-          branch: main
+
+      - name: Восстановление pnpm-lock.yaml
+        uses: actions/download-artifact@v4
+        with:
+          name: pnpm-lock
+          path: pnpm-lock.yaml
+
+      - name: Проверка восстановления ESLint
+        run: |
+          echo "Checking restored ESLint..."
+          ls -la node_modules/.bin/eslint || echo "ESLint not found in restored artifacts"
+          echo "ESLint version:"
+          npx eslint --version || echo "ESLint not executable"
 
       - name: Проверка линтером
         run: npx eslint . --fix
@@ -130,6 +155,12 @@ jobs:
           name: node-modules
           path: node_modules
 
+      - name: Восстановление pnpm-lock.yaml
+        uses: actions/download-artifact@v4
+        with:
+          name: pnpm-lock
+          path: pnpm-lock.yaml
+
       - name: Проверка типов
         run: pnpm run type-check
 
@@ -157,6 +188,12 @@ jobs:
         with:
           name: node-modules
           path: node_modules
+
+      - name: Восстановление pnpm-lock.yaml
+        uses: actions/download-artifact@v4
+        with:
+          name: pnpm-lock
+          path: pnpm-lock.yaml
 
       # Сборки
       - name: Сборка всех пакетов
