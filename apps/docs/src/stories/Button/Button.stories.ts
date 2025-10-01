@@ -437,8 +437,8 @@ export const IconOnly: Story = {
       control: false,
     },
     size: {
-      control: false
-    }
+      control: false,
+    },
   },
   render: (args) => ({
     components: { CButton, CTabs, CTabList, CTab },
