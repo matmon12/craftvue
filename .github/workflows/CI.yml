@@ -94,8 +94,11 @@ jobs:
           node-version: lts/*
           cache: 'pnpm'
 
-      - name: Установка зависимостей
-        run: pnpm install --frozen-lockfile
+      - name: Восстановление node_modules
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          name: node-modules
+          path: node_modules
 
       - name: Проверка линтером
         run: npx eslint . --fix
@@ -119,8 +122,11 @@ jobs:
           node-version: lts/*
           cache: 'pnpm'
 
-      - name: Установка зависимостей
-        run: pnpm install --frozen-lockfile
+      - name: Восстановление node_modules
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules
+          path: node_modules
 
       - name: Проверка типов
         run: pnpm run type-check
@@ -144,8 +150,11 @@ jobs:
           node-version: lts/*
           cache: 'pnpm'
 
-      - name: Установка зависимостей
-        run: pnpm install --frozen-lockfile
+      - name: Восстановление node_modules
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules
+          path: node_modules
 
       # Сборки
       - name: Сборка всех пакетов
