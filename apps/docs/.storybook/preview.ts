@@ -26,6 +26,17 @@ const preview: Preview = {
     a11y: {
       test: 'todo',
     },
+    options: {
+      storySort: {
+        order: [
+          'Configuration',
+          'Design System',
+          'Components',
+          '*'
+        ]
+      },
+      initialActive: 'Configuration'
+    }
   },
   initialGlobals: {
     backgrounds: { value: 'dark' },
