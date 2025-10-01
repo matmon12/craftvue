@@ -68,32 +68,12 @@ jobs:
       - name: Установка зависимостей
         run: pnpm install --frozen-lockfile
 
-      - name: Диагностика путей
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "Contents of current directory:"
-          ls -la
-          echo "Contents of node_modules:"
-          ls -la node_modules/ | head -10
-          echo "ESLint binary check:"
-          ls -la node_modules/.bin/eslint || echo "ESLint not found"
-          echo "PATH check:"
-          echo $PATH
-          echo "Which eslint:"
-          which eslint || echo "eslint not in PATH"
-
       - name: Сохранение node_modules
         uses: actions/upload-artifact@v4
         with:
           name: node-modules
+          include-hidden-files: true
           path: node_modules
-          retention-days: 1
-
-      - name: Сохранение node_modules/.bin
-        uses: actions/upload-artifact@v4
-        with:
-          name: node-modules-bin
-          path: node_modules/.bin
           retention-days: 1
 
   # Проверка кода линтером
@@ -120,32 +100,6 @@ jobs:
         with:
           name: node-modules
           path: node_modules
-
-      - name: Восстановление node_modules/.bin
-        uses: actions/download-artifact@v4
-        with:
-          name: node-modules-bin
-          path: node_modules/.bin
-
-      - name: Исправление прав доступа
-        run: |
-          echo "Fixing permissions for node_modules/.bin..."
-          chmod +x node_modules/.bin/* || echo "Permission fix failed"
-          ls -la node_modules/.bin/ | head -5
-
-      - name: Диагностика путей
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "Contents of current directory:"
-          ls -la
-          echo "Contents of node_modules:"
-          ls -la node_modules/ | head -10
-          echo "ESLint binary check:"
-          ls -la node_modules/.bin/eslint || echo "ESLint not found"
-          echo "PATH check:"
-          echo $PATH
-          echo "Which eslint:"
-          which eslint || echo "eslint not in PATH"
 
       - name: Проверка линтером
         run: npx eslint . --fix
@@ -175,15 +129,6 @@ jobs:
           name: node-modules
           path: node_modules
 
-      - name: Восстановление node_modules/.bin
-        uses: actions/download-artifact@v4
-        with:
-          name: node-modules-bin
-          path: node_modules/.bin
-
-      - name: Исправление прав доступа
-        run: chmod +x node_modules/.bin/*
-
       - name: Проверка типов
         run: pnpm run type-check
 
@@ -211,15 +156,6 @@ jobs:
         with:
           name: node-modules
           path: node_modules
-
-      - name: Восстановление node_modules/.bin
-        uses: actions/download-artifact@v4
-        with:
-          name: node-modules-bin
-          path: node_modules/.bin
-
-      - name: Исправление прав доступа
-        run: chmod +x node_modules/.bin/*
 
       # Сборки
       - name: Сборка всех пакетов
