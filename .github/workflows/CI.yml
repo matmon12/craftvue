@@ -97,8 +97,10 @@ jobs:
       - name: Восстановление node_modules
         uses: dawidd6/action-download-artifact@v11
         with:
+          workflow: CI.yml
           name: node-modules
           path: node_modules
+          branch: main
 
       - name: Проверка линтером
         run: npx eslint . --fix
