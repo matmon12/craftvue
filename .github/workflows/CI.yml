@@ -17,6 +17,7 @@ on:
       - '.prettierrc*'
       - 'tsconfig*.json'
       - 'vite.config.*'
+      - 'README.md'
 
   pull_request:
     branches:
@@ -32,6 +33,7 @@ on:
       - '.prettierrc*'
       - 'tsconfig*.json'
       - 'vite.config.*'
+      - 'README.md'
 
 jobs:
   # Проверка кода линтером
