@@ -34,8 +34,8 @@ on:
       - 'vite.config.*'
 
 jobs:
-  # Подготовка окружения и установка зависимостей
-  setup:
+  # Проверка кода линтером
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout кода
@@ -51,65 +51,15 @@ jobs:
         with:
           node-version: lts/*
           cache: 'pnpm'
-
-      - name: Получение пути к pnpm store
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - name: Настройка кэша pnpm
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
 
       - name: Установка зависимостей
         run: pnpm install --frozen-lockfile
 
-      - name: Сохранение node_modules
-        uses: actions/upload-artifact@v4
-        with:
-          name: node-modules
-          # include-hidden-files: true
-          path: node_modules
-          retention-days: 1
-
-  # Проверка кода линтером
-  lint:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout кода
-        uses: actions/checkout@v4
-
-      - name: Установка pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.17.1
-
-      - name: Настройка Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          cache: 'pnpm'
-
-      - name: Восстановление node_modules
-        uses: actions/download-artifact@v4
-        with:
-          name: node-modules
-          path: node_modules
-
-      - name: test
-        run: pnpm rebuild
-
       - name: Проверка линтером
-        run: npx eslint . --fix
+        run: pnpm run lint
 
   # Проверка типов TypeScript
   typecheck:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout кода
@@ -126,18 +76,15 @@ jobs:
           node-version: lts/*
           cache: 'pnpm'
 
-      - name: Восстановление node_modules
-        uses: actions/download-artifact@v4
-        with:
-          name: node-modules
-          path: node_modules
+      - name: Установка зависимостей
+        run: pnpm install --frozen-lockfile
 
       - name: Проверка типов
         run: pnpm run type-check
 
   # Сборка пакетов и Storybook
   build:
-    needs: [lint, typecheck, setup]
+    needs: [lint, typecheck]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout кода
@@ -154,11 +101,8 @@ jobs:
           node-version: lts/*
           cache: 'pnpm'
 
-      - name: Восстановление node_modules
-        uses: actions/download-artifact@v4
-        with:
-          name: node-modules
-          path: node_modules
+      - name: Установка зависимостей
+        run: pnpm install --frozen-lockfile
 
       # Сборки
       - name: Сборка всех пакетов
