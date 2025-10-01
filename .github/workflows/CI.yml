@@ -101,7 +101,7 @@ jobs:
           path: node_modules
 
       - name: Проверка линтером
-        run: npx lint
+        run: pnpm run lint
 
   # Проверка типов TypeScript
   typecheck:
