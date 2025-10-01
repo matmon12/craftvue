@@ -13,7 +13,7 @@
   "scripts": {
     "------------- Check --------------": "",
     "type-check": "vue-tsc --build",
-    "lint": "1 eslint . --fix",
+    "lint": "eslint . --fix",
     "format": "prettier --write src/",
     "storybook": "pnpm -C apps/docs run storybook",
     "build-storybook": "pnpm -C apps/docs run build-storybook",
