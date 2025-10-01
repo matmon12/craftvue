@@ -31,16 +31,16 @@ jobs:
       - name: Checkout кода
         uses: actions/checkout@v4
 
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
       - name: Настройка Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: 'pnpm'
-
-      - name: Установка pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8
 
       - name: Получение пути к pnpm store
         shell: bash
@@ -73,16 +73,16 @@ jobs:
       - name: Checkout кода
         uses: actions/checkout@v4
 
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
       - name: Настройка Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: 'pnpm'
-
-      - name: Установка pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8
 
       - name: Восстановление node_modules
         uses: actions/download-artifact@v4
@@ -101,16 +101,16 @@ jobs:
       - name: Checkout кода
         uses: actions/checkout@v4
 
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
       - name: Настройка Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: 'pnpm'
-
-      - name: Установка pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8
 
       - name: Восстановление node_modules
         uses: actions/download-artifact@v4
@@ -129,16 +129,16 @@ jobs:
       - name: Checkout кода
         uses: actions/checkout@v4
 
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
       - name: Настройка Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: 'pnpm'
-
-      - name: Установка pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8
 
       - name: Восстановление node_modules
         uses: actions/download-artifact@v4
