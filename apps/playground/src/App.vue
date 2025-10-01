@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 // import CloseIcon from '@craftvue/icons/close'
-// import { CButton, CInput, CTab, CTabList, CTabs, CBadge } from 'craftvue'
+// import { CButton, CInput, CTab, CTabList, CTabs } from 'craftvue'
 
 import { CButton, CInput, CTab, CTabList, CTabs } from 'craftvue-dev'
 import { HomeIcon } from 'icons-dev'
