@@ -10,27 +10,13 @@
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": [
-    "Vitesse",
-    "composables",
-    "Vite",
-    "unocss",
-    "vitest",
-    "vueuse",
-    "pinia",
-    "demi",
-    "antfu",
-    "iconify",
-    "intlify",
-    "vitejs",
-    "unplugin",
-    "pnpm"
-  ],
   "prettier.enable": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.locale": "ru",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  // "eslint.workingDirectories": [".", "packages/craftvue", "packages/icons", "apps/playground"],
+  // "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"]
 }

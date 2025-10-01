@@ -1,0 +1,17 @@
+.c-icon {
+  --color: inherit;
+  color: var(--color);
+  fill: currentColor;
+  font-size: inherit;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  :deep(svg) {
+    height: 1em;
+    width: 1em;
+  }
+}

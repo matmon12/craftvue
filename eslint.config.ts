@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook'
+
 import { globalIgnores } from 'eslint/config'
 import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
 import pluginVue from 'eslint-plugin-vue'
@@ -12,11 +15,19 @@ export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
+    rules: {
+      'no-unused-expressions': ['error', { allowTernary: true, allowShortCircuit: true }],
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        { allowTernary: true, allowShortCircuit: true },
+      ],
+    },
   },
 
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
   pluginVue.configs['flat/recommended'], // es
+  storybook.configs["flat/recommended"],
   vueTsConfigs.recommended,
   skipFormatting,
 )

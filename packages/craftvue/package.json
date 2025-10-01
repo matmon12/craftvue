@@ -1,0 +1,100 @@
+{
+  "name": "craftvue",
+  "version": "1.0.4",
+  "private": false,
+  "author": "Craft",
+  "description": "UI Components for Vue.js",
+  "keywords": [
+    "vue",
+    "vue3",
+    "components",
+    "ui",
+    "typescript",
+    "scss"
+  ],
+  "type": "module",
+  "homepage": "https://matmon12.github.io/craftvue/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matmon12/craftvue.git",
+    "directory": "packages/craftvue"
+  },
+  "bugs": {
+    "url": "https://github.com/matmon12/craftvue/issues"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./style": "./dist/craftvue.css",
+    "./button": {
+      "types": "./dist/components/Button/index.d.ts",
+      "import": "./dist/components/Button/index.mjs",
+      "require": "./dist/components/Button/index.cjs"
+    },
+    "./badge": {
+      "types": "./dist/components/Badge/index.d.ts",
+      "import": "./dist/components/Badge/index.mjs",
+      "require": "./dist/components/Badge/index.cjs"
+    },
+    "./form-item": {
+      "types": "./dist/components/FormItem/index.d.ts",
+      "import": "./dist/components/FormItem/index.mjs",
+      "require": "./dist/components/FormItem/index.cjs"
+    },
+    "./icon": {
+      "types": "./dist/components/Icon/index.d.ts",
+      "import": "./dist/components/Icon/index.mjs",
+      "require": "./dist/components/Icon/index.cjs"
+    },
+    "./input": {
+      "types": "./dist/components/Input/index.d.ts",
+      "import": "./dist/components/Input/index.mjs",
+      "require": "./dist/components/Input/index.cjs"
+    },
+    "./tabs": {
+      "types": "./dist/components/Tabs/index.d.ts",
+      "import": "./dist/components/Tabs/index.mjs",
+      "require": "./dist/components/Tabs/index.cjs"
+    }
+  },
+  "sideEffects": [
+    "**/styles.*",
+    "dist/**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepare:publish": "pnpm up @craftvue/icons@^1.0.0",
+    "prepare:dev": "pnpm up @craftvue/icons@workspace:*",
+    "version:patch": "npm version patch --no-git-tag-version --workspaces=false",
+    "version:minor": "npm version minor --no-git-tag-version --workspaces=false",
+    "version:major": "npm version major --no-git-tag-version --workspaces=false",
+    "publish:patch": "pnpm run prepare:publish && pnpm run build && pnpm run version:patch && npm publish && pnpm run prepare:dev",
+    "publish:minor": "pnpm run prepare:publish && pnpm run build && pnpm run version:minor && npm publish && pnpm run prepare:dev",
+    "publish:major": "pnpm run prepare:publish && pnpm run build && pnpm run version:major && npm publish && pnpm run prepare:dev"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "dependencies": {
+    "@craftvue/icons": "workspace:^",
+    "@vueuse/core": "^13.9.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.20",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "sass-embedded": "^1.93.2",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

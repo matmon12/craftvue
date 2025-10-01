@@ -1,0 +1,33 @@
+.c-form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.c-form-item__label {
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1;
+  gap: 5px;
+  color: var(--form-item-label-color);
+
+  &.c-form-item--required::before {
+    content: '*';
+    color: var(--invalid-color);
+  }
+}
+
+.c-form-item__content {
+  position: relative;
+}
+
+.c-form-item__error {
+  position: absolute;
+  color: var(--invalid-color);
+  left: 0;
+  top: calc(100% + 3px);
+  font-size: 12px;
+  line-height: 1;
+}

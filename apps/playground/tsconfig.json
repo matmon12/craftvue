@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["DOM", "ESNext"],
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "paths": {
+      "craftvue-dev": ["../../packages/craftvue/src/index.ts"],
+      "icons-dev": ["../../packages/icons/src/index.ts"],
+      "@/*": ["../../packages/craftvue/src/*"]
+    }
+  },
+  "include": ["src/**/*", "index.html", "auto-imports.d.ts"],
+  "exclude": ["dist", "node_modules"]
+}

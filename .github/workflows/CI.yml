@@ -1,65 +1,173 @@
 name: CI
 
+# Триггеры для запуска CI
 on:
   push:
     branches:
       - main
+    # Запуск при изменении файлов, влияющих на сборку
+    paths:
+      - 'apps/**'
+      - 'packages/**'
+      - '.github/workflows/CI.yml'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
 
   pull_request:
     branches:
       - main
+    paths:
+      - 'apps/**'
+      - 'packages/**'
+      - '.github/workflows/CI.yml'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
 
 jobs:
-  lint:
+  # Подготовка окружения и установка зависимостей
+  setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout кода
+        uses: actions/checkout@v4
+
+      - name: Настройка Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: npm
+          cache: 'npm'
 
-      - name: Install
-        run: npm ci
-
-      - name: Lint
-        run: npm run lint
-
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: lts/*
-          cache: npm
+          version: 8
 
-      - name: Install
-        run: npm ci
+      - name: Получение пути к pnpm store
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Typecheck
-        run: npm run type-check
-
-  # Новый job для сборки и сохранения артефактов
-  build:
-    needs: [lint, typecheck]  # Зависит от успешного завершения lint и typecheck
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Настройка кэша pnpm
+        uses: actions/cache@v4
         with:
-          node-version: lts/*
-          cache: npm
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-      - name: Install
-        run: npm ci
+      - name: Установка зависимостей
+        run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: npm run build  # Замените на вашу команду сборки, если отличается
-
-      - name: Upload build artifacts
+      - name: Сохранение node_modules
         uses: actions/upload-artifact@v4
         with:
-          name: ci-artifacts
-          path: ./dist  # Укажите путь к вашей собранной версии
-          retention-days: 1  # Хранить артефакты 1 день
+          name: node-modules
+          path: node_modules
+          retention-days: 1
+
+  # Проверка кода линтером
+  lint:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout кода
+        uses: actions/checkout@v4
+
+      - name: Настройка Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'npm'
+
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Восстановление node_modules
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules
+          path: node_modules
+
+      - name: Проверка линтером
+        run: pnpm run lint
+
+  # Проверка типов TypeScript
+  typecheck:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout кода
+        uses: actions/checkout@v4
+
+      - name: Настройка Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'npm'
+
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Восстановление node_modules
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules
+          path: node_modules
+
+      - name: Проверка типов
+        run: pnpm run type-check
+
+  # Сборка пакетов и Storybook
+  build:
+    needs: [lint, typecheck, setup]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout кода
+        uses: actions/checkout@v4
+
+      - name: Настройка Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'npm'
+
+      - name: Установка pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Восстановление node_modules
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules
+          path: node_modules
+
+      # Сборки
+      - name: Сборка всех пакетов
+        run: pnpm run build:all
+
+      - name: Сборка Storybook
+        run: pnpm run build-storybook
+        env:
+          NODE_ENV: production
+
+      # Артифакты
+      - name: Загрузка артефактов пакетов
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages-artifacts
+          path: |
+            packages/craftvue/dist
+            packages/icons/dist
+          retention-days: 1
+
+      - name: Загрузка артефактов Storybook
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-artifacts
+          path: apps/docs/storybook-static
+          retention-days: 1
