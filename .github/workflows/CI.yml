@@ -75,6 +75,13 @@ jobs:
           path: node_modules
           retention-days: 1
 
+      - name: Сохранение node_modules/.bin
+        uses: actions/upload-artifact@v4
+        with:
+          name: node-modules-bin
+          path: node_modules/.bin
+          retention-days: 1
+
   # Проверка кода линтером
   lint:
     needs: setup
@@ -100,11 +107,17 @@ jobs:
           name: node-modules
           path: node_modules
 
+      - name: Восстановление node_modules/.bin
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules-bin
+          path: node_modules/.bin
+
       - name: Исправление прав доступа
         run: |
           echo "Fixing permissions for node_modules/.bin..."
-          chmod +x node_modules/.bin/* || echo "No .bin directory or permission fix failed"
-          ls -la node_modules/.bin/ | head -5 || echo "No .bin directory found"
+          chmod +x node_modules/.bin/* || echo "Permission fix failed"
+          ls -la node_modules/.bin/ | head -5
 
       - name: Диагностика путей
         run: |
@@ -148,6 +161,15 @@ jobs:
           name: node-modules
           path: node_modules
 
+      - name: Восстановление node_modules/.bin
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules-bin
+          path: node_modules/.bin
+
+      - name: Исправление прав доступа
+        run: chmod +x node_modules/.bin/*
+
       - name: Проверка типов
         run: pnpm run type-check
 
@@ -175,6 +197,15 @@ jobs:
         with:
           name: node-modules
           path: node_modules
+
+      - name: Восстановление node_modules/.bin
+        uses: actions/download-artifact@v4
+        with:
+          name: node-modules-bin
+          path: node_modules/.bin
+
+      - name: Исправление прав доступа
+        run: chmod +x node_modules/.bin/*
 
       # Сборки
       - name: Сборка всех пакетов
