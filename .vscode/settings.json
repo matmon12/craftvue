@@ -17,6 +17,10 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "svg.preview.background": "dark-transparent",
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
   // "eslint.workingDirectories": [".", "packages/craftvue", "packages/icons", "apps/playground"],
   // "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"]
 }

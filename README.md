@@ -1,104 +1,330 @@
-<h1 align="center">Starter Pack</h1>
+<div align="center" fill="#ffffff">
+  <img src="./public/Logo.svg" alt="CraftVue Logo" width="300" heiht="auto" />
 
-<div align="center" id="top">
-  <img src="./public/readme-logo.svg" alt="logo" />
+  &nbsp;
+
+  **Современная библиотека Vue.js компонентов для создания красивых интерфейсов**
+
+  [![npm version](https://img.shields.io/npm/v/craftvue?color=42d392)](https://www.npmjs.com/package/craftvue)
+  [![npm downloads](https://img.shields.io/npm/dm/craftvue?color=4cc71e)](https://www.npmjs.com/package/craftvue)
+  [![GitHub license](https://img.shields.io/github/license/matmon12/craftvue?color=56BEB8)](https://github.com/matmon12/craftvue/blob/main/LICENSE)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?color=3178c6)](https://www.typescriptlang.org/)
+  [![Vue 3](https://img.shields.io/badge/Vue-3.x-green?color=4fc08d)](https://vuejs.org/)
+
+  [📚 Документация](https://matmon12.github.io/craftvue/) • [🎨 Storybook](https://matmon12.github.io/craftvue/) • [💾 npm](https://www.npmjs.com/package/craftvue)
 </div>
-&#xa0;
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/matmon12/starter-pack?color=42d392">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/matmon12/starter-pack?color=d36449">
+## ✨ Особенности
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/matmon12/starter-pack?color=4cc71e">
+- 🎨 **Современный дизайн** - красивые и функциональные компоненты
+- 🛠 **TypeScript** - полная поддержка типов из коробки
+- 🎯 **Tree Shaking** - импортируйте только нужные компоненты
+- 📱 **Responsive** - адаптивность для всех устройств
+- 🌗 **Темы** - поддержка светлой и темной темы
+- ⚡ **Vue 3 Composition API** - современный подход к разработке
+- 📦 **Легкий вес** - оптимизированная сборка
+- 🔧 **Настраиваемый** - CSS переменные для кастомизации
 
-  <img alt="License" src="https://img.shields.io/github/license/matmon12/starter-pack?color=56BEB8">
+## 📦 Установка
 
-  <img alt="Github stars" src="https://img.shields.io/github/stars/matmon12/starter-pack?color=56BEB8" />
-</p>
-
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0;
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/matmon12" target="_blank">Author</a>
-</p>
-
-<br>
-
-## :dart: About
-
-Starter template Vite + Vue3
-
-## :sparkles: Features
-
-:heavy_check_mark: Vite 7 + Vue 3;\
-:heavy_check_mark: Vue-router;\
-:heavy_check_mark: TypeScript;\
-:heavy_check_mark: Pinia;\
-:heavy_check_mark: Components auto importing;\
-:heavy_check_mark: SCSS;\
-:heavy_check_mark: Iconify (icons as components, auto importing);\
-:heavy_check_mark: CI/CD;\
-:heavy_check_mark: Deploy on gitPages;\
-:heavy_check_mark: PrimeVue;\
-:heavy_check_mark: Eslint & prettier;\
-:heavy_check_mark: Modular architecture.
-
-## :rocket: Technologies
-
-The following tools were used in this project:
-
-- [Vue](https://vuejs.org/)
-- [VueUse](https://vueuse.org/)
-- [Pinia](https://pinia.vuejs.org/)
-- [Vite](https://vitejs.dev/)
-- [PrimeVue](https://primevue.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vue-router](https://router.vuejs.org/)
-- [Unplugin](https://unplugin.unjs.io/)
-- [SASS](https://sass-lang.com/)
-
-## :white_check_mark: Requirements
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting
+### NPM
 
 ```bash
-# Clone this project
-$ git clone https://github.com/matmon12/starter-pack.git
-
-# Access
-$ cd starter-pack
-
-# Install dependencies
-$ npm install
-
-# Run the project
-$ npm run dev
-
-# Compiles and minifies for production
-$ npm run build
+npm install craftvue
 ```
 
-### Vue 3 + Vite
+### PNPM
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+```bash
+pnpm add craftvue
+```
 
-### Recommended IDE Setup
+### Yarn
 
-- [VS Code](https://code.visualstudio.com/) + [Vue](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur)
+```bash
+yarn add craftvue
+```
 
-## :memo: License
+## 🚀Быстрый старт
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+### 1. Импортируйте стили
 
-Made with :heart: by <a href="https://github.com/matmon12" target="_blank">Matmon</a>
+```typescript
+// main.ts
+import 'craftvue/style'
+```
 
-&#xa0;
+### 2. Используйте компоненты
 
-<a href="#top">Back to top</a>
+#### Глобальная регистрация
+
+```typescript
+// main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
+import CraftVue from 'craftvue'
+
+const app = createApp(App)
+app.use(CraftVue)
+app.mount('#app')
+```
+
+#### Селективный импорт (рекомендуется)
+
+```vue
+<template>
+  <CButton variant="primary" @click="handleClick">
+    <HomeIcon />
+    Главная
+  </CButton>
+</template>
+
+<script setup lang="ts">
+import { CButton } from 'craftvue'
+import { HomeIcon } from '@craftvue/icons'
+
+const handleClick = () => {
+  console.log('Кнопка нажата')
+}
+</script>
+```
+
+## 🎯 Примеры использования
+
+### Кнопки
+
+```vue
+<template>
+  <div class="buttons">
+    <!-- Базовые варианты -->
+    <CButton variant="primary">Основная</CButton>
+    <CButton variant="secondary">Второстепенная</CButton>
+    <CButton variant="outline">Контурная</CButton>
+
+    <!-- С иконками -->
+    <CButton variant="primary">
+      <template #iconSlot>
+        <AddIcon />
+      </template>
+      Добавить
+    </CButton>
+
+    <!-- Размеры -->
+    <CButton size="sm">Маленькая</CButton>
+    <CButton>Средняя</CButton>
+    <CButton size="lg">Большая</CButton>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { CButton } from 'craftvue'
+import { AddIcon } from '@craftvue/icons'
+</script>
+```
+
+### Формы
+
+```vue
+<template>
+  <form @submit="onSubmit">
+    <CFormItem for="email" label="Email" required>
+      <CInput v-model="form.email" id="email" type="email" placeholder="your@email.com" required />
+    </CFormItem>
+
+    <CFormItem for="password" label="Пароль" required>
+      <CInput v-model="form.password" id="password" type="password" required />
+    </CFormItem>
+
+    <CButton type="submit" variant="primary">Войти</CButton>
+  </form>
+</template>
+
+<script setup lang="ts">
+import { reactive } from 'vue'
+import { CInput, CButton, CFormItem } from 'craftvue'
+
+const form = reactive({
+  email: '',
+  password: '',
+})
+
+const onSubmit = (e: Event) => {
+  e.preventDefault()
+  console.log('Форма отправлена', form)
+}
+</script>
+```
+
+## 📁 Структура монорепозитория
+
+```
+craftvue/
+├── apps/
+│   ├── docs/          # 📚 Storybook документация
+│   └── playground/    # 🎮 Площадка для тестирования
+├── packages/
+│   ├── craftvue/      # 🎨 Основная библиотека компонентов
+│   └── icons/         # 🎭 Библиотека иконок
+├── scripts/
+└── README.md
+```
+
+## 🎨 Доступные компоненты
+
+| Компонент   | Описание                    | Статус |
+| ----------- | --------------------------- | ------ |
+| `CButton`   | Кнопки различных стилей     | ✅     |
+| `CInput`    | Поля ввода                  | ✅     |
+| `CBadge`    | Значки и метки              | ✅     |
+| `CIcon`     | Иконки                      | ✅     |
+| `CTabs`     | Вкладки                     | ✅     |
+| `CTabList`  | Список вкладок              | ✅     |
+| `CTab`      | Отдельная вкладка           | ✅     |
+| `CFormItem` | Обертка для элементов формы | ✅     |
+
+### 🎭 Иконки (@craftvue/icons)
+
+Библиотека включает набор оптимизированных SVG иконок:
+
+```vue
+<script setup lang="ts">
+import { HomeIcon, AddIcon, CloseIcon, SearchIcon } from '@craftvue/icons'
+</script>
+
+<template>
+  <HomeIcon />
+  <AddIcon />
+  <CloseIcon />
+  <SearchIcon />
+</template>
+```
+
+## 🎨 Кастомизация
+
+### CSS переменные
+
+```css
+:root {
+  /* Основные цвета */
+  --main-color: #ffffff;
+  --prime-color: #bea87b;
+  --secondary-back: #262626;
+  --invalid-color: #f87171;
+
+  /* Цвета комопнентов */
+  --button-primary-filled-color: #ffffff;
+  --button-primary-filled-back: var(--prime-color);
+  --button-primary-filled-back-hover: color-mix(in srgb, var(--prime-color) 100%, #fff 10%);
+}
+```
+
+### Темы
+
+CraftVue поддерживает переключение между светлой и темной темами через CSS переменные:
+
+```css
+/* Темная тема (по умолчанию) */
+:root[data-theme='dark'] {
+  --main-color: #ffffff;
+  --prime-color: #bea87b;
+  --secondary-back: #262626;
+  --invalid-color: #f87171;
+}
+
+/* Светлая тема */
+:root {
+  --main-color: #000000;
+  --prime-color: #bea87b;
+  --secondary-back: #374151;
+  --invalid-color: #f87171;
+}
+```
+
+## 🔧 Разработка
+
+### Требования
+
+- Node.js 18+
+- pnpm 8+
+
+### Установка зависимостей
+
+```bash
+pnpm install
+```
+
+### Запуск в режиме зарработки
+
+```bash
+# Запуск всех приложений
+pnpm run dev:all
+
+# Только библиотека компонентов
+pnpm run dev:lib
+
+# Только иконки
+pnpm run dev:icons
+
+# Storybook
+pnpm run dev:docs
+```
+
+### Сборка
+
+```bash
+# Сборка всех пакетов
+pnpm run build:all
+
+# Только библиотека
+pnpm run build:lib
+
+# Только иконки
+pnpm run build:icons
+```
+
+### Линтинг и проверка типов
+
+```bash
+# Проверка ESLint
+pnpm run lint
+
+# Проверка типов TypeScript
+pnpm run type-check
+```
+
+## 📚 Документация
+
+- **[Storybook](https://matmon12.github.io/craftvue/)** - интерактивная документация и примеры
+- **[API Reference]** - подробное описание всех компонентов и их свойств
+
+## 🤝 Участие в разработке
+
+Мы приветствуем вклад в развитие CraftVue!
+
+1. 🍴 Сделайте форк репозитория
+2. 🌿 Создайте ветку для новой функции (`git checkout -b feature/amazing-feature`)
+3. 💾 Зафиксируйте изменения (`git commit -m 'feat: Add amazing feature'`)
+4. 📤 Отправьте изменения (`git push origin feature/amazing-feature`)
+5. 🔄 Создайте Pull Request
+
+## 📄 Лицензия
+
+Этот проект распространяется под лицензией MIT. Подробнее в файле [LICENSE](LICENSE).
+
+## 🙏 Благодарности
+
+- [Vue.js](https://vuejs.org/) - прогрессивный JavaScript фреймворк
+- [Vite](https://vitejs.dev/) - быстрый инструмент сборки
+- [TypeScript](https://www.typescriptlang.org/) - типизированный JavaScript
+- [Storybook](https://storybook.js.org/) - инструмент для разработки UI компонентов
+
+---
+
+<div align="center">
+
+**Сделано с ❤️ для Vue.js сообщества**
+
+[⭐ Поставьте звезду](https://github.com/matmon12/craftvue) • [🐛 Сообщить об ошибке](https://github.com/matmon12/craftvue/issues) • [💡 Предложить идею](https://github.com/matmon12/craftvue/discussions)
+
+</div>
