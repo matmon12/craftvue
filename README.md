@@ -1,82 +1,91 @@
-<div align="center" fill="#ffffff">
-  <img src="./public/Logo.svg" alt="CraftVue Logo" width="300" heiht="auto" />
+<div align="center">
+  <img src="./public/Logo.svg" alt="CraftVue Logo" width="300" height="auto" />
 
-  &nbsp;
+&nbsp;
 
-  **Современная библиотека Vue.js компонентов для создания красивых интерфейсов**
+[![npm version](https://img.shields.io/npm/v/craftvue?color=42d392)](https://www.npmjs.com/package/craftvue)
+[![npm downloads](https://img.shields.io/npm/dm/craftvue?color=4cc71e)](https://www.npmjs.com/package/craftvue)
+[![GitHub license](https://img.shields.io/github/license/matmon12/craftvue?color=56BEB8)](https://github.com/matmon12/craftvue/blob/main/LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?color=3178c6)](https://www.typescriptlang.org/)
+[![Vue 3](https://img.shields.io/badge/Vue-3.x-green?color=4fc08d)](https://vuejs.org/)
 
-  [![npm version](https://img.shields.io/npm/v/craftvue?color=42d392)](https://www.npmjs.com/package/craftvue)
-  [![npm downloads](https://img.shields.io/npm/dm/craftvue?color=4cc71e)](https://www.npmjs.com/package/craftvue)
-  [![GitHub license](https://img.shields.io/github/license/matmon12/craftvue?color=56BEB8)](https://github.com/matmon12/craftvue/blob/main/LICENSE)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?color=3178c6)](https://www.typescriptlang.org/)
-  [![Vue 3](https://img.shields.io/badge/Vue-3.x-green?color=4fc08d)](https://vuejs.org/)
+[📚 Documentation](https://matmon12.github.io/craftvue/) • [🎨 Storybook](https://matmon12.github.io/craftvue/) • [💾 npm](https://www.npmjs.com/package/craftvue)
 
-  [📚 Документация](https://matmon12.github.io/craftvue/) • [🎨 Storybook](https://matmon12.github.io/craftvue/) • [💾 npm](https://www.npmjs.com/package/craftvue)
 </div>
 
+# CraftVue
 
-## ✨ Особенности
+A modern Vue.js component library with beautiful, accessible components. 
 
-- 🎨 **Современный дизайн** - красивые и функциональные компоненты
-- 🛠 **TypeScript** - полная поддержка типов из коробки
-- 🎯 **Tree Shaking** - импортируйте только нужные компоненты
-- 📱 **Responsive** - адаптивность для всех устройств
-- 🌗 **Темы** - поддержка светлой и темной темы
-- ⚡ **Vue 3 Composition API** - современный подход к разработке
-- 📦 **Легкий вес** - оптимизированная сборка
-- 🔧 **Настраиваемый** - CSS переменные для кастомизации
+## Features
 
-## 📦 Установка
+- 🎨 **Modern Design** - Beautiful and functional components
+- 🛠️ **TypeScript** - Full type support out of the box
+- 🎯 **Tree Shaking** - Import only the components you need
+- 📱 **Responsive** - Adaptability for all devices
+- 🌗 **Themes** - Support for light and dark themes
+- ⚡ **Vue 3 Composition API** - Modern development approach
+- 📦 **Lightweight** - Optimized build
+- 🔧 **Customizable** - CSS variables for customization
+
+## Packages
+
+| Name     | Version |
+| -------- | ------- |
+| [craftvue](https://github.com/matmon12/craftvue/tree/main/packages/craftvue) | [![npm version](https://img.shields.io/npm/v/craftvue?color=42d392)](https://www.npmjs.com/package/craftvue)   |
+| [@craftvue/icons](https://github.com/matmon12/craftvue/tree/main/packages/icons) | [![npm version](https://img.shields.io/npm/v/@craftvue/icons?color=42d392)](https://www.npmjs.com/package/@craftvue/icons) |
+
+## 📦 Installation
 
 ### NPM
 
 ```bash
-npm install craftvue
+npm install craftvue @craftvue/icons
 ```
 
 ### PNPM
 
 ```bash
-pnpm add craftvue
+pnpm add craftvue @craftvue/icons
 ```
 
 ### Yarn
 
 ```bash
-yarn add craftvue
+yarn add craftvue @craftvue/icons
 ```
 
-## 🚀Быстрый старт
+## 🚀 Quick Start
 
-### 1. Импортируйте стили
+### 1. Import styles
 
 ```typescript
 // main.ts
 import 'craftvue/style'
 ```
 
-### 2. Используйте компоненты
+### 2. Use components
 
-#### Глобальная регистрация
+#### Global registration
 
 ```typescript
 // main.ts
 import { createApp } from 'vue'
-import App from './App.vue'
 import CraftVue from 'craftvue'
+import App from './App.vue'
 
 const app = createApp(App)
 app.use(CraftVue)
 app.mount('#app')
 ```
 
-#### Селективный импорт (рекомендуется)
+#### Selective import (recommended)
 
 ```vue
 <template>
   <CButton variant="primary" @click="handleClick">
     <HomeIcon />
-    Главная
+    Home
   </CButton>
 </template>
 
@@ -85,107 +94,41 @@ import { CButton } from 'craftvue'
 import { HomeIcon } from '@craftvue/icons'
 
 const handleClick = () => {
-  console.log('Кнопка нажата')
+  console.log('Button clicked!')
 }
 </script>
 ```
 
-## 🎯 Примеры использования
-
-### Кнопки
-
-```vue
-<template>
-  <div class="buttons">
-    <!-- Базовые варианты -->
-    <CButton variant="primary">Основная</CButton>
-    <CButton variant="secondary">Второстепенная</CButton>
-    <CButton variant="outline">Контурная</CButton>
-
-    <!-- С иконками -->
-    <CButton variant="primary">
-      <template #iconSlot>
-        <AddIcon />
-      </template>
-      Добавить
-    </CButton>
-
-    <!-- Размеры -->
-    <CButton size="sm">Маленькая</CButton>
-    <CButton>Средняя</CButton>
-    <CButton size="lg">Большая</CButton>
-  </div>
-</template>
-
-<script setup lang="ts">
-import { CButton } from 'craftvue'
-import { AddIcon } from '@craftvue/icons'
-</script>
-```
-
-### Формы
-
-```vue
-<template>
-  <form @submit="onSubmit">
-    <CFormItem for="email" label="Email" required>
-      <CInput v-model="form.email" id="email" type="email" placeholder="your@email.com" required />
-    </CFormItem>
-
-    <CFormItem for="password" label="Пароль" required>
-      <CInput v-model="form.password" id="password" type="password" required />
-    </CFormItem>
-
-    <CButton type="submit" variant="primary">Войти</CButton>
-  </form>
-</template>
-
-<script setup lang="ts">
-import { reactive } from 'vue'
-import { CInput, CButton, CFormItem } from 'craftvue'
-
-const form = reactive({
-  email: '',
-  password: '',
-})
-
-const onSubmit = (e: Event) => {
-  e.preventDefault()
-  console.log('Форма отправлена', form)
-}
-</script>
-```
-
-## 📁 Структура монорепозитория
+## 📁 Monorepo Structure
 
 ```
 craftvue/
 ├── apps/
-│   ├── docs/          # 📚 Storybook документация
-│   └── playground/    # 🎮 Площадка для тестирования
+│   ├── docs/          # 📚 Storybook documentation
+│   └── playground/    # 🎮 Testing playground
 ├── packages/
-│   ├── craftvue/      # 🎨 Основная библиотека компонентов
-│   └── icons/         # 🎭 Библиотека иконок
-├── scripts/
+│   ├── craftvue/      # 🎨 Main component library
+│   └── icons/         # 🎭 Icon library
+├── scripts/        
 └── README.md
 ```
 
-## 🎨 Доступные компоненты
+## Available Components
 
-| Компонент   | Описание                    | Статус |
-| ----------- | --------------------------- | ------ |
-| `CButton`   | Кнопки различных стилей     | ✅     |
-| `CInput`    | Поля ввода                  | ✅     |
-| `CBadge`    | Значки и метки              | ✅     |
-| `CIcon`     | Иконки                      | ✅     |
-| `CTabs`     | Вкладки                     | ✅     |
-| `CTabList`  | Список вкладок              | ✅     |
-| `CTab`      | Отдельная вкладка           | ✅     |
-| `CFormItem` | Обертка для элементов формы | ✅     |
+| Component   | Description               | Status |
+| ----------- | ------------------------- | ------ |
+| `CButton`   | Buttons of various styles | ✅     |
+| `CInput`    | Input fields              | ✅     |
+| `CBadge`    | Badges and labels         | ✅     |
+| `CIcon`     | Icons                     | ✅     |
+| `CTabs`     | Tabs                      | ✅     |
+| `CTabList`  | Tab list                  | ✅     |
+| `CTab`      | Individual tab            | ✅     |
+| `CFormItem` | Form element wrapper      | ✅     |
 
-### 🎭 Иконки (@craftvue/icons)
+### 🎭 Icons (@craftvue/icons)
 
-Библиотека включает набор оптимизированных SVG иконок:
+The library includes a set of optimized SVG icons:
 
 ```vue
 <script setup lang="ts">
@@ -200,31 +143,31 @@ import { HomeIcon, AddIcon, CloseIcon, SearchIcon } from '@craftvue/icons'
 </template>
 ```
 
-## 🎨 Кастомизация
+## 🎨 Customization
 
-### CSS переменные
+### CSS Variables
 
 ```css
 :root {
-  /* Основные цвета */
+  /* Main colors */
   --main-color: #ffffff;
   --prime-color: #bea87b;
   --secondary-back: #262626;
   --invalid-color: #f87171;
 
-  /* Цвета комопнентов */
+  /* Component colors */
   --button-primary-filled-color: #ffffff;
   --button-primary-filled-back: var(--prime-color);
   --button-primary-filled-back-hover: color-mix(in srgb, var(--prime-color) 100%, #fff 10%);
 }
 ```
 
-### Темы
+### Themes
 
-CraftVue поддерживает переключение между светлой и темной темами через CSS переменные:
+CraftVue supports switching between light and dark themes through CSS variables:
 
 ```css
-/* Темная тема (по умолчанию) */
+/* Dark theme (default) */
 :root[data-theme='dark'] {
   --main-color: #ffffff;
   --prime-color: #bea87b;
@@ -232,7 +175,7 @@ CraftVue поддерживает переключение между светл
   --invalid-color: #f87171;
 }
 
-/* Светлая тема */
+/* Light theme */
 :root {
   --main-color: #000000;
   --prime-color: #bea87b;
@@ -241,90 +184,82 @@ CraftVue поддерживает переключение между светл
 }
 ```
 
-## 🔧 Разработка
+## 🔧 Development
 
-### Требования
+### Requirements
 
 - Node.js 18+
 - pnpm 8+
 
-### Установка зависимостей
+### Install dependencies
 
 ```bash
 pnpm install
 ```
 
-### Запуск в режиме зарработки
+### Development mode
 
 ```bash
-# Запуск всех приложений
+# Run all applications
 pnpm run dev:all
 
-# Только библиотека компонентов
+# Component library only
 pnpm run dev:lib
 
-# Только иконки
+# Icons only
 pnpm run dev:icons
 
 # Storybook
 pnpm run dev:docs
 ```
 
-### Сборка
+### Build
 
 ```bash
-# Сборка всех пакетов
+# Build all packages
 pnpm run build:all
 
-# Только библиотека
+# Library only
 pnpm run build:lib
 
-# Только иконки
+# Icons only
 pnpm run build:icons
 ```
 
-### Линтинг и проверка типов
+### Linting and type checking
 
 ```bash
-# Проверка ESLint
+# ESLint check
 pnpm run lint
 
-# Проверка типов TypeScript
+# TypeScript type check
 pnpm run type-check
 ```
 
-## 📚 Документация
+## Documentation
 
-- **[Storybook](https://matmon12.github.io/craftvue/)** - интерактивная документация и примеры
-- **[API Reference]** - подробное описание всех компонентов и их свойств
+- **[Storybook](https://matmon12.github.io/craftvue/)** - Interactive documentation and examples
 
-## 🤝 Участие в разработке
+## 🤝 Contributing
 
-Мы приветствуем вклад в развитие CraftVue!
+We welcome contributions to CraftVue development!
 
-1. 🍴 Сделайте форк репозитория
-2. 🌿 Создайте ветку для новой функции (`git checkout -b feature/amazing-feature`)
-3. 💾 Зафиксируйте изменения (`git commit -m 'feat: Add amazing feature'`)
-4. 📤 Отправьте изменения (`git push origin feature/amazing-feature`)
-5. 🔄 Создайте Pull Request
+1. 🍴 Fork the repository
+2. 🌿 Create a branch for new feature (`git checkout -b feature/amazing-feature`)
+3. 💾 Commit changes (`git commit -m 'feat: Add amazing feature'`)
+4. 📤 Push changes (`git push origin feature/amazing-feature`)
+5. 🔄 Create a Pull Request
 
-## 📄 Лицензия
+## 📄 License
 
-Этот проект распространяется под лицензией MIT. Подробнее в файле [LICENSE](LICENSE).
-
-## 🙏 Благодарности
-
-- [Vue.js](https://vuejs.org/) - прогрессивный JavaScript фреймворк
-- [Vite](https://vitejs.dev/) - быстрый инструмент сборки
-- [TypeScript](https://www.typescriptlang.org/) - типизированный JavaScript
-- [Storybook](https://storybook.js.org/) - инструмент для разработки UI компонентов
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
 
-**Сделано с ❤️ для Vue.js сообщества**
+**Made with ❤️ for the Vue.js community**
 
-[⭐ Поставьте звезду](https://github.com/matmon12/craftvue) • [🐛 Сообщить об ошибке](https://github.com/matmon12/craftvue/issues) • [💡 Предложить идею](https://github.com/matmon12/craftvue/discussions)
+[⭐ Star us](https://github.com/matmon12/craftvue) • [🐛 Report bug](https://github.com/matmon12/craftvue/issues) • [💡 Suggest idea](https://github.com/matmon12/craftvue/discussions)
 
 </div>
