@@ -12,7 +12,6 @@
 import { CSSProperties, useSlots, computed } from 'vue'
 import { badgeClasses, BadgeProps } from './CBadge.types'
 import { isEmpty, addUnit } from '@/utils'
-import { isNumber } from '@/types'
 
 const slots = useSlots()
 
@@ -68,8 +67,11 @@ const isCircle = computed<boolean>(
 
 const content = computed<string>(() => {
   if (isDot.value) return ''
-  if (isNumber(props.value) && isNumber(props.max)) {
-    return props.max < props.value ? `${props.max}+` : `${props.value}`
+
+  const numberValue = Number(props.value)
+  const numberMax = Number(props.max)
+  if (!isNaN(numberValue) && !isNaN(numberMax)) {
+    return numberMax < numberValue ? `${numberMax}+` : `${numberValue}`
   }
   return `${props.value}`
 })
