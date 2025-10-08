@@ -2,7 +2,7 @@
 
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { CBadge, CButton, CIcon } from 'craftvue'
-import {EnvelopeIcon} from "@craftvue/icons"
+import { DeleteIcon } from '@craftvue/icons'
 import { ref, watch } from 'vue'
 
 const meta = {
@@ -218,31 +218,104 @@ export const Customizations: Story = {
 
 export const Overlay: Story = {
   args: {
-    value: undefined
+    value: '',
+    bordered: true,
+  },
+  argTypes: {
+    content: {
+      control: false,
+    },
+    default: {
+      control: false,
+    },
   },
   render: (args) => ({
-    components: { CBadge, CIcon, CButton, EnvelopeIcon },
+    components: { CBadge, CIcon, CButton },
     setup() {
       return { args }
     },
     template: `
-      <div style="display: flex; gap: 10px;">
-        <CBadge v-bind="args" value="5">
+      <div style="display: flex; gap: 20px;">
+        <CBadge v-bind="args" :value="args.value || '9'">
           <template #default >
             <CButton label="Button" severity="secondary" />
           </template>
         </CBadge>
-        <CBadge v-bind="args" value="10">
+        <CBadge v-bind="args" :value="args.value || '5'">
           <template #default >
-            <CIcon name="delete" :size="40" />
+            <CIcon name="delete" :size="30" />
+          </template>
+        </CBadge>
+        <CBadge v-bind="args" :value="args.value || undefined">
+          <template #default >
+            <CIcon name="envelope" :size="30" />
+          </template>
+        </CBadge>
+      </div>
+    `,
+  }),
+}
+
+export const PositionOverlay: Story = {
+  args: {
+    bordered: true,
+  },
+  argTypes: {
+    location: {
+      control: false,
+    },
+    content: {
+      control: false,
+    },
+    default: {
+      control: false,
+    },
+  },
+  render: (args) => ({
+    components: { CBadge, CButton },
+    setup() {
+      return { args }
+    },
+    template: `
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <CBadge v-bind="args" location="top-left">
+          <template #default >
+            <CButton label="Button" severity="secondary" />
           </template>
         </CBadge>
         <CBadge v-bind="args">
           <template #default >
-            <CIcon name="envelope" :size="40" />
+            <CButton label="Button" severity="secondary" />
           </template>
         </CBadge>
-        <EnvelopeIcon/>
+        <CBadge v-bind="args" location="bottom-left">
+          <template #default >
+            <CButton label="Button" severity="secondary" />
+          </template>
+        </CBadge>
+        <CBadge v-bind="args" location="bottom-right">
+          <template #default >
+            <CButton label="Button" severity="secondary" />
+          </template>
+        </CBadge>
+      </div>
+    `,
+  }),
+}
+
+export const Button: Story = {
+  parameters: {
+    controls: { disable: true },
+  },
+  render: (args) => ({
+    components: { CButton },
+    setup() {
+      return { args, DeleteIcon }
+    },
+    template: `
+      <div style="display: flex; gap: 10px;">
+        <CButton label="Delete" :icon="DeleteIcon" badge="2" badge-severity="secondary" />
+        <CButton label="Submit" badge="2" severity="secondary" />
       </div>
     `,
   }),
