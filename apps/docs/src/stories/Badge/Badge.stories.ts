@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
-import { CBadge } from 'craftvue'
+import { CBadge, CButton, CIcon } from 'craftvue'
 
 const meta = {
   title: 'Components/Badge',
   component: CBadge,
   args: {
-    value: undefined,
+    value: '5',
     size: 1 as any,
     severity: 'primary',
     location: 'bottom-left',
     bordered: false,
-    max: 0,
+    max: undefined,
   },
   parameters: {
     layout: 'centered',
@@ -47,19 +47,27 @@ const meta = {
       control: 'number',
       description: '',
     },
+    content: {
+      control: {
+        type: 'text'
+      }
+    }
   },
   render: (args) => ({
-    components: { CBadge },
+    components: { CBadge, CButton, CIcon },
     setup() {
       return { args }
     },
     template: `
       <CBadge v-bind="args">
-        <template #value>
-
+        <template #content>
+          <div style="">
+            <CIcon name="envelope" />
+            99
+          </div>
         </template>
         <template #default>
-
+          <CButton label="Button" severity="secondary" />
         </template>
       </CBadge>
     `,

@@ -1,7 +1,7 @@
 <template>
   <div class="c-badge__wrapper">
     <span :class="badgeClasses" :style="styleOverlay">
-      <slot name="value">{{ content }}</slot>
+      <slot name="content">{{ content }}</slot>
     </span>
 
     <slot />
@@ -9,17 +9,17 @@
 </template>
 
 <script setup lang="ts">
-import { CSSProperties, useSlots, computed } from 'vue'
-import { badgeClasses, BadgeProps } from './CBadge.types'
+import { CSSProperties, defineSlots, computed } from 'vue'
+import { BadgeClasses, BadgeProps, BadgeSlots } from './CBadge.types'
 import { isEmpty, addUnit } from '@/utils'
 
-const slots = useSlots()
+const slots = defineSlots<BadgeSlots>()
 
 const props = withDefaults(defineProps<BadgeProps>(), {
   severity: 'primary',
 })
 
-const badgeClasses = computed<badgeClasses>(() => [
+const badgeClasses = computed<BadgeClasses>(() => [
   'c-badge',
   `c-badge--${props.severity}`,
   {
@@ -59,10 +59,10 @@ const styleOverlay = computed<CSSProperties>(() => {
   return props.location ? positionStyles[props.location] : positionStyles['top-right']
 })
 
-const isDot = computed<boolean>(() => isEmpty(props.value) && !slots.value)
+const isDot = computed<boolean>(() => isEmpty(props.value) && !slots.content)
 
 const isCircle = computed<boolean>(
-  () => !isEmpty(props.value) && props.value?.toString().length === 1,
+  () => !isEmpty(props.value) && props.value?.toString().length === 1 && !slots.content,
 )
 
 const content = computed<string>(() => {

@@ -95,6 +95,11 @@
       "types": "./dist/components/AddIcon.d.ts",
       "import": "./dist/components/AddIcon.mjs",
       "require": "./dist/components/AddIcon.cjs"
+    },
+    "./envelope": {
+      "types": "./dist/components/EnvelopeIcon.d.ts",
+      "import": "./dist/components/EnvelopeIcon.mjs",
+      "require": "./dist/components/EnvelopeIcon.cjs"
     }
   },
   "files": [

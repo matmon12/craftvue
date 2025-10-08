@@ -1,3 +1,5 @@
+import { VNode } from "vue"
+
 export interface BadgeProps {
   value?: string | number
   size?: 'sm' | 'lg'
@@ -7,4 +9,9 @@ export interface BadgeProps {
   max?: number
 }
 
-export type badgeClasses = (string | { [key: string]: boolean })[]
+export type BadgeClasses = (string | { [key: string]: boolean })[]
+
+export interface BadgeSlots {
+  default(): VNode[]
+  content(): VNode[]
+}

@@ -48,6 +48,9 @@ export default defineConfig({
         'components/AddIcon': fileURLToPath(
           new URL('./src/components/AddIcon.vue', import.meta.url),
         ),
+        'components/EnvelopeIcon': fileURLToPath(
+          new URL('./src/components/EnvelopeIcon.vue', import.meta.url),
+        ),
       },
       name: 'CraftVueIcons',
       formats: ['es', 'cjs'],
