@@ -19,9 +19,11 @@ const meta = {
     default: false,
   },
   parameters: {
+    controls: {
+      exclude: ['$slots']
+    },
     layout: 'centered',
   },
-  tags: ['autodocs'],
   argTypes: {
     value: {
       control: 'text',

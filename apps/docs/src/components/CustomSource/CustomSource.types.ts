@@ -18,7 +18,15 @@ export type ButtonStoryName =
   | 'badge'
   | 'template'
 
-export type BadgeStoryName = 'basic' | 'severity' | 'size' | 'location' | 'bordered' | 'max'
+export type BadgeStoryName =
+  | 'basic'
+  | 'severity'
+  | 'size'
+  | 'maxValue'
+  | 'customizations'
+  | 'overlay'
+  | 'positionOverlay'
+  | 'button'
 
 export type InputStoryName =
   | 'basic'
@@ -56,7 +64,7 @@ export interface CustomSourceProps {
   /** Передача кода напрямую */
   code?: string
   /** Язык кода (для подсветки) */
-  language?: 'javascript' | 'typescript' | 'xml',
+  language?: 'javascript' | 'typescript' | 'xml'
   /** Парсер кода для Prettier */
   parser: 'babel' | 'vue'
 }
