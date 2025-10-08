@@ -1,7 +1,7 @@
 import { Nullable } from '@/types'
-import { Component, InputHTMLAttributes } from 'vue'
+import { Component, InputHTMLAttributes, VNode } from 'vue'
 
-export interface InputProps extends /* @vue-ignore */ InputHTMLAttributes {
+export interface BaseInputProps {
   modelValue?: Nullable<string>
   variant?: 'outlined' | 'filled'
   size?: 'sm' | 'lg'
@@ -17,7 +17,9 @@ export interface InputProps extends /* @vue-ignore */ InputHTMLAttributes {
   clearIcon?: Component
 }
 
-export type AllowedInputHTMLAttributes = Omit<InputHTMLAttributes, 'size' | 'disabled'>
+export interface InputProps
+  extends /* @vue-ignore */ Omit<InputHTMLAttributes, 'disabled' | 'size'>,
+    BaseInputProps {}
 
 export type InputEmits = {
   'update:modelValue': [value: string]
@@ -29,3 +31,10 @@ export type InputEmits = {
 }
 
 export type InputClasses = (string | { [key: string]: boolean })[]
+
+export interface InputSlots {
+  'prepend'(): VNode[],
+  'prefix'(): VNode[],
+  'suffix'(): VNode[],
+  'append'(): VNode[],
+}

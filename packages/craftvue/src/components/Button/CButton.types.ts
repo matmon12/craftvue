@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, VNode } from 'vue'
 import type { Component } from 'vue'
 
-export interface ButtonProps extends /* @vue-ignore */ ButtonHTMLAttributes {
+export interface BaseButtonProps {
   severity?: 'primary' | 'secondary' | 'contrast'
   variant?: 'filled' | 'outlined' | 'text'
   label?: string
@@ -10,12 +10,15 @@ export interface ButtonProps extends /* @vue-ignore */ ButtonHTMLAttributes {
   loading?: boolean
   raised?: boolean
   rounded?: boolean
+  disabled?: boolean
   badge?: string
   size?: 'sm' | 'lg'
   badgeSeverity?: 'primary' | 'secondary' | 'contrast'
 }
 
-export type CustomProps = Omit<ButtonProps, keyof ButtonHTMLAttributes> & { disabled?: boolean }
+export interface ButtonProps
+  extends /* @vue-ignore */ Omit<ButtonHTMLAttributes, 'disabled'>,
+    BaseButtonProps {}
 
 export interface ButtonEmits {
   click: [event: MouseEvent]

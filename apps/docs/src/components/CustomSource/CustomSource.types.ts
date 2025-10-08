@@ -22,15 +22,17 @@ export type BadgeStoryName = 'basic' | 'severity' | 'size' | 'location' | 'borde
 
 export type InputStoryName =
   | 'basic'
-  | 'variant'
+  | 'filled'
   | 'size'
   | 'invalid'
   | 'disabled'
   | 'clearable'
+  | 'customClearIcon'
   | 'formatter'
   | 'password'
-  | 'wordLimit'
-  | 'icons'
+  | 'limitLength'
+  | 'withIcon'
+  | 'inputGroup'
 
 export type TabsStoryName =
   | 'basic'

@@ -15,7 +15,7 @@
 
 # CraftVue
 
-A modern Vue.js component library with beautiful, accessible components. 
+A modern Vue.js component library with beautiful, accessible components.
 
 ## Features
 
@@ -30,9 +30,9 @@ A modern Vue.js component library with beautiful, accessible components.
 
 ## Packages
 
-| Name     | Version |
-| -------- | ------- |
-| [craftvue](https://github.com/matmon12/craftvue/tree/main/packages/craftvue) | [![npm version](https://img.shields.io/npm/v/craftvue?color=42d392)](https://www.npmjs.com/package/craftvue)   |
+| Name                                                                             | Version                                                                                                                    |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [craftvue](https://github.com/matmon12/craftvue/tree/main/packages/craftvue)     | [![npm version](https://img.shields.io/npm/v/craftvue?color=42d392)](https://www.npmjs.com/package/craftvue)               |
 | [@craftvue/icons](https://github.com/matmon12/craftvue/tree/main/packages/icons) | [![npm version](https://img.shields.io/npm/v/@craftvue/icons?color=42d392)](https://www.npmjs.com/package/@craftvue/icons) |
 
 ## 📦 Installation
@@ -109,7 +109,7 @@ craftvue/
 ├── packages/
 │   ├── craftvue/      # 🎨 Main component library
 │   └── icons/         # 🎭 Icon library
-├── scripts/        
+├── scripts/
 └── README.md
 ```
 

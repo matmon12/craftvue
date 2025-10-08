@@ -15,9 +15,6 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "storybook": "pnpm -C apps/docs run storybook",
-    "build-storybook": "pnpm -C apps/docs run build-storybook",
-    "deploy-storybook": "pnpm run build:all && pnpm run build-storybook",
     "------------- Build --------------": "",
     "build:lib": "pnpm -C packages/craftvue run build",
     "build:lib:prod": "pnpm -C packages/craftvue run build:prod",
@@ -36,7 +33,10 @@
     "publish:icons:patch": "pnpm -C packages/icons run publish:patch",
     "publish:icons:minor": "pnpm -C packages/icons run publish:minor",
     "publish:icons:major": "pnpm -C packages/icons run publish:major",
-    "publish:all": "pnpm run publish:icons:patch && pnpm run publish:craftvue:patch"
+    "publish:all": "pnpm run publish:icons:patch && pnpm run publish:craftvue:patch",
+    "----------- Storybook ------------": "",
+    "storybook": "pnpm -C apps/docs run storybook",
+    "build-storybook": "pnpm -C apps/docs run build-storybook"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",

@@ -1,0 +1,28 @@
+.sbdocs {
+  font-family: 'Montserrat', sans-serif;
+
+  .sb-docs-wrapper {
+    display: flex;
+    gap: 30px;
+  }
+  .sb-canvas {
+    background-color: var(--ground-back);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .sb-docs-toc .toc-wrapper > .toc-list {
+    border-left: 2px solid #444444;
+  }
+  .sb-docs-toc .toc-list-item::before {
+    border-left: var(--prime-color) 2px solid;
+  }
+  .sb-docs-toc .toc-list-item.is-active-li > a {
+    color: var(--prime-color);
+  }
+  .sb-docs-toc {
+    width: 15rem;
+  }
+  .sb-docs-toc h2 {
+  }
+}

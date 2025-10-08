@@ -6,11 +6,10 @@ import {
   Subtitle,
   TableOfContents,
 } from '@storybook/addon-docs/blocks'
-import * as ButtonStories from "./Button.stories.ts"
-import { useState } from 'react'
+import * as ButtonStories from './Button.stories.ts'
 import { CustomSource } from 'docs/components/CustomSource/CustomSource'
 
-<Meta of={ButtonStories} toc={{ disable: true }} />
+<Meta of={ButtonStories} />
 
 <div className='sb-docs-wrapper' >
   <div className='sb-docs-content'>
@@ -23,7 +22,7 @@ import { CustomSource } from 'docs/components/CustomSource/CustomSource'
     <h3>Импорт</h3>
 
     <CustomSource
-      code="import { AppButton } from '@/app/components/UI/Button/AppButton.vue'"
+      code="import { CButton } from 'craftvue/button'"
       actions={['copy']}
       parser="babel"
       language="javascript"
@@ -181,32 +180,3 @@ import { CustomSource } from 'docs/components/CustomSource/CustomSource'
     />
   </div>
 </div>
-
-<style>
-  {`
-  .sb-docs-wrapper{
-    display: flex;
-    gap: 30px;
-  }
-  .sb-canvas{
-    background-color: var(--ground-back);
-    border-radius: 8px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-  }
-  .sb-docs-toc .toc-wrapper > .toc-list {
-    border-left: 2px solid #444444;
-  }
-  .sb-docs-toc .toc-list-item::before {
-    border-left: var(--prime-color) 2px solid;
-  }
-  .sb-docs-toc .toc-list-item.is-active-li > a {
-    color: var(--prime-color);
-  }
-  .sb-docs-toc{
-    width: 15rem;
-  }
-  .sb-docs-toc h2 {
-  }
-`}
-</style>

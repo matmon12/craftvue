@@ -3,7 +3,7 @@ import { ref, markRaw } from 'vue'
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import { CButton, CTab, CTabList, CTabs } from 'craftvue'
-import type { CustomProps, ButtonEmits, ButtonSlots } from 'craftvue'
+import type { BaseButtonProps, ButtonEmits, ButtonSlots } from 'craftvue'
 import { AddIcon, DeleteIcon, EditIcon, SaveIcon, CheckIcon, HomeIcon } from '@craftvue/icons'
 
 const icons = {
@@ -14,7 +14,7 @@ const icons = {
   SaveIcon: markRaw(SaveIcon),
 }
 
-type AllKeys = keyof CustomProps | keyof ButtonEmits | keyof ButtonSlots
+type AllKeys = keyof BaseButtonProps | keyof ButtonEmits | keyof ButtonSlots
 
 const customArgsKeys: AllKeys[] = [
   'badge',

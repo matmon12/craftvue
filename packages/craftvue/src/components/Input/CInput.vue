@@ -1,5 +1,10 @@
 <template>
-  <div :class="containerKls" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+  <div
+    :class="containerKls"
+    :style="containerStyle"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
+  >
     <!-- prepend -->
     <div v-if="$slots.prepend" class="c-input-group__prepend">
       <slot name="prepend" />
@@ -67,15 +72,15 @@ import {
   computed,
   nextTick,
   shallowRef,
-  useAttrs,
-  useSlots,
+  useAttrs as useRawAttrs,
   ref,
   watch,
   onMounted,
-  type Component
 } from 'vue'
+import type { Component, StyleValue } from 'vue'
+import { useAttrs } from '@/composables'
 import { CIcon } from '@/components'
-import { InputClasses, InputEmits, InputProps, AllowedInputHTMLAttributes } from './CInput.types'
+import { InputClasses, InputEmits, InputProps, BaseInputProps, InputSlots } from './CInput.types'
 import { isNil } from 'lodash'
 import { useFocus } from '@vueuse/core'
 import { CloseIcon, EyeIcon, EyeSlashIcon } from '@craftvue/icons'
@@ -84,17 +89,23 @@ const inputRef = shallowRef<HTMLInputElement>()
 const passwordVisible = ref(false)
 const isHovering = ref(false)
 
-const attrs = useAttrs() as InputHTMLAttributes
-const slots = useSlots()
+const rawAttrs = useRawAttrs() as InputHTMLAttributes
+const attrs = useAttrs<InputHTMLAttributes>()
+const slots = defineSlots<InputSlots>()
 const { focused } = useFocus(inputRef)
 
 defineOptions({ inheritAttrs: false })
 
 const _props = withDefaults(defineProps<InputProps>(), {
   variant: 'outlined',
+  invalid: false,
+  disabled: false,
+  clearable: false,
+  showPassword: false,
+  showWordLimit: false,
   clearIcon: () => CloseIcon,
 })
-const props = _props as Omit<typeof _props, keyof AllowedInputHTMLAttributes>
+const props = _props as Pick<typeof _props, keyof BaseInputProps>
 const emits = defineEmits<InputEmits>()
 
 const nativeInputValue = computed<string>(() =>
@@ -120,7 +131,7 @@ const showPwdVisible = computed(
 const isWordLimitVisible = computed<boolean>(
   () =>
     props.showWordLimit &&
-    !!attrs.maxlength &&
+    !!attrs.value.maxlength &&
     !props.disabled &&
     inputRef.value?.type === 'text' &&
     !props.showPassword,
@@ -136,7 +147,7 @@ const suffixVisible = computed<boolean>(
 )
 
 const inputExceed = computed(
-  () => !!isWordLimitVisible.value && textLength.value > Number(attrs.maxlength),
+  () => !!isWordLimitVisible.value && textLength.value > Number(attrs.value.maxlength),
 )
 
 // classes
@@ -154,8 +165,9 @@ const containerKls = computed<InputClasses>(() => [
     'c-input-group--append': !!slots.append,
     'c-input--prefix': !!slots.prefix || !!props.prefixIcon,
     'c-input--suffix': suffixVisible.value,
-    'c-input-hidden': attrs.type === 'hidden',
+    'c-input-hidden': attrs.value.type === 'hidden',
   },
+  rawAttrs.class,
 ])
 
 const wrapperKls = computed<InputClasses>(() => [
@@ -164,6 +176,9 @@ const wrapperKls = computed<InputClasses>(() => [
     'is--focus': focused.value,
   },
 ])
+
+// style
+const containerStyle = computed<StyleValue>(() => [rawAttrs.style])
 
 // events
 const onInput = async (event: Event) => {

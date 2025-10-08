@@ -7,28 +7,21 @@
       <h2>Button</h2>
       <CButton label="123"></CButton>
       <CFormItem label="Email" required for="email">
-        <CInput v-model="input" clearable show-password type="password" />
+        <CInput v-model="input">
+          <template #suffix>
+            <p v-if="!!input">dfgdfg</p>
+          </template>
+        </CInput>
       </CFormItem>
       <CTabs value="1">
         <CTabList>
           <CTab value="1">Tab 1</CTab>
           <CTab value="2">Tab 2</CTab>
           <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
-          <CTab value="3">Tab 3</CTab>
         </CTabList>
       </CTabs>
+
+      <CIcon name="add" />
 
       <HomeIcon />
 
@@ -42,7 +35,8 @@
 // import CloseIcon from '@craftvue/icons/close'
 // import { CButton, CInput, CTab, CTabList, CTabs } from 'craftvue'
 
-import { CButton, CInput, CTab, CTabList, CTabs, CFormItem } from 'craftvue-dev'
+
+import { CButton, CInput, CTab, CTabList, CTabs, CFormItem, CIcon } from 'craftvue-dev'
 import { HomeIcon } from 'icons-dev'
 
 const input = ref('')

@@ -23,7 +23,13 @@
 <script setup lang="ts">
 import { CBadge, CIcon } from '@/components'
 import { ButtonHTMLAttributes, useAttrs, computed } from 'vue'
-import { ButtonProps, ButtonEmits, ButtonClasses, ButtonSlots } from './CButton.types'
+import {
+  ButtonProps,
+  BaseButtonProps,
+  ButtonEmits,
+  ButtonClasses,
+  ButtonSlots,
+} from './CButton.types'
 
 defineOptions({
   inheritAttrs: false,
@@ -44,12 +50,9 @@ const _props = withDefaults(defineProps<ButtonProps>(), {
   disabled: false,
   badge: '',
   badgeSeverity: 'primary',
-  icon: undefined,
-  size: undefined,
-  label: undefined,
 })
 // only keep non-HTML attributes
-const props = _props as Omit<typeof _props, keyof ButtonHTMLAttributes>
+const props = _props as Pick<typeof _props, keyof BaseButtonProps>
 
 const buttonClasses = computed<ButtonClasses>(() => [
   'c-button',
@@ -68,9 +71,7 @@ const buttonClasses = computed<ButtonClasses>(() => [
 
 const buttonIconClasses = computed(() => ['c-button__icon', `c-button__icon--${props.iconPos}`])
 
-const disabled = computed<boolean>(
-  () => !!attrs.disabled || String(attrs.disabled) === '' || props.loading,
-)
+const disabled = computed<boolean>(() => props.disabled || props.loading)
 
 const hasIcon = computed<boolean>(() => !!(props.icon || slots['iconSlot']))
 
