@@ -47,15 +47,15 @@ const meta = {
     },
     default: {
       control: false,
-      description: '',
+      description: 'Основной слот для содержимого поля формы (например, CInput, CSelect и т.д.)',
     },
     error: {
       control: false,
-      description: '',
+      description: 'Слот для кастомного отображения ошибки. Получает объект с полем error',
     },
     labelSlot: {
       control: false,
-      description: '',
+      description: 'Слот для кастомного содержимого лейбла. Получает объект с полем label',
     },
   },
 } satisfies Meta<typeof CFormItem>
@@ -268,35 +268,35 @@ export const Form: Story = {
       return { form, errors, submit, reset }
     },
     template: `
-      <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; max-width: 400px; padding: 20px; border: 1px solid var(--prime-color); border-radius: 8px;">
+      <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; width: 400px; padding: 20px; border: 1px solid var(--prime-color); border-radius: 8px;">
         <h3 style="margin-bottom: 20px; font-size: 20px;">Contact form</h3>
 
         <CFormItem label="Name" required :errorMessage="errors.name">
-          <CInput v-model="form.name" placeholder="Your name" :invalid="!!errors.name"/>
+          <CInput v-model="form.name" placeholder="Your name" :invalid="!!errors.name" style="width: 100%;"/>
         </CFormItem>
 
         <CFormItem label="Email" required :errorMessage="errors.email">
-          <CInput v-model="form.email" type="email" placeholder="your@email.com" :invalid="!!errors.email" />
+          <CInput v-model="form.email" type="email" placeholder="your@email.com" :invalid="!!errors.email" style="width: 100%;" />
         </CFormItem>
 
         <CFormItem label="Phone number">
-          <CInput v-model="form.phone" type="tel" placeholder="+7 (999) 123-45-67" />
+          <CInput v-model="form.phone" type="tel" placeholder="+7 (999) 123-45-67" style="width: 100%;" />
         </CFormItem>
 
         <CFormItem label="Resources" required :errorMessage="errors.resources">
-          <div style="display: flex; gap: 10px;">
+          <div style="display: flex; gap: 20px;">
             <label style="display: flex; gap: 4px;">
               <input v-model="form.resources" type="radio" name="resources" value="online" />
-              <span>Online</span>
+              <span>Online resource</span>
             </label>
             <label style="display: flex; gap: 4px;">
               <input v-model="form.resources" type="radio" name="resources" value="offline" />
-              <span>Offline</span>
+              <span>Offline resource</span>
             </label>
           </div>
         </CFormItem>
 
-        <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr;  gap: 10px;">
           <CButton label="Submit" type="submit" />
           <CButton label="Reset" @click.prevent="reset" severity="secondary" />
         </div>

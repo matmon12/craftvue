@@ -5,6 +5,9 @@
     display: flex;
     gap: 30px;
   }
+  .sb-docs-content {
+    min-width: 0;
+  }
   .sb-canvas {
     background-color: var(--ground-back);
     border-radius: 8px;
@@ -21,7 +24,7 @@
     color: var(--prime-color);
   }
   .sb-docs-toc {
-    width: 15rem;
+    min-width: 15rem;
   }
   .sb-docs-toc h2 {
   }

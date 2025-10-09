@@ -27,7 +27,9 @@ import { FormItemProps, FormItemsClasses, FormItemSlots } from './CFormItem.type
 
 const slots = defineSlots<FormItemSlots>()
 
-const props = defineProps<FormItemProps>()
+const props = withDefaults(defineProps<FormItemProps>(), {
+  required: false,
+})
 
 const hasLabel = computed<boolean>(() => {
   return !!(props.label || slots.labelSlot)
