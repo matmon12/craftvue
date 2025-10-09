@@ -28,15 +28,11 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: [
-          'Configuration',
-          'Design System',
-          'Components',
-          '*'
-        ]
+        order: ['Configuration', 'Design System', 'Components', '*'],
       },
-      initialActive: 'Configuration'
-    }
+      initialActive: 'Configuration',
+      panelPosition: 'right'
+    },
   },
   initialGlobals: {
     backgrounds: { value: 'dark' },

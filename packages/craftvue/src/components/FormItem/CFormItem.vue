@@ -6,7 +6,7 @@
       :for="props.for"
       :class="labelClasses"
     >
-      <slot name="label" :label="props.label">{{ props.label }}</slot>
+      <slot name="labelSlot" :label="props.label">{{ props.label }}</slot>
     </component>
 
     <div class="c-form-item__content">
@@ -22,15 +22,15 @@
 </template>
 
 <script setup lang="ts">
-import {useSlots, computed} from "vue"
-import { FormItemProps, FormItemsClasses } from './CFormItem.types'
+import { computed } from 'vue'
+import { FormItemProps, FormItemsClasses, FormItemSlots } from './CFormItem.types'
 
-const slots = useSlots()
+const slots = defineSlots<FormItemSlots>()
 
 const props = defineProps<FormItemProps>()
 
 const hasLabel = computed<boolean>(() => {
-  return !!(props.label || slots.label)
+  return !!(props.label || slots.labelSlot)
 })
 
 const showError = computed<boolean>(() => {

@@ -50,8 +50,18 @@ export type TabsStoryName =
   | 'selectOnFocus'
   | 'disabled'
 
+export type FormItemStoryName =
+  | 'basic'
+  | 'withLabel'
+  | 'required'
+  | 'withError'
+  | 'customLabel'
+  | 'customError'
+  | 'withFor'
+  | 'form'
+
 // Union тип для всех возможных названий историй
-export type AllStoryNames = ButtonStoryName | BadgeStoryName | InputStoryName | TabsStoryName
+export type AllStoryNames = ButtonStoryName | BadgeStoryName | InputStoryName | TabsStoryName | FormItemStoryName
 
 // CustomSource props
 export interface CustomSourceProps {
