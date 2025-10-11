@@ -4,7 +4,7 @@ import { CFormItem, CInput, CButton } from 'craftvue'
 import { ref } from 'vue'
 
 const meta = {
-  title: 'Components/FormItem',
+  title: 'Components/FormItem/FormItem',
   component: CFormItem,
   args: {
     label: 'Label',

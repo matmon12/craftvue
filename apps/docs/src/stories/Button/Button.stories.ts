@@ -2,6 +2,7 @@
 import { ref, markRaw } from 'vue'
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
+import IconLogo from "docs/components/IconLogo.vue"
 import { CButton, CTab, CTabList, CTabs } from 'craftvue'
 import type { BaseButtonProps, ButtonEmits, ButtonSlots } from 'craftvue'
 import { AddIcon, DeleteIcon, EditIcon, SaveIcon, CheckIcon, HomeIcon } from '@craftvue/icons'
@@ -35,7 +36,7 @@ const customArgsKeys: AllKeys[] = [
 ]
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Components/Button/Button',
   component: CButton,
   args: {
     onClick: fn(),
@@ -604,13 +605,13 @@ export const Template: Story = {
     },
   },
   render: (args) => ({
-    components: { CButton },
+    components: { CButton, IconLogo },
     setup() {
       return { args }
     },
     template: `
       <CButton v-bind="args">
-        <svg v-if="args.default === 'default'" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" rx="60"/><path fill="#41b883" d="M182 50h36l-90 155.25L38 50h68.85L128 86l20.7-36z"/><path fill="#41b883" d="m38 50l90 155.25L218 50h-36l-54 93.15L73.55 50z"/><path fill="#35495e" d="M73.55 50L128 143.6L182 50h-33.3L128 86l-21.15-36z"/></g></svg>
+        <IconLogo v-if="args.default === 'default'" style="font-size: 200px; margin: 10px;" />
         <span v-else-if="args.default">
           {{ args.default }}
         </span>
@@ -618,12 +619,3 @@ export const Template: Story = {
     `,
   }),
 }
-
-// export const PrimaryOutlined: Story = {
-//   parameters: {
-//     controls: {
-//       disable: true,
-//     },
-//   },
-//   tags: ['!autodocs'],
-// }

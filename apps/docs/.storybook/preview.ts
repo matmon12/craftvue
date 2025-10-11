@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/vue3-vite'
-import { themes } from 'storybook/internal/theming'
+import craftTheme from './craftTheme'
 
 import '../src/index.scss'
 
@@ -12,7 +12,7 @@ const preview: Preview = {
       },
     },
     docs: {
-      theme: themes.dark,
+      theme: craftTheme,
     },
     backgrounds: {
       options: {
@@ -33,9 +33,6 @@ const preview: Preview = {
       initialActive: 'Configuration',
       panelPosition: 'right',
     },
-  },
-  initialGlobals: {
-    backgrounds: { value: 'dark' },
   },
 }
 

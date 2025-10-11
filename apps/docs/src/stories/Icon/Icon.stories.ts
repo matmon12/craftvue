@@ -3,7 +3,7 @@ import { CIcon } from 'craftvue'
 import IconLogo from 'docs/components/IconLogo.vue'
 
 const meta = {
-  title: 'Components/Icon',
+  title: 'Components/Icon/Icon',
   component: CIcon,
   parameters: {
     controls: {
