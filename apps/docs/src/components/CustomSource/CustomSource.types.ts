@@ -44,11 +44,13 @@ export type InputStoryName =
 
 export type TabsStoryName =
   | 'basic'
-  | 'orientation'
-  | 'navigators'
-  | 'lazy'
-  | 'selectOnFocus'
+  | 'vertical'
+  | 'dynamic'
+  | 'template'
+  | 'controlled'
+  | 'scrollable'
   | 'disabled'
+  | 'navigation'
 
 export type FormItemStoryName =
   | 'basic'
@@ -60,8 +62,16 @@ export type FormItemStoryName =
   | 'withFor'
   | 'form'
 
+export type IconStoryName = 'basic' | 'name' | 'color' | 'size' | 'template'
+
 // Union тип для всех возможных названий историй
-export type AllStoryNames = ButtonStoryName | BadgeStoryName | InputStoryName | TabsStoryName | FormItemStoryName
+export type AllStoryNames =
+  | ButtonStoryName
+  | BadgeStoryName
+  | InputStoryName
+  | TabsStoryName
+  | FormItemStoryName
+  | IconStoryName
 
 // CustomSource props
 export interface CustomSourceProps {

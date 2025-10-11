@@ -4,6 +4,9 @@
 :root {
   --main-color: #ffffff;
   --ground-back: #171717;
+  --prime-color: #bea87b;
+  --prime-color-light: color-mix(in srgb, var(--prime-color) 100%, #fff 30%);
+  --prime-color-dark: color-mix(in srgb, var(--prime-color) 90%, #000 100%);
 }
 
 @font-face {
@@ -30,3 +33,4 @@ body {
   color: var(--main-color);
   background-color: var(--ground-back);
 }
+

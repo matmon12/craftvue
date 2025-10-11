@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import { CSSProperties, computed } from 'vue'
-import type { IconProps, IconsMap, IconName } from './CIcon.types'
+import { CSSProperties, computed, defineSlots } from 'vue'
+import type { IconProps, IconsMap, IconName, IconSlots } from './CIcon.types'
 import { addUnit } from '@/utils'
 import * as icons from '@craftvue/icons'
 
@@ -16,6 +16,7 @@ defineOptions({
   inheritAttrs: false,
 })
 
+defineSlots<IconSlots>()
 const props = defineProps<IconProps>()
 
 // карта иконок вида {close: CloseIcon} для простого указания названия иконки

@@ -1,5 +1,5 @@
 import * as icons from '@craftvue/icons'
-import { Component } from 'vue'
+import { Component, VNode } from 'vue'
 
 export interface IconProps {
   /** Название иконки для динамического импорта */
@@ -15,3 +15,7 @@ export type IconName = {
 }[keyof typeof icons]
 
 export type IconsMap = Record<IconName, Component>
+
+export interface IconSlots {
+  default(): VNode[]
+}

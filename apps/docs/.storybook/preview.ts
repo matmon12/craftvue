@@ -17,7 +17,7 @@ const preview: Preview = {
     backgrounds: {
       options: {
         dark: { name: 'Dark', value: '#171717' },
-        light: {
+        ligt: {
           name: 'Light',
           value: '#ffeabfff',
         },
@@ -31,7 +31,7 @@ const preview: Preview = {
         order: ['Configuration', 'Design System', 'Components', '*'],
       },
       initialActive: 'Configuration',
-      panelPosition: 'right'
+      panelPosition: 'right',
     },
   },
   initialGlobals: {
