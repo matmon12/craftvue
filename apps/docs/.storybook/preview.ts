@@ -1,6 +1,5 @@
 import type { Preview } from '@storybook/vue3-vite'
 import craftTheme from './craftTheme'
-
 import '../src/index.scss'
 
 const preview: Preview = {
@@ -16,12 +15,13 @@ const preview: Preview = {
     },
     backgrounds: {
       options: {
-        dark: { name: 'Dark', value: '#171717' },
+        dark: { name: 'Dark', value: '#0e0e0e' },
         ligt: {
           name: 'Light',
           value: '#ffeabfff',
         },
       },
+      defaultValue: 'dark'
     },
     a11y: {
       test: 'todo',
@@ -32,6 +32,7 @@ const preview: Preview = {
       },
       initialActive: 'Configuration',
       panelPosition: 'right',
+      navSize: 240,
     },
   },
 }

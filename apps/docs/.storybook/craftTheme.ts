@@ -12,27 +12,35 @@ export default create({
   fontCode: 'monospace',
 
   // Цвета
-  colorPrimary: '#41b883',
-  colorSecondary: '#a1a1aa',
+  colorPrimary: '#bea87b',
+  colorSecondary: '#bea87b',
 
   // Text colors
   textColor: '#ffffff',
   textInverseColor: '#000000',
 
   // UI
-  appBg: '#1d2924',
-  // appContentBg: '#171717',
-  appBorderColor: '#404040',
+  appBg: '#171717',
+  appContentBg: '#171717',
+  appPreviewBg: '#0e0e0e',
+  appBorderColor: '#3f3f46',
   appBorderRadius: 6,
 
   // Toolbar default and active colors
-  barTextColor: '#999999',
-  barSelectedColor: '#41b883',
-  barBg: '#27272a',
+  barTextColor: '#a1a1aa',
+  barSelectedColor: '#bea87b',
+  barHoverColor: '#bea87b',
+  barBg: '#171717',
 
   // Form colors
-  inputBg: '#2a2a2a',
-  inputBorder: '#333333',
+  inputBg: '#262626',
+  inputBorder: 'transparent',
   inputTextColor: '#ffffff',
-  inputBorderRadius: 4,
+  inputBorderRadius: 6,
+
+  buttonBg: '#262626',
+  buttonBorder: 'transparent',
+
+  booleanBg: '#262626',
+  booleanSelectedBg: '#bea87b',
 })

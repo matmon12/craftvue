@@ -183,6 +183,20 @@ const meta = {
       },
     },
   },
+  decorators: [
+    () => ({
+      template: `
+    <div
+      style="
+        --tabs-tablist-background: #0e0e0e;
+        --tabs-nav-button-background: #0e0e0e;
+        --tabs-tabpanel-background: #0e0e0e;
+      "
+    >
+      <story/>
+    </div>`,
+    }),
+  ],
 } satisfies Meta<AllTabsArgs>
 
 export default meta
