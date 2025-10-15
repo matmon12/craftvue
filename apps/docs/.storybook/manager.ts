@@ -1,22 +1,24 @@
 import { addons, type State, type LeafEntry } from 'storybook/manager-api'
 import craftTheme from './craftTheme'
 import { renderLabel } from './render-label'
-import { STORY_RENDERED } from '@storybook/core-events'
+import {
+  STORY_RENDERED,
+  STORY_CHANGED,
+  STORY_PREPARED,
+  SELECT_STORY,
+  SET_CURRENT_STORY,
+} from '@storybook/core-events'
 
 addons.register('TitleAddon', (api) => {
   const TITLE_PAGE = 'CraftVue'
   const CATEGORIES_ROOT = ['Components/', 'Design System/']
-  let interval: NodeJS.Timeout | undefined = undefined
   const setTitle = () => {
-    clearTimeout(interval)
-
     let title: string
     let name: string
     let storyData: LeafEntry | null = null
 
     try {
       storyData = api.getCurrentStoryData()
-      console.log(storyData.title)
     } catch (e) {
       console.error(e)
     }
@@ -39,11 +41,21 @@ addons.register('TitleAddon', (api) => {
     if (document.title !== title) {
       document.title = title
     }
-
-    interval = setTimeout(setTitle, 100)
   }
 
   setTitle()
+  api.on(STORY_CHANGED, () => {
+    setTitle()
+  })
+  api.on(STORY_PREPARED, () => {
+    setTitle()
+  })
+  api.on(SELECT_STORY, () => {
+    setTitle()
+  })
+  api.on(SET_CURRENT_STORY, () => {
+    setTitle()
+  })
   api.on(STORY_RENDERED, () => {
     setTitle()
   })

@@ -1,0 +1,36 @@
+import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks'
+import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+
+export const codes = {
+  download: `
+    # Using npm
+    npm install carftvue
+
+    # Using yarn
+    yarn add craftvue
+
+    # Using pnpm
+    pnpm add craftvue
+
+`
+}
+
+<Meta title="Getting Started" />
+
+<Title>Установка CraftVue</Title>
+
+<Subtitle>Настройка</Subtitle>
+
+&nbsp;
+
+## Скачивание
+
+<p>Библиотеку можно скачать через любой пакетный менеджер</p>
+
+<CustomSource code={codes.download} actions={['copy']} parser="babel" language="" />
+
+<style>
+  {`
+
+  `}
+</style>
