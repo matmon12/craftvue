@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "craftvue": "workspace:*",
     "@craftvue/icons": "workspace:*",
+    "craftvue": "workspace:*",
     "vue": "^3.5.18"
   },
   "devDependencies": {

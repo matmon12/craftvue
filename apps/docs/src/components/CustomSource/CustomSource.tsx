@@ -12,6 +12,7 @@ import { format } from 'prettier'
 import prettierPluginBabel from 'prettier/plugins/babel'
 import prettierPluginEstree from 'prettier/plugins/estree'
 import prettierPluginHtml from 'prettier/plugins/html'
+import prettierPluginMarkdown from 'prettier/plugins/markdown'
 import * as parserPostCSS from 'prettier/parser-postcss'
 import type { Options } from 'prettier'
 import SyntaxHighlighter from 'react-syntax-highlighter'
@@ -58,13 +59,23 @@ export const CustomSource = ({
 
   const formatCode = async (code: string): Promise<string> => {
     try {
+      if (language === 'bash' || parser === 'bash') {
+        return code.trim()
+      }
+
       const prettierOptions: Options = {
         semi: true,
         singleQuote: true,
         parser: parser,
         htmlWhitespaceSensitivity: 'ignore',
         vueIndentScriptAndStyle: true,
-        plugins: [prettierPluginBabel, prettierPluginEstree, prettierPluginHtml, parserPostCSS],
+        plugins: [
+          prettierPluginBabel,
+          prettierPluginEstree,
+          prettierPluginHtml,
+          prettierPluginMarkdown,
+          parserPostCSS,
+        ],
       }
 
       let formattedCode = await format(code, prettierOptions)

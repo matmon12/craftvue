@@ -1,19 +1,6 @@
 import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks'
 import { CustomSource } from 'docs/components/CustomSource/CustomSource'
-
-export const codes = {
-  download: `
-    # Using npm
-    npm install carftvue
-
-    # Using yarn
-    yarn add craftvue
-
-    # Using pnpm
-    pnpm add craftvue
-
-`
-}
+import configCodeTexts from './codes'
 
 <Meta title="Getting Started" />
 
@@ -27,7 +14,43 @@ export const codes = {
 
 <p>Библиотеку можно скачать через любой пакетный менеджер</p>
 
-<CustomSource code={codes.download} actions={['copy']} parser="babel" language="" />
+<CustomSource code={configCodeTexts.download} actions={['copy']} parser="bash" language="apache" />
+
+&nbsp;
+
+## Подключение
+
+### Базовое использование
+
+<p>
+  Для использования компонентов в проекте необходимо их импортировать из подключенной библиотеки
+  `craftvue`
+</p>
+
+<CustomSource code={configCodeTexts.basicUsage} actions={['copy']} />
+
+### Подкючение по-отдельности
+
+<p>
+  Также компоненты можно импортировать отдельно по мере необходимости, для контроля размера
+  подключаемых пакетов.
+</p>
+
+<CustomSource code={configCodeTexts.selectiveImport} actions={['copy']} />
+
+### Глобальная регистрация
+
+<p>
+  Компоненты можно также регистрировать глобально в `main.ts(js)` и использовать в проекте без
+  дополнительного импорта.
+</p>
+
+<CustomSource
+  code={configCodeTexts.globalReg}
+  actions={['copy']}
+  parser="babel"
+  language="typescript"
+/>
 
 <style>
   {`

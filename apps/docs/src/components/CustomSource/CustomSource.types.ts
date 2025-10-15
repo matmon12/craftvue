@@ -84,9 +84,9 @@ export interface CustomSourceProps {
   /** Передача кода напрямую */
   code?: string
   /** Язык кода (для подсветки) */
-  language?: 'javascript' | 'typescript' | 'xml'
+  language?: 'javascript' | 'typescript' | 'xml' | 'markdown' | 'tsx' | 'bash' | 'apache'
   /** Парсер кода для Prettier */
-  parser: 'babel' | 'vue'
+  parser?: 'babel' | 'vue' | 'markdown' | 'html' | 'bash'
 }
 
 // Тип для кода историй
