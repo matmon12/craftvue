@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.1](https://www.npmjs.com/package/craftvue/v/1.1.1) (2025-10-16)
+
+#### Bug fixes
+
+- Changed dependency `@craftvue/icons` to `1.1.3`
+
 ## [1.1.0](https://www.npmjs.com/package/craftvue/v/1.1.0) (2025-10-15)
 
 #### Features

@@ -7,10 +7,7 @@
       <h2>Button</h2>
       <CButton label="123"></CButton>
       <CFormItem label="Email" required for="email">
-        <CInput v-model="input">
-          <template #suffix>
-            <p v-if="!!input">dfgdfg</p>
-          </template>
+        <CInput v-model="input" clearable>
         </CInput>
       </CFormItem>
       <CTabs value="1">
@@ -21,9 +18,9 @@
         </CTabList>
       </CTabs>
 
-      <CIcon name="add" />
+      <CIcon name="edit" />
 
-      <!-- <HomeIcon /> -->
+      <EnvelopeIcon />
 
       <!-- <CloseIcon /> -->
       <!-- <TestVue>123</TestVue> -->
@@ -33,10 +30,10 @@
 
 <script setup lang="ts">
 // import CloseIcon from '@craftvue/icons/close'
-import { CButton, CInput, CTab, CTabList, CTabs } from 'craftvue'
+// import { CButton, CInput, CTab, CTabList, CTabs, CFormItem, CIcon } from 'craftvue'
 
-// import { CButton, CInput, CTab, CTabList, CTabs, CFormItem, CIcon } from 'craftvue-dev'
-// import { HomeIcon } from 'icons-dev'
+import { CButton, CInput, CTab, CTabList, CTabs, CFormItem, CIcon } from 'craftvue-dev'
+// import { EnvelopeIcon } from 'icons-dev'
 
 const input = ref('')
 </script>
