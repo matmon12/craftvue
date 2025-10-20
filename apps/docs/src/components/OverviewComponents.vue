@@ -40,7 +40,7 @@ import { SearchIcon } from '@craftvue/icons'
 import { getImageUrl } from 'docs/utils'
 import { ref } from 'vue'
 
-const basePath = import.meta.env.PROD ? '/craftvue' : ''
+// const basePath = import.meta.env.PROD ? '/craftvue' : ''
 
 interface Component {
   title: string
