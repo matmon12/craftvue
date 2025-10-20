@@ -16,7 +16,7 @@
       </div>
       <ul class="group__list">
         <li v-for="component in group.items" :key="component.title" class="group__item">
-          <a :href="`${basePath}${component.path}`" class="group__link">
+          <a :href="component.path" class="group__link">
             <h1 class="group__item-title">
               {{ component.title }}
             </h1>
@@ -39,8 +39,6 @@ import { CBadge, CInput } from 'craftvue'
 import { SearchIcon } from '@craftvue/icons'
 import { getImageUrl } from 'docs/utils'
 import { ref } from 'vue'
-
-// const basePath = import.meta.env.PROD ? '/craftvue' : ''
 
 interface Component {
   title: string
