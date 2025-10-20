@@ -23,6 +23,6 @@ const config: StorybookConfig = {
   features: {
     interactions: false,
   },
-  staticDirs: ['./public'],
+  staticDirs: ['./public', '../public'],
 }
 export default config
