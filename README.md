@@ -3,11 +3,11 @@
 
 &nbsp;
 
-[![npm version](https://img.shields.io/npm/v/craftvue?color=42d392)](https://www.npmjs.com/package/craftvue)
-[![npm downloads](https://img.shields.io/npm/dm/craftvue?color=4cc71e)](https://www.npmjs.com/package/craftvue)
-[![GitHub license](https://img.shields.io/github/license/matmon12/craftvue?color=56BEB8)](https://github.com/matmon12/craftvue/blob/main/LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?color=3178c6)](https://www.typescriptlang.org/)
-[![Vue 3](https://img.shields.io/badge/Vue-3.x-green?color=4fc08d)](https://vuejs.org/)
+[![npm version](https://img.shields.io/npm/v/craftvue?color=ffffff)](https://www.npmjs.com/package/craftvue)
+[![npm downloads](https://img.shields.io/npm/dm/craftvue?color=E2D5B9)](https://www.npmjs.com/package/craftvue)
+[![GitHub license](https://img.shields.io/github/license/matmon12/craftvue?color=D1C2A1)](https://github.com/matmon12/craftvue/blob/main/LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?color=bea87b)](https://www.typescriptlang.org/)
+[![Vue 3](https://img.shields.io/badge/Vue-3.x-green?color=B59A6A)](https://vuejs.org/)
 
 [📚 Documentation](https://matmon12.github.io/craftvue/) • [🎨 Storybook](https://matmon12.github.io/craftvue/) • [💾 npm](https://www.npmjs.com/package/craftvue)
 
