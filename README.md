@@ -9,7 +9,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?color=bea87b)](https://www.typescriptlang.org/)
 [![Vue 3](https://img.shields.io/badge/Vue-3.x-green?color=B59A6A)](https://vuejs.org/)
 
-[📚 Documentation](https://matmon12.github.io/craftvue/) • [🎨 Storybook](https://matmon12.github.io/craftvue/) • [💾 npm](https://www.npmjs.com/package/craftvue)
+[Documentation](https://matmon12.github.io/craftvue/) • [Storybook](https://matmon12.github.io/craftvue/) • [NPM](https://www.npmjs.com/package/craftvue)
 
 </div>
 
