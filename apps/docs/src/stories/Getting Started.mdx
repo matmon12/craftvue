@@ -1,59 +1,89 @@
-import { Meta, Title, Subtitle } from '@storybook/addon-docs/blocks'
+import { Meta, Title, Subtitle, TableOfContents, Story } from '@storybook/addon-docs/blocks'
 import { CustomSource } from 'docs/components/CustomSource/CustomSource'
 import configCodeTexts from './codes'
+import * as EmptyStories from './Empty.stories.ts'
 
 <Meta title="Getting Started" />
 
-<Title>Установка CraftVue</Title>
+<div className='sb-docs-wrapper' >
+  <div className='sb-docs-content'>
 
-<Subtitle>Настройка</Subtitle>
+    <Title>Установка CraftVue</Title>
 
-&nbsp;
+    <Subtitle>Настройка CraftVue в проектах на Vite: установка, подключение и базовая стилизация.</Subtitle>
 
-## Скачивание
+    &nbsp;
 
-<p>Библиотеку можно скачать через любой пакетный менеджер</p>
+    ## Скачивание
 
-<CustomSource code={configCodeTexts.download} actions={['copy']} parser="bash" language="apache" />
+    Библиотеку можно скачать через любой пакетный менеджер
 
-&nbsp;
+    <CustomSource code={configCodeTexts.download} actions={['copy']} parser="bash" language="apache" />
 
-## Подключение
+    &nbsp;
 
-### Базовое использование
+    ## Подключение
 
-<p>
-  Для использования компонентов в проекте необходимо их импортировать из подключенной библиотеки
-  `craftvue`
-</p>
+    ### Базовое использование
 
-<CustomSource code={configCodeTexts.basicUsage} actions={['copy']} />
+    Для использования компонентов в проекте необходимо их импортировать из подключенной библиотеки
+    `craftvue`
 
-### Подкючение по-отдельности
+    Также компоненты можно импортировать отдельно по мере необходимости, для контроля размера
+    подключаемых пакетов.
 
-<p>
-  Также компоненты можно импортировать отдельно по мере необходимости, для контроля размера
-  подключаемых пакетов.
-</p>
+    <CustomSource code={configCodeTexts.basicUsage} actions={['copy']} />
 
-<CustomSource code={configCodeTexts.selectiveImport} actions={['copy']} />
+    ### Глобальная регистрация
 
-### Глобальная регистрация
+    Компоненты можно также регистрировать глобально в `main.ts(js)` и использовать в проекте без
+    дополнительного импорта.
 
-<p>
-  Компоненты можно также регистрировать глобально в `main.ts(js)` и использовать в проекте без
-  дополнительного импорта.
-</p>
+    <CustomSource
+      code={configCodeTexts.globalReg}
+      actions={['copy']}
+      parser="babel"
+      language="typescript"
+    />
 
-<CustomSource
-  code={configCodeTexts.globalReg}
-  actions={['copy']}
-  parser="babel"
-  language="typescript"
-/>
+    ### Автоимпорт (рекомендуется)
 
-<style>
-  {`
+    Для максимального удобства разработки рекомендуется настроить автоимпорт компонентов. Это позволит
+    использовать компоненты без явного импорта в каждом файле.
 
-  `}
-</style>
+    Установите необходимые плагины и настройте Vite:
+
+    <CustomSource
+      code={configCodeTexts.autoImport}
+      actions={['copy']}
+      parser="babel"
+      language="typescript"
+    />
+
+    &nbsp;
+
+    ## Стилизация
+
+    По умолчанию компоненты импортируются без стилизации. Стили подключаются отдельно в `main.ts(js)`.
+
+    <CustomSource
+      code={configCodeTexts.styles}
+      actions={['copy']}
+      parser="babel"
+      language="typescript"
+    />
+
+    <Story of={EmptyStories.Basic} />
+
+  </div>
+
+  <div>
+    <TableOfContents
+      className='sb-docs-toc sb-unstyled'
+      title='Содержание'
+      contentsSelector='.sb-docs-content'
+      headingSelector="h2, h3"
+      ignoreSelector='.sbdocs-subtitle'
+    />
+  </div>
+</div>

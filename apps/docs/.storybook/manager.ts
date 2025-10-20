@@ -38,6 +38,7 @@ addons.register('TitleAddon', (api) => {
       title = `${name} ⋅ ${TITLE_PAGE}`
     }
 
+
     if (document.title !== title) {
       document.title = title
     }

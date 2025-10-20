@@ -9,16 +9,14 @@ export const HexagonsIcon = () => {
       viewBox="0 0 24 24"
       className="sidebar-icon"
     >
-      <g
+      <path
         fill="none"
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="1.5"
-      >
-        <path d="M5 12H3l9-9l9 9h-2M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" />
-        <path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6" />
-      </g>
+        d="M4 18v-5l4-2l4 2v5l-4 2zm4-7V6l4-2l4 2v5m-4 2l4-2l4 2v5l-4 2l-4-2"
+      />
     </svg>
   )
 }

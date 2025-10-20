@@ -8,11 +8,13 @@ import { FolderIcon } from './components/icons/FolderIcon'
 import { HexagonsIcon } from './components/icons/HexagonsIcon'
 import { HomeIcon } from './components/icons/HomeIcon'
 import { PaletteIcon } from './components/icons/PaletteIcon'
+import { RocketIcon } from './components/icons/RocketIcon'
 
 const ICONS_MAP = {
-  'Getting Started': <HomeIcon />,
+  Introduction: <HomeIcon />,
+  'Getting Started': <RocketIcon />,
   Icons: <EyeIcon />,
-  Components: <HexagonsIcon />,
+  Overview: <HexagonsIcon />,
   Theming: <PaletteIcon />,
   Changelog: <FileIcon />,
 }
@@ -35,7 +37,7 @@ const renderIcon = (item) => {
       return <BookmarkIcon />
     }
     case 'group': {
-      return <ComponentsIcon/>
+      return <ComponentsIcon />
     }
     default:
       return null

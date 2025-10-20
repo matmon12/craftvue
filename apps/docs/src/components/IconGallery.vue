@@ -1,54 +1,85 @@
 <template>
   <div class="gallery">
-    <div v-for="(IconComponent, name) in icons" :key="name" class="gallery__item">
-      <CIcon class="gallery__item-icon">
-        <component :is="IconComponent" />
-      </CIcon>
-      <span class="gallery__item-text">{{ name.replace('Icon', '').toLowerCase() }}</span>
-    </div>
+    <CInput v-model="search" placeholder="Поиск иконки" class="gallery-input" />
+
+    <ul ref="parent" class="gallery__list">
+      <template v-for="(IconComponent, name) in icons" :key="name">
+        <li v-if="showIcon(name)" class="gallery__item">
+          <CIcon class="gallery__item-icon">
+            <component :is="IconComponent" />
+          </CIcon>
+          <p class="gallery__item-text">
+            {{ removeEntryName(name)[0] }}<span class="text-highlighted">{{ search }}</span
+            >{{ removeEntryName(name)[1] }}
+          </p>
+        </li>
+      </template>
+    </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-import { CIcon } from 'craftvue'
+import { ref } from 'vue'
+import { CIcon, CInput } from 'craftvue'
 import * as icons from '@craftvue/icons'
+import { useAutoAnimate } from '@formkit/auto-animate/vue'
+
+const [parent] = useAutoAnimate()
+
+const search = ref('')
+
+const formateName = (name: string): string => name.replace('Icon', '').toLowerCase()
+const showIcon = (name: string): boolean =>
+  !search.value || formateName(name).includes(search.value)
+const removeEntryName = (name: string) => formateName(name).replace(search.value, ' ').split(' ')
 </script>
 
 <style scoped lang="scss">
 .gallery {
   padding: 20px;
+  background-color: var(--ground-back);
+}
+.gallery-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.gallery__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 15px;
-  background-color: var(--ground-back);
+}
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #414141;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #ffffff0a;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #414141;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #ffffff0a;
-    transition:
-      border-color 0.3s,
-      box-shadow 0.3s;
-
-    &:hover {
-      border-color: #41b883;
-      box-shadow: 0 0 10px #525252;
-    }
+  &:hover {
+    border-color: var(--prime-color);
+    box-shadow: 0 0 10px #525252;
   }
+}
 
-  &__item-icon {
-    font-size: 32px;
-    margin-bottom: 5px;
-  }
+.gallery__item-icon {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
 
-  &__item-text {
-    font-size: 12px;
-    color: #8f8f8f;
-    word-break: break-word;
+.gallery__item-text {
+  font-size: 12px;
+  color: #8f8f8f;
+  word-break: break-word;
+
+  .text-highlighted{
+    font-weight: 500;
+    color: var(--prime-color-light);
   }
 }
 </style>

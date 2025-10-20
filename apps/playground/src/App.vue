@@ -18,7 +18,7 @@
         </CTabList>
       </CTabs>
 
-      <CIcon name="edit" />
+      <CIcon name="edit" color="var(--purple-400)" />
 
       <EnvelopeIcon />
 

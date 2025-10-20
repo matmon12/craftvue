@@ -21,16 +21,26 @@ const preview: Preview = {
           value: '#ffeabfff',
         },
       },
-      defaultValue: 'dark'
+      defaultValue: 'dark',
     },
     a11y: {
       test: 'todo',
     },
     options: {
       storySort: {
-        order: ['Configuration', 'Design System', 'Components', '*'],
+        order: [
+          'Introduction',
+          'Getting Started',
+          'Overview',
+          'Theming',
+          'Changelog',
+          'Icons',
+          'Design System',
+          'Components',
+          '*',
+        ],
       },
-      initialActive: 'Configuration',
+      initialActive: 'Introduction',
       panelPosition: 'right',
       navSize: 240,
     },
