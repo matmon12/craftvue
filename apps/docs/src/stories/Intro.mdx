@@ -1,4 +1,5 @@
 import { Meta, Subtitle, Title } from '@storybook/addon-docs/blocks'
+import { BASE_PATH } from 'docs/constants'
 
 <Meta title="Introduction" />
 
@@ -29,7 +30,7 @@ import { Meta, Subtitle, Title } from '@storybook/addon-docs/blocks'
     </div>
 
     <div className='config-intro__links'>
-      <a href='/?path=/docs/getting-started--docs' className='config-intro__link docs'>
+      <a href={`${BASE_PATH}/?path=/docs/getting-started--docs`} className='config-intro__link docs'>
         Get Started
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414"/></g></svg>
       </a>
@@ -49,7 +50,7 @@ import { Meta, Subtitle, Title } from '@storybook/addon-docs/blocks'
   <p className='config-menu__total'>С чего начать?</p>
 
   <div className="config-menu sb-unstyled">
-    <a href='/?path=/docs/components-button--docs' className="config-block config-menu__item">
+    <a href={`${BASE_PATH}/?path=/docs/components-button--docs`} className="config-block config-menu__item">
       <div className="config-menu__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8.885 12.308h6.23q.213 0 .357-.144t.144-.357t-.144-.356t-.356-.143H8.885q-.213 0-.357.144q-.143.144-.143.356q0 .213.143.357t.357.143m0 2.769h6.23q.213 0 .357-.144t.144-.357t-.144-.356t-.356-.143H8.885q-.213 0-.357.144q-.143.144-.143.357t.143.356t.357.143m0 2.77h3.23q.213 0 .357-.145t.144-.356t-.144-.356t-.356-.144H8.885q-.213 0-.357.144q-.143.144-.143.357t.143.356t.357.143M6.615 21q-.69 0-1.152-.462T5 19.385V4.615q0-.69.463-1.152T6.616 3h7.213q.331 0 .632.13t.518.349L18.52 7.02q.217.218.348.518t.131.632v11.214q0 .69-.463 1.153T17.385 21zM18 8h-2.788q-.505 0-.859-.353Q14 7.293 14 6.789V4H6.616q-.231 0-.424.192T6 4.615v14.77q0 .23.192.423t.423.192h10.77q.23 0 .423-.192t.192-.424zM6 4v4zv16z"/></svg>
       </div>
@@ -58,7 +59,7 @@ import { Meta, Subtitle, Title } from '@storybook/addon-docs/blocks'
         <p className='config-menu__description'>Изучите компонент с помощью подробной документации.</p>
       </div>
     </a>
-    <a href='/?path=/docs/overview--docs' className="config-block config-menu__item">
+    <a href={`${BASE_PATH}/?path=/docs/overview--docs`} className="config-block config-menu__item">
       <div className="config-menu__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M12 4.467c0-.405.262-.75.559-1.027c.276-.257.441-.584.441-.94c0-.828-.895-1.5-2-1.5s-2 .672-2 1.5c0 .362.171.694.456.953c.29.265.544.6.544.994a.97.97 0 0 1-1.024.974a40 40 0 0 1-3.014-.306a.75.75 0 0 0-.847.847q.21 1.49.306 3.014A.97.97 0 0 1 4.447 10c-.393 0-.729-.253-.994-.544C3.194 9.17 2.862 9 2.5 9C1.672 9 1 9.895 1 11s.672 2 1.5 2c.356 0 .683-.165.94-.441c.276-.297.622-.559 1.027-.559a.997.997 0 0 1 1.004 1.03a40 40 0 0 1-.319 3.734a.75.75 0 0 0 .64.842q1.575.219 3.184.318A.97.97 0 0 0 10 16.948c0-.394-.254-.73-.545-.995C9.171 15.693 9 15.362 9 15c0-.828.895-1.5 2-1.5s2 .672 2 1.5c0 .356-.165.683-.441.94c-.297.276-.559.622-.559 1.027a1 1 0 0 0 1.03 1.005q2.007-.075 3.961-.337a.75.75 0 0 0 .644-.644q.263-1.954.337-3.961A1 1 0 0 0 16.967 12c-.405 0-.75.262-1.027.559c-.257.276-.584.441-.94.441c-.828 0-1.5-.895-1.5-2s.672-2 1.5-2c.362 0 .694.17.953.455c.265.291.601.545.995.545a.97.97 0 0 0 .976-1.024a41 41 0 0 0-.318-3.184a.75.75 0 0 0-.842-.64q-1.842.247-3.734.319A.997.997 0 0 1 12 4.467"/></svg>
       </div>
@@ -67,7 +68,7 @@ import { Meta, Subtitle, Title } from '@storybook/addon-docs/blocks'
         <p className='config-menu__description'>Смотрите полный список доступных компонентов. </p>
       </div>
     </a>
-    <a href='/?path=/story/components-button-button--basic' className="config-block config-menu__item">
+    <a href={`${BASE_PATH}/?path=/story/components-button-button--basic`} className="config-block config-menu__item">
       <div className="config-menu__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1"><path stroke-width="1.5" d="M14.54 2v2.486c0 1.748 0 2.622.215 3.461c.213.84.633 1.61 1.472 3.15l1.136 2.088c2.138 3.926 3.207 5.89 2.33 7.345l-.014.022C18.79 22 16.526 22 12 22s-6.79 0-7.68-1.448l-.013-.022c-.877-1.455.192-3.419 2.33-7.345l1.136-2.088c.84-1.54 1.258-2.31 1.472-3.15s.214-1.713.214-3.46V2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 16.002L9.009 16M15 18.002l.009-.002"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 2h8"/><path stroke-linecap="round" stroke-width="1.5" d="M7.5 11.556c1-1.153 2.6-.322 4.5.762c2.5 1.426 4 .332 4.5-.703"/></g></svg>
       </div>
@@ -76,7 +77,7 @@ import { Meta, Subtitle, Title } from '@storybook/addon-docs/blocks'
         <p className='config-menu__description'>Тестируйте различные состояния компонентов с помощью Storybook.</p>
       </div>
     </a>
-    <a href='/?path=/docs/icons--docs' className="config-block config-menu__item">
+    <a href={`${BASE_PATH}/?path=/docs/icons--docs`} className="config-block config-menu__item">
       <div className="config-menu__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6.5a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0M2.5 21h8l-4-7zM14 3l7 7m-7 0l7-7m-7 11h7v7h-7z"/></svg>
       </div>
