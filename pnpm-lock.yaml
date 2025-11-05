@@ -158,8 +158,8 @@ importers:
   packages/craftvue:
     dependencies:
       '@craftvue/icons':
-        specifier: workspace:^
-        version: link:../icons
+        specifier: 1.2.0
+        version: 1.2.0(vue@3.5.22(typescript@5.8.3))
       '@vueuse/core':
         specifier: ^13.9.0
         version: 13.9.0(vue@3.5.22(typescript@5.8.3))
@@ -245,6 +245,11 @@ packages:
 
   '@bufbuild/protobuf@2.9.0':
     resolution: {integrity: sha512-rnJenoStJ8nvmt9Gzye8nkYd6V22xUAnu4086ER7h1zJ508vStko4pMvDeQ446ilDTFpV5wnoc5YS7XvMwwMqA==}
+
+  '@craftvue/icons@1.2.0':
+    resolution: {integrity: sha512-UUK+qRwBwQyq9LsGRLcIo9I8FCP8PscRGKiJ54m1ygUPZpSlIQD7W6cJxZ8YcJiWAqEbKOjfqPGhVl7iPtuBaw==}
+    peerDependencies:
+      vue: ^3.4.0
 
   '@esbuild/aix-ppc64@0.25.10':
     resolution: {integrity: sha512-0NFWnA+7l41irNuaSVlLfgNT12caWJVLzp5eAVhZ0z1qpxbockccEt3s+149rE64VUI3Ml2zt8Nv5JVc4QXTsw==}
@@ -3207,6 +3212,10 @@ snapshots:
   '@bcoe/v8-coverage@1.0.2': {}
 
   '@bufbuild/protobuf@2.9.0': {}
+
+  '@craftvue/icons@1.2.0(vue@3.5.22(typescript@5.8.3))':
+    dependencies:
+      vue: 3.5.22(typescript@5.8.3)
 
   '@esbuild/aix-ppc64@0.25.10':
     optional: true

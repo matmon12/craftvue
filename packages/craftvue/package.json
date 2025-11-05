@@ -1,6 +1,6 @@
 {
   "name": "craftvue",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": false,
   "author": "Craft",
   "description": "UI Components for Vue.js",
@@ -108,7 +108,7 @@
     "vue": "^3.4.0"
   },
   "dependencies": {
-    "@craftvue/icons": "workspace:^",
+    "@craftvue/icons": "1.2.0",
     "@vueuse/core": "^13.9.0",
     "lodash": "^4.17.21"
   },

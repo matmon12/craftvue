@@ -150,7 +150,6 @@ const rootElRef = computed<HTMLElement | null>(() => {
   if (!rootEl) return null
 
   if ('$el' in rootEl && rootEl.$el instanceof HTMLElement) {
-    console.log(rootEl.$el)
     return rootEl.$el
   }
 
