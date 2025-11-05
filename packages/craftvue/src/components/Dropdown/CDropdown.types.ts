@@ -1,8 +1,8 @@
-import { VNode } from 'vue'
+import { VNode, ComponentPublicInstance } from 'vue'
 
 export interface DropdownProps {
   show?: boolean
-  rootEl: HTMLElement | null
+  rootEl: HTMLElement | ComponentPublicInstance | null
   placement?: 'bottom' | 'top'
   align?: 'start' | 'center' | 'end'
   sameWidth?: boolean

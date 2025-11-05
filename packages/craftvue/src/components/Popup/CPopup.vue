@@ -136,7 +136,6 @@ const popupClasses = computed<PopupClasses>(() => [
   attrs.class,
 ])
 
-const rootElRef = computed(() => props.rootEl || triggerRef.value)
 const showState = computed<boolean>(() => (isControlled.value ? props.show! : internalShow.value))
 const isControlled = computed<boolean>(() => props.show !== undefined)
 const teleportTarget = computed<HTMLElement | string>(() => props.teleportTo || 'body')
@@ -146,6 +145,21 @@ const effectiveOffset = computed<number>(() =>
 )
 const arrowStyle = computed<CSSProperties>(() => calculateArrowPosition())
 const hideDelayFinal = computed(() => props.hideDelay || (props.autoHide ? 0 : 150))
+const rootElRef = computed<HTMLElement | null>(() => {
+  const rootEl = props.rootEl || triggerRef.value
+  if (!rootEl) return null
+
+  if ('$el' in rootEl && rootEl.$el instanceof HTMLElement) {
+    console.log(rootEl.$el)
+    return rootEl.$el
+  }
+
+  if (rootEl instanceof HTMLElement) {
+    return rootEl
+  }
+
+  return null
+})
 
 const openPopup = () => {
   if (isControlled.value) {

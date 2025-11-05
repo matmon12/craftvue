@@ -2,6 +2,12 @@
 
 ## [1.2.1](https://www.npmjs.com/package/craftvue/v/1.2.1) (2025-11-05)
 
+#### Bug fixes
+
+- Added support for component refs in `CPopup` `rootEl` prop
+
+## [1.2.0](https://www.npmjs.com/package/craftvue/v/1.2.0) (2025-11-05)
+
 #### Features
 
 - Added `CPopup`, `CDropdown`, `CTooltip`, `CSelect` components

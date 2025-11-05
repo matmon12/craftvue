@@ -1,9 +1,9 @@
-import { VNode } from 'vue'
+import { VNode, ComponentPublicInstance } from 'vue'
 
 export interface TooltipProps {
   content?: string
   show?: boolean
-  rootEl?: HTMLElement | null
+  rootEl?: HTMLElement | ComponentPublicInstance | null
   placement?: 'bottom' | 'top' | 'left' | 'right'
   align?: 'start' | 'center' | 'end'
   trigger?: 'hover' | 'click'

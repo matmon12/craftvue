@@ -1,4 +1,4 @@
-import { VNode } from 'vue'
+import { VNode, ComponentPublicInstance } from 'vue'
 
 export interface PopupPosition {
   left: number
@@ -14,7 +14,7 @@ export interface ElementSize {
 
 export interface PopupProps {
   show?: boolean
-  rootEl?: HTMLElement | null
+  rootEl?: HTMLElement | ComponentPublicInstance | null
   placement?: 'bottom' | 'top' | 'left' | 'right'
   align?: 'start' | 'center' | 'end'
   trigger?: 'hover' | 'click'
