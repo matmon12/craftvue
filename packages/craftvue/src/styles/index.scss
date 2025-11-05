@@ -14,5 +14,8 @@
 // 3. Составные компоненты (импортируются после базовых)
 @use '../components/Button/CButton.style.scss' as *;
 @use '../components/Badge/CBadge.style.scss' as *;
+@use '../components/Popup/CPopup.style.scss' as *;
 @use '../components/FormItem/CFormItem.style.scss' as *;
+@use '../components/Select/CSelect.style.scss' as *;
 @use '../components/Tabs/CTabs.style.scss' as *;
+@use '../components/Tooltip/CTooltip.style.scss' as *;

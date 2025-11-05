@@ -4,7 +4,7 @@ Icon components for [CraftVue](https://github.com/matmon12/craftvue) library.
 
 ## Installation
 
-```bash 
+```bash
 npm install @craftvue/icons
 # or
 yarn add @craftvue/icons
@@ -13,7 +13,22 @@ pnpm add @craftvue/icons
 ```
 
 ## Usage
- 
+
+### With CIcon component (Recommended)
+
+The easiest way to use icons is through the `CIcon` component from `craftvue`:
+
+```vue
+<template>
+  <CIcon name="search" />
+  <CIcon name="close" size="24" color="#ff0000" />
+</template>
+
+<script setup>
+  import { CIcon } from 'craftvue'
+</script>
+```
+
 ### Import all icons
 
 ```typescript
@@ -24,25 +39,9 @@ import { SearchIcon, CloseIcon, SpinnerIcon } from '@craftvue/icons'
 
 ```typescript
 import { SearchIcon } from '@craftvue/icons/search'
-import { CloseIcon } from "@craftvue/icons/close"
-import { SpinnerIcon } from "@craftvue/icons/spinner"
+import { CloseIcon } from '@craftvue/icons/close'
+import { SpinnerIcon } from '@craftvue/icons/spinner'
 ```
-
-## Available icons
-
-- **SearchIcon** - Search icon
-- **CloseIcon** - Close icon
-- **SpinnerIcon** - Loading spinner
-- **EyeIcon** - Eye icon
-- **EyeSlashIcon** - Eye with slash icon
-- **NextArrowIcon** - Next arrow icon
-- **PrevArrowIcon** - Previous arrow icon
-- **CheckIcon** - Check icon
-- **EditIcon** - Edit icon
-- **SaveIcon** - Save icon
-- **DeleteIcon** - Delete icon
-- **HomeIcon** - Home icon
-- **AddIcon** - Add icon
 
 ## Requirements
 

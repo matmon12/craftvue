@@ -4,6 +4,7 @@
     width="24"
     height="24"
     viewBox="0 0 24 24"
+    fill="currentColor"
     role="img"
     aria-hidden="true"
     v-bind="$attrs"
@@ -14,7 +15,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2.4"
-      d="m8 4l8 8l-8 8"
+      d="m4 8l8 8l8-8"
     />
   </svg>
 </template>
@@ -22,6 +23,5 @@
 <script setup lang="ts">
 import { defineOptions } from 'vue'
 
-defineOptions({ name: 'NextArrowIcon' })
+defineOptions({ name: 'DownArrowIcon' })
 </script>
-

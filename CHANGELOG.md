@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.1](https://www.npmjs.com/package/craftvue/v/1.2.1) (2025-11-05)
+
+#### Features
+
+- Added `CPopup`, `CDropdown`, `CTooltip`, `CSelect` components
+- Added `tryOnScopeDispose` and `tryGetFieldData` functions in utils
+- Added style vars in \_vars.scss
+- Added `useResizeObserver` and `useIntersectionObserver` composables
+
+#### Bug fixes
+
+- Added `break` operator for `CTab`
+
+#### Refactors
+
+- Updated dependency `@craftvue/icons` to `1.2.0`
+- Updated type of `findSingle` function in utils
+- Removed `CButton.spec.ts` file
+- Updated README file for `craftvue`
+
 ## [1.1.1](https://www.npmjs.com/package/craftvue/v/1.1.1) (2025-10-16)
 
 #### Bug fixes
@@ -69,4 +89,3 @@
 - Initial release
 - `@craftvue/icons` and `craftvue` packages added
 - Added `CButton`, `CInput`, `CBadge`, `CIcon`, `CTabs`, `CTabList`, `CTab`, `CFormItem` components
-- Added `HomeIcon`, `CheckIcon`, `AddIcon` icons

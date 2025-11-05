@@ -1,5 +1,14 @@
 // Доступные UI компоненты
-export type UIComponentType = 'button' | 'input' | 'badge' | 'tabs' | 'formItem' | 'icon'
+export type UIComponentType =
+  | 'button'
+  | 'input'
+  | 'badge'
+  | 'tabs'
+  | 'formItem'
+  | 'icon'
+  | 'select'
+  | 'dropdown'
+  | 'tooltip'
 
 // Типы для названий историй UI компонентов
 export type ButtonStoryName =
@@ -64,6 +73,44 @@ export type FormItemStoryName =
 
 export type IconStoryName = 'basic' | 'name' | 'color' | 'size' | 'template'
 
+export type SelectStoryName =
+  | 'basic'
+  | 'disabled'
+  | 'disabledOption'
+  | 'clearable'
+  | 'invalid'
+  | 'multiple'
+  | 'filled'
+  | 'fullWidth'
+  | 'loading'
+  | 'filter'
+  | 'size'
+  | 'checkmark'
+  | 'template'
+  | 'form'
+
+export type DropdownStoryName =
+  | 'basic'
+  | 'placement'
+  | 'sameWidth'
+  | 'arrow'
+  | 'animation'
+  | 'template'
+  | 'maxSize'
+  | 'boundaryPadding'
+  | 'offset'
+
+export type TooltipStoryName =
+  | 'basic'
+  | 'placement'
+  | 'trigger'
+  | 'autoHide'
+  | 'delay'
+  | 'template'
+  | 'triggerSlot'
+  | 'controlled'
+  | 'rootEl'
+
 // Union тип для всех возможных названий историй
 export type AllStoryNames =
   | ButtonStoryName
@@ -72,6 +119,9 @@ export type AllStoryNames =
   | TabsStoryName
   | FormItemStoryName
   | IconStoryName
+  | SelectStoryName
+  | DropdownStoryName
+  | TooltipStoryName
 
 // CustomSource props
 export interface CustomSourceProps {

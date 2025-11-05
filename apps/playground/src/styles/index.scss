@@ -24,6 +24,7 @@ body {
   font-family: 'Montserrat';
   font-weight: 400;
   overflow-y: auto;
+  overflow-x: hidden;
   color: var(--main-color);
-  background-color: var(--ground-back);
+  background-color: #000;
 }

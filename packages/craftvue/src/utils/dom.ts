@@ -2,7 +2,7 @@
 
 import { isElement } from '@/types/guards'
 
-export const findSingle = (element: Element, selector: string): Element | null => {
+export const findSingle = (element: Element | null, selector: string): Element | null => {
   return isElement(element)
     ? element.matches(selector)
       ? element

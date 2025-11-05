@@ -106,10 +106,12 @@ const onKeydown = (event: KeyboardEvent) => {
       break
     case 'PageUp':
       onPageUpKey(event)
+      break
     case 'Enter':
     case 'NumpadEnter':
     case 'Space':
       onEnterKey(event)
+      break
     default:
       break
   }

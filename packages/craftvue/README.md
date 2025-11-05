@@ -14,20 +14,36 @@ pnpm add craftvue
 
 ## Usage
 
-### Import all components
+### Automatic import (Recommended)
+
+Configure resolver in your `vite.config.ts` to automatically import components:
 
 ```typescript
-import { createApp } from 'vue'
-import App from './App.vue'
-import CraftVue from 'craftvue'
-import 'craftvue/style'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import Components from 'unplugin-vue-components/vite'
+import { CraftVueResolver } from 'craftvue'
 
-const app = createApp(App)
-
-app.use(CraftVue).mount('#app')
+export default defineConfig({
+  plugins: [
+    vue(),
+    Components({
+      resolvers: [CraftVueResolver()],
+    }),
+  ],
+})
 ```
 
-### Import specific components
+After configuration, you can use components directly in templates without importing:
+
+```vue
+<template>
+  <CButton label="Click me" />
+  <CInput placeholder="Enter text" />
+</template>
+```
+
+### Manual import
 
 ```typescript
 import { CButton, CIcon } from 'craftvue'
@@ -42,14 +58,9 @@ import { CIcon } from 'craftvue/icon'
 import 'craftvue/style'
 ```
 
-## Components
+## Documentation
 
-- **CButton** - Button component with multiple variants
-- **CIcon** - Icon component
-- **CBadge** - Badge component
-- **CInput** - Input component
-- **CFormItem** - Form item wrapper
-- **CTabs** - Tabs component
+For detailed documentation, examples, and component API, visit the [Storybook documentation](https://matmon12.github.io/craftvue/).
 
 ## Requirements
 

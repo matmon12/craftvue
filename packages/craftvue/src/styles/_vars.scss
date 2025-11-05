@@ -26,8 +26,15 @@
   --secondary-back: var(--neutral-800);
   --secondary-text-color: var(--zinc-400);
   --invalid-color: var(--red-400);
+  --invalid-border-color: var(--red-300);
   --disabled-opacity: 0.6;
   --border-radius: var(--border-radius-lg);
+
+  /////////////////////////////
+  ///////// SCROLLBAR /////////
+  /////////////////////////////
+  --scroll-track-color: var(--black);
+  --scroll-thumb-color: var(--prime-color);
 
   /////////////////////////////
   ///// BUTTONS VARIABLES /////
@@ -98,7 +105,7 @@
   --input-hover-border-color: var(--neutral-500);
   --input-focus-border-color: var(--prime-color);
   --input-placeholder-color: var(--neutral-400);
-  --input-invalid-border-color: var(--red-300);
+  --input-invalid-border-color: var(--invalid-border-color);
   --input-invalid-placeholder-color: var(--invalid-color);
   --input-disabled-background: var(--neutral-700);
   --input-disabled-color: var(--neutral-400);
@@ -135,6 +142,41 @@
   --tabs-tabpanel-background: var(--ground-back);
   --tabs-tabpanel-color: var(--main-color);
   --tabs-tabpanel-focus-ring-color: var(--prime-color);
+
+  ////////////////////////////
+  ///// SELECT VARIABLES /////
+  ////////////////////////////
+  --select-background: var(--zinc-950);
+  --select-color: var(--main-color);
+  --select-border-color: var(--neutral-600);
+  --select-hover-border-color: var(--neutral-500);
+  --select-focus-border-color: var(--prime-color);
+  --select-placeholder-color: var(--neutral-400);
+  --select-option-color: var(--main-color);
+  --select-option-background: var(--ground-back);
+  --select-option-active-color: var(--prime-color);
+  --select-option-focus-background: var(--secondary-back);
+  --select-disabled-color: var(--neutral-400);
+  --select-disabled-background: var(--neutral-700);
+  --select-invalid-color: var(--invalid-color);
+  --select-invalid-border-color: var(--invalid-border-color);
+  --select-text-muted: var(--neutral-400);
+  --select-tag-color: var(--main-color);
+  --select-tag-background: var(--neutral-800);
+
+  // filled
+  --select-filled-background: var(--secondary-back);
+  --select-filled-tag-background: var(--neutral-700);
+  --select-filled-disabled-tag-background: var(--neutral-800);
+
+
+  ////////////////////////////
+  ////// POPUP VARIABLES /////
+  ////////////////////////////
+  --popup-background: var(--neutral-900);
+  --popup-border-color: var(--neutral-600);
+  --popup-shadow-color: var(--black);
+
 }
 
 :root {

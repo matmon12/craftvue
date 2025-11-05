@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import {isFunction} from "@/types/guards"
+import { isFunction } from '@/types/guards'
+import { getCurrentScope, onScopeDispose } from 'vue'
 
 export const isEmpty = (value: unknown): boolean => {
   return (
@@ -91,4 +92,32 @@ export const deepEquals = (a: any, b: any): boolean => {
 export const equals = (obj1: any, obj2: any, field?: string): boolean => {
   if (field) return resolveFieldData(obj1, field) === resolveFieldData(obj2, field)
   else return deepEquals(obj1, obj2)
+}
+
+export const tryOnScopeDispose = (fn: () => void): boolean => {
+  if (getCurrentScope()) {
+    onScopeDispose(fn)
+    return true
+  }
+  return false
+}
+
+export const tryGetFieldData = (data: any, field: any): any => {
+  if (!field || typeof data !== 'object' || !Object.keys(data).length) {
+    return null
+  }
+
+  if (data.hasOwnProperty(field)) {
+    return data[field]
+  }
+
+  if (typeof field === 'string' && field.includes('.')) {
+    const fields = field.split('.')
+    const value = fields.reduce((acc, key) => {
+      return acc !== null && typeof acc === 'object' && acc.hasOwnProperty(key) ? acc[key] : null
+    }, data)
+    return value
+  }
+
+  return null
 }

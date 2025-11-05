@@ -27,7 +27,18 @@ export function CraftVueResolver(options: CraftVueResolverOptions = {}): Compone
         .replace(/^-/, '')
 
       // Список доступных компонентов
-      const components = ['button', 'badge', 'input', 'form-item', 'icon', 'tabs']
+      const components = [
+        'button',
+        'badge',
+        'input',
+        'form-item',
+        'icon',
+        'tabs',
+        'tooltip',
+        'select',
+        'dropdown',
+        'popup',
+      ]
 
       if (components.includes(kebabName)) {
         return {

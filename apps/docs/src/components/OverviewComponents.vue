@@ -67,11 +67,21 @@ const components = ref<ComponentCategory[]>([
     items: [
       { title: 'Input', image: 'input.png', path: '/?path=/docs/components-input--docs' },
       { title: 'FormItem', image: 'formitem.png', path: '/?path=/docs/components-formitem--docs' },
+      { title: 'Select', image: 'select.png', path: '/?path=/docs/components-select--docs' },
     ],
   },
   {
     name: 'Навигация',
-    items: [{ title: 'Tabs', image: 'tabs.png', path: '/?path=/docs/components-tabs--docs' }],
+    items: [
+      { title: 'Tabs', image: 'tabs.png', path: '/?path=/docs/components-tabs--docs' },
+      { title: 'Dropdown', image: 'dropdown.png', path: '/?path=/docs/components-dropdown--docs' },
+    ],
+  },
+  {
+    name: 'Обратная связь',
+    items: [
+      { title: 'Tooltip', image: 'tooltip.png', path: '/?path=/docs/components-tooltip--docs' },
+    ],
   },
 ])
 const filteredComponents = ref<ComponentCategory[]>([...components.value])

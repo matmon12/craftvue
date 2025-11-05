@@ -1,5 +1,6 @@
-import { Meta, Subtitle, Title } from '@storybook/addon-docs/blocks'
+import { Meta, Subtitle, Title, Story } from '@storybook/addon-docs/blocks'
 import { BASE_PATH } from 'docs/constants'
+import * as EmptyStories from './Empty.stories.ts'
 
 <Meta title="Introduction" />
 
@@ -88,6 +89,8 @@ import { BASE_PATH } from 'docs/constants'
     </a>
   </div>
 </div>
+
+<Story of={EmptyStories.Basic} />
 
 <style>
   {`

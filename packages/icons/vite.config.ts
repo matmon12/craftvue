@@ -30,6 +30,12 @@ export default defineConfig({
         'components/PrevArrowIcon': fileURLToPath(
           new URL('./src/components/PrevArrowIcon.vue', import.meta.url),
         ),
+        'components/UpArrowIcon': fileURLToPath(
+          new URL('./src/components/UpArrowIcon.vue', import.meta.url),
+        ),
+        'components/DownArrowIcon': fileURLToPath(
+          new URL('./src/components/DownArrowIcon.vue', import.meta.url),
+        ),
         'components/CheckIcon': fileURLToPath(
           new URL('./src/components/CheckIcon.vue', import.meta.url),
         ),
@@ -55,7 +61,7 @@ export default defineConfig({
       name: 'CraftVueIcons',
       formats: ['es', 'cjs'],
       fileName: (format, entryName) => {
-        const ext = format === 'es' ? 'mjs' : 'cjs';
+        const ext = format === 'es' ? 'mjs' : 'cjs'
         return entryName === 'index' ? `index.${ext}` : `${entryName}.${ext}`
       },
     },
@@ -65,11 +71,11 @@ export default defineConfig({
         globals: { vue: 'Vue' },
         chunkFileNames: 'chunks/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          if(assetInfo.names && assetInfo.names[0] === 'craftvue-icons.css') {
+          if (assetInfo.names && assetInfo.names[0] === 'craftvue-icons.css') {
             return 'craftvue-icons.css'
           }
           return 'assets/[name]-[hash][extname]'
-        }
+        },
       },
     },
   },
