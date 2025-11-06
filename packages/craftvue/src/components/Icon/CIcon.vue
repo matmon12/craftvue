@@ -19,6 +19,9 @@ defineOptions({
 defineSlots<IconSlots>()
 const props = defineProps<IconProps>()
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore - Dynamic imports for individual icon entry points are only available after @craftvue/icons package is built
+// These paths are resolved at runtime and may not be available during type checking in CI/CD
 const iconLoaders: Record<IconName, () => Promise<{ default: Component }>> = {
   close: () => import('@craftvue/icons/close'),
   search: () => import('@craftvue/icons/search'),
