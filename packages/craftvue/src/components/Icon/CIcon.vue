@@ -19,25 +19,56 @@ defineOptions({
 defineSlots<IconSlots>()
 const props = defineProps<IconProps>()
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore - Dynamic imports for individual icon entry points are only available after @craftvue/icons package is built
+// Dynamic imports for individual icon entry points are only available after @craftvue/icons package is built
 // These paths are resolved at runtime and may not be available during type checking in CI/CD
 const iconLoaders: Record<IconName, () => Promise<{ default: Component }>> = {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   close: () => import('@craftvue/icons/close'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   search: () => import('@craftvue/icons/search'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   spinner: () => import('@craftvue/icons/spinner'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   eye: () => import('@craftvue/icons/eye'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   eyeslash: () => import('@craftvue/icons/eyeslash'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   nextarrow: () => import('@craftvue/icons/nextarrow'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   prevarrow: () => import('@craftvue/icons/prevarrow'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   uparrow: () => import('@craftvue/icons/uparrow'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   downarrow: () => import('@craftvue/icons/downarrow'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   check: () => import('@craftvue/icons/check'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   edit: () => import('@craftvue/icons/edit'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   save: () => import('@craftvue/icons/save'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   delete: () => import('@craftvue/icons/delete'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   home: () => import('@craftvue/icons/home'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   add: () => import('@craftvue/icons/add'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   envelope: () => import('@craftvue/icons/envelope'),
 }
 
