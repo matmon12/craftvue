@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1](https://www.npmjs.com/package/craftvue/v/1.3.1) (2025-11-06)
+
+#### Bug fixes
+
+- Fixed auto-import for `CTabList`, `CTabPanels`, `CTabPanel` components in resolver
+
 ## [1.3.0](https://www.npmjs.com/package/craftvue/v/1.3.0) (2025-11-06)
 
 #### Features
