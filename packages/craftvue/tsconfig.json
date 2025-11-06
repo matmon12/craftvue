@@ -17,22 +17,7 @@
     "jsx": "preserve",
     "paths": {
       "@/*": ["./src/*"],
-      "@craftvue/icons/close": ["../icons/dist/components/CloseIcon"],
-      "@craftvue/icons/search": ["../icons/dist/components/SearchIcon"],
-      "@craftvue/icons/spinner": ["../icons/dist/components/SpinnerIcon"],
-      "@craftvue/icons/eye": ["../icons/dist/components/EyeIcon"],
-      "@craftvue/icons/eyeslash": ["../icons/dist/components/EyeSlashIcon"],
-      "@craftvue/icons/nextarrow": ["../icons/dist/components/NextArrowIcon"],
-      "@craftvue/icons/prevarrow": ["../icons/dist/components/PrevArrowIcon"],
-      "@craftvue/icons/uparrow": ["../icons/dist/components/UpArrowIcon"],
-      "@craftvue/icons/downarrow": ["../icons/dist/components/DownArrowIcon"],
-      "@craftvue/icons/check": ["../icons/dist/components/CheckIcon"],
-      "@craftvue/icons/edit": ["../icons/dist/components/EditIcon"],
-      "@craftvue/icons/save": ["../icons/dist/components/SaveIcon"],
-      "@craftvue/icons/delete": ["../icons/dist/components/DeleteIcon"],
-      "@craftvue/icons/home": ["../icons/dist/components/HomeIcon"],
-      "@craftvue/icons/add": ["../icons/dist/components/AddIcon"],
-      "@craftvue/icons/envelope": ["../icons/dist/components/EnvelopeIcon"]
+      "@craftvue/icons/*": ["../icons/dist/components/*"]
     },
     "declaration": true,
     "outDir": "./dist"

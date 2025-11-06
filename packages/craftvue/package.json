@@ -115,7 +115,7 @@
     "build": "vite build",
     "build:prod": "pnpm run prepare:publish && pnpm run build && pnpm run prepare:dev",
     "dev": "vite build --watch",
-    "prepare:publish": "pnpm up @craftvue/icons@^1.2.0",
+    "prepare:publish": "pnpm up @craftvue/icons@^1.2.1",
     "prepare:dev": "pnpm up @craftvue/icons@workspace:*",
     "version:patch": "npm version patch --no-git-tag-version --workspaces=false",
     "version:minor": "npm version minor --no-git-tag-version --workspaces=false",
@@ -128,7 +128,7 @@
     "vue": "^3.4.0"
   },
   "dependencies": {
-    "@craftvue/icons": "workspace:*",
+    "@craftvue/icons": "^1.2.1",
     "@vueuse/core": "^13.9.0",
     "lodash": "^4.17.21"
   },
