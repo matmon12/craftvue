@@ -10,7 +10,7 @@
       @click="onPrevButtonClick"
     >
       <CIcon aria-hidden="true" name="prevarrow">
-        <component :is="templates.previcon"/>
+        <component :is="templates.previcon" />
       </CIcon>
     </button>
 
@@ -42,7 +42,7 @@
       @click="onNextButtonClick"
     >
       <CIcon aria-hidden="true" name="nextarrow">
-        <component :is="templates.nexticon"/>
+        <component :is="templates.nexticon" />
       </CIcon>
     </button>
   </div>
@@ -60,13 +60,8 @@ import {
   onBeforeUnmount,
   provide,
 } from 'vue'
-import {
-  TabListInjectionKey,
-  TabsClasses,
-  TabsContext,
-  TabsInjectionKey,
-  TabsListSlots,
-} from './CTabs.types'
+import { TabListInjectionKey, TabsListSlots } from './CTabList.types'
+import { TabsClasses, TabsContext, TabsInjectionKey } from '@/components/Tabs'
 import {
   getWidth,
   getHeight,

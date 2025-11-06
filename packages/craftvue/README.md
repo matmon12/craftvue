@@ -48,8 +48,8 @@ After configuration, you can use components directly in templates without import
 ```typescript
 import { CButton, CIcon } from 'craftvue'
 // or
-import { CButton } from 'craftvue/button'
-import { CIcon } from 'craftvue/icon'
+import CButton from 'craftvue/button'
+import CIcon from 'craftvue/icon'
 ```
 
 ### Import styles

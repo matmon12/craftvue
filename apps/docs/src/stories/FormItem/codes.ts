@@ -15,7 +15,8 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
 
         const value = ref('')
       </script>
@@ -35,7 +36,8 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
 
         const email = ref('')
       </script>
@@ -55,7 +57,8 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
 
         const value = ref('')
       </script>
@@ -75,7 +78,8 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
 
         const value = ref('craftvue@gmail.com')
       </script>
@@ -85,7 +89,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
     simple: `
       <CFormItem label="Phone number">
         <template #labelSlot>
-          <span>For example: <code style="color: var(--prime-color); padding-left: 4px;">+7(953)413-38-83</code></span>
+          <span>For example: <code style="color: var(--c-prime-color); padding-left: 4px;">+7(953)413-38-83</code></span>
         </template>
         <CInput v-model="value" placeholder="Enter number..." />
       </CFormItem>
@@ -94,14 +98,15 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       <template>
         <CFormItem label="Phone number">
           <template #labelSlot>
-            <span>For example: <code style="color: var(--prime-color); padding-left: 4px;">+7(953)413-38-83</code></span>
+            <span>For example: <code style="color: var(--c-prime-color); padding-left: 4px;">+7(953)413-38-83</code></span>
           </template>
           <CInput v-model="value" placeholder="Enter number..." />
         </CFormItem>
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
 
         const value = ref('')
       </script>
@@ -112,7 +117,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       <CFormItem label="Password" error-message="The password must contain at least 8 characters.">
         <CInput v-model="value" type="password" invalid />
         <template #error="{ error }">
-          <div style="color: var(--invalid-color); font-size: 12px; display: flex; align-items: center; gap: 4px; margin-top: 4px;">
+          <div style="color: var(--c-invalid-color); font-size: 12px; display: flex; align-items: center; gap: 4px; margin-top: 4px;">
             <span>⚠️</span>
             <span>{{ error }}</span>
           </div>
@@ -124,7 +129,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
         <CFormItem label="Password" error-message="The password must contain at least 8 characters.">
           <CInput v-model="value" type="password" invalid />
           <template #error="{ error }">
-            <div style="color: var(--invalid-color); font-size: 12px; display: flex; align-items: center; gap: 4px; margin-top: 4px;">
+            <div style="color: var(--c-invalid-color); font-size: 12px; display: flex; align-items: center; gap: 4px; margin-top: 4px;">
               <span>⚠️</span>
               <span>{{ error }}</span>
             </div>
@@ -133,7 +138,8 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
 
         const value = ref('123456')
       </script>
@@ -153,7 +159,8 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
 
         const phone = ref('')
       </script>
@@ -193,7 +200,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
     `,
     full: `
       <template>
-        <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; width: 400px; padding: 20px; border: 1px solid var(--prime-color); border-radius: 8px;">
+        <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; width: 400px; padding: 20px; border: 1px solid var(--c-prime-color); border-radius: 8px;">
           <h3 style="margin-bottom: 20px; font-size: 20px;">Contact form</h3>
 
           <CFormItem label="Name" required :errorMessage="errors.name">
@@ -229,7 +236,9 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CFormItem, CInput, CButton } from 'craftvue'
+        import CFormItem from 'craftvue/form-item'
+        import CInput from 'craftvue/input'
+        import CButton from 'craftvue/button'
 
         const form = ref({
           name: '',

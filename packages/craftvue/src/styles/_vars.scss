@@ -2,181 +2,187 @@
   /////////////////////////////
   ////// FONT VARIABLES ///////
   /////////////////////////////
-  --font-family-base:
+  --c-font-family-base:
     Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --font-family-mono:
+  --c-font-family-mono:
     'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace;
-  --font-family-cursive: cursive;
-  --font-size-base: 0.875rem;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --line-height-base: 1.5;
+  --c-font-family-cursive: cursive;
+  --c-font-size-base: 0.875rem;
+  --c-font-weight-normal: 400;
+  --c-font-weight-medium: 500;
+  --c-font-weight-semibold: 600;
+  --c-font-weight-bold: 700;
+  --c-line-height-base: 1.5;
 
   /////////////////////////////
   ////// MAIN VARIABLES ///////
   /////////////////////////////
-  --main-color: var(--white);
-  --ground-back: var(--neutral-900);
-  --prime-color: #bea87b;
-  --prime-color-light: color-mix(in srgb, var(--prime-color) 100%, #fff 30%);
-  --prime-color-dark: color-mix(in srgb, var(--prime-color) 90%, #000 100%);
-  --secondary-back: var(--neutral-800);
-  --secondary-text-color: var(--zinc-400);
-  --invalid-color: var(--red-400);
-  --invalid-border-color: var(--red-300);
-  --disabled-opacity: 0.6;
-  --border-radius: var(--border-radius-lg);
+  --c-main-color: var(--white);
+  --c-ground-back: var(--neutral-900);
+  --c-prime-color: #bea87b;
+  --c-prime-color-light: color-mix(in srgb, var(--c-prime-color) 100%, #fff 30%);
+  --c-prime-color-dark: color-mix(in srgb, var(--c-prime-color) 90%, #000 100%);
+  --c-secondary-back: var(--neutral-800);
+  --c-secondary-text-color: var(--zinc-400);
+  --c-invalid-color: var(--red-400);
+  --c-invalid-border-color: var(--red-300);
+  --c-disabled-opacity: 0.6;
+  --c-border-radius: var(--c-border-radius-lg);
 
   /////////////////////////////
   ///////// SCROLLBAR /////////
   /////////////////////////////
-  --scroll-track-color: var(--black);
-  --scroll-thumb-color: var(--prime-color);
+  --c-scroll-track-color: var(--black);
+  --c-scroll-thumb-color: var(--c-prime-color);
 
   /////////////////////////////
   ///// BUTTONS VARIABLES /////
   /////////////////////////////
-  --button-raised-shadow:
+  --c-button-raised-shadow:
     0 3px 1px -2px rgba(0, 0, 0, 0.7), 0 2px 2px 0 rgba(0, 0, 0, 0.5),
     0 1px 5px 0 rgba(0, 0, 0, 0.5);
 
   // primary
-  --button-primary-filled-color: var(--black);
-  --button-primary-filled-back: var(--prime-color);
-  --button-primary-filled-back-hover: var(--prime-color-light);
-  --button-primary-outlined-color: var(--white);
-  --button-primary-outlined-border-color: var(--prime-color);
-  --button-primary-outlined-back-hover: color-mix(
+  --c-button-primary-filled-color: var(--black);
+  --c-button-primary-filled-back: var(--c-prime-color);
+  --c-button-primary-filled-back-hover: var(--c-prime-color-light);
+  --c-button-primary-outlined-color: var(--white);
+  --c-button-primary-outlined-border-color: var(--c-prime-color);
+  --c-button-primary-outlined-back-hover: color-mix(
     in srgb,
-    var(--prime-color) 10%,
+    var(--c-prime-color) 10%,
     transparent 100%
   );
-  --button-primary-text-color: var(--prime-color);
-  --button-primary-text-hover-background: color-mix(in srgb, var(--prime-color), transparent 90%);
+  --c-button-primary-text-color: var(--c-prime-color);
+  --c-button-primary-text-hover-background: color-mix(
+    in srgb,
+    var(--c-prime-color),
+    transparent 90%
+  );
 
   // secondary
-  --button-secondary-filled-color: var(--white);
-  --button-secondary-filled-back: var(--secondary-back);
-  --button-secondary-filled-back-hover: var(--neutral-700);
-  --button-secondary-outlined-color: var(--white);
-  --button-secondary-outlined-border-color: var(--neutral-700);
-  --button-secondary-outlined-back-hover: var(--secondary-back);
-  --button-secondary-text-color: var(--neutral-400);
-  --button-secondary-text-hover-background: var(--secondary-back);
+  --c-button-secondary-filled-color: var(--white);
+  --c-button-secondary-filled-back: var(--c-secondary-back);
+  --c-button-secondary-filled-back-hover: var(--neutral-700);
+  --c-button-secondary-outlined-color: var(--white);
+  --c-button-secondary-outlined-border-color: var(--neutral-700);
+  --c-button-secondary-outlined-back-hover: var(--c-secondary-back);
+  --c-button-secondary-text-color: var(--neutral-400);
+  --c-button-secondary-text-hover-background: var(--c-secondary-back);
 
   // contrast
-  --button-contrast-filled-color: var(--white);
-  --button-contrast-filled-back: var(--prime-color-dark);
-  --button-contrast-filled-back-hover: color-mix(in srgb, var(--prime-color-dark) 100%, #fff 10%);
-  --button-contrast-outlined-color: var(--white);
-  --button-contrast-outlined-border-color: var(--prime-color-dark);
-  --button-contrast-outlined-hover-background: color-mix(
+  --c-button-contrast-filled-color: var(--white);
+  --c-button-contrast-filled-back: var(--c-prime-color-dark);
+  --c-button-contrast-filled-back-hover: color-mix(
     in srgb,
-    var(--prime-color-dark),
+    var(--c-prime-color-dark) 100%,
+    #fff 10%
+  );
+  --c-button-contrast-outlined-color: var(--white);
+  --c-button-contrast-outlined-border-color: var(--c-prime-color-dark);
+  --c-button-contrast-outlined-hover-background: color-mix(
+    in srgb,
+    var(--c-prime-color-dark),
     transparent 70%
   );
-  --button-contrast-text-color: var(--white);
-  --button-contrast-text-hover-background: color-mix(
+  --c-button-contrast-text-color: var(--white);
+  --c-button-contrast-text-hover-background: color-mix(
     in srgb,
-    var(--prime-color-dark),
+    var(--c-prime-color-dark),
     transparent 70%
   );
 
   ////////////////////////////
   ///// BADGE VARIABLES //////
   ////////////////////////////
-  --badge-primary-back: var(--prime-color);
-  --badge-primary-color: var(--black);
-  --badge-secondary-back: var(--secondary-back);
-  --badge-secondary-color: var(--white);
-  --badge-contrast-back: var(--prime-color-dark);
-  --badge-contrast-color: var(--white);
-  --badge-outline-color: var(--ground-back);
+  --c-badge-primary-back: var(--c-prime-color);
+  --c-badge-primary-color: var(--black);
+  --c-badge-secondary-back: var(--c-secondary-back);
+  --c-badge-secondary-color: var(--white);
+  --c-badge-contrast-back: var(--c-prime-color-dark);
+  --c-badge-contrast-color: var(--white);
+  --c-badge-outline-color: var(--c-ground-back);
 
   ////////////////////////////
   ///// INPUT VARIABLES //////
   ////////////////////////////
-  --input-color: var(--main-color);
-  --input-background: var(--zinc-950);
-  --input-border-color: var(--neutral-600);
-  --input-hover-border-color: var(--neutral-500);
-  --input-focus-border-color: var(--prime-color);
-  --input-placeholder-color: var(--neutral-400);
-  --input-invalid-border-color: var(--invalid-border-color);
-  --input-invalid-placeholder-color: var(--invalid-color);
-  --input-disabled-background: var(--neutral-700);
-  --input-disabled-color: var(--neutral-400);
-  --input-group-background: var(--secondary-back);
-  --input-group-color: var(--neutral-400);
-  --input-icon-color: var(--neutral-400);
+  --c-input-color: var(--c-main-color);
+  --c-input-background: var(--zinc-950);
+  --c-input-border-color: var(--neutral-600);
+  --c-input-hover-border-color: var(--neutral-500);
+  --c-input-focus-border-color: var(--c-prime-color);
+  --c-input-placeholder-color: var(--neutral-400);
+  --c-input-invalid-border-color: var(--c-invalid-border-color);
+  --c-input-invalid-placeholder-color: var(--c-invalid-color);
+  --c-input-disabled-background: var(--neutral-700);
+  --c-input-disabled-color: var(--neutral-400);
+  --c-input-group-background: var(--c-secondary-back);
+  --c-input-group-color: var(--neutral-400);
+  --c-input-icon-color: var(--neutral-400);
 
   // filled
-  --input-filled-background: var(--secondary-back);
-  --input-filled-group-background: var(--neutral-700);
+  --c-input-filled-background: var(--c-secondary-back);
+  --c-input-filled-group-background: var(--neutral-700);
 
   //////////////////////////////
   //// FORM ITEM VARIABLES /////
   //////////////////////////////
-  --form-item-label-color: var(--neutral-300);
+  --c-form-item-label-color: var(--neutral-300);
 
   //////////////////////////////
   /////// TABS VARIABLES ///////
   //////////////////////////////
-  --tabs-tablist-background: var(--ground-back);
-  --tabs-tablist-border-color: var(--zinc-800);
-  --tabs-active-bar-background: var(--prime-color);
-  --tabs-nav-button-background: var(--ground-back);
-  --tabs-nav-button-color: var(--neutral-400);
-  --tabs-nav-button-hover-color: var(--main-color);
-  --tabs-nav-button-shadow-color: color-mix(in srgb, var(--ground-back) 100%, transparent 5%);
-  --tabs-nav-button-focus-ring-color: var(--prime-color);
-  --tabs-tab-background: transparent;
-  --tabs-tab-color: var(--neutral-400);
-  --tabs-tab-hover-color: var(--main-color);
-  --tabs-tab-active-background: transparent;
-  --tabs-tab-active-color: var(--prime-color);
-  --tabs-tab-focus-ring-color: var(--prime-color);
-  --tabs-tabpanel-background: var(--ground-back);
-  --tabs-tabpanel-color: var(--main-color);
-  --tabs-tabpanel-focus-ring-color: var(--prime-color);
+  --c-tabs-tablist-background: var(--c-ground-back);
+  --c-tabs-tablist-border-color: var(--zinc-800);
+  --c-tabs-active-bar-background: var(--c-prime-color);
+  --c-tabs-nav-button-background: var(--c-ground-back);
+  --c-tabs-nav-button-color: var(--neutral-400);
+  --c-tabs-nav-button-hover-color: var(--c-main-color);
+  --c-tabs-nav-button-shadow-color: color-mix(in srgb, var(--c-ground-back) 100%, transparent 5%);
+  --c-tabs-nav-button-focus-ring-color: var(--c-prime-color);
+  --c-tabs-tab-background: transparent;
+  --c-tabs-tab-color: var(--neutral-400);
+  --c-tabs-tab-hover-color: var(--c-main-color);
+  --c-tabs-tab-active-background: transparent;
+  --c-tabs-tab-active-color: var(--c-prime-color);
+  --c-tabs-tab-focus-ring-color: var(--c-prime-color);
+  --c-tabs-tabpanel-background: var(--c-ground-back);
+  --c-tabs-tabpanel-color: var(--c-main-color);
+  --c-tabs-tabpanel-focus-ring-color: var(--c-prime-color);
 
   ////////////////////////////
   ///// SELECT VARIABLES /////
   ////////////////////////////
-  --select-background: var(--zinc-950);
-  --select-color: var(--main-color);
-  --select-border-color: var(--neutral-600);
-  --select-hover-border-color: var(--neutral-500);
-  --select-focus-border-color: var(--prime-color);
-  --select-placeholder-color: var(--neutral-400);
-  --select-option-color: var(--main-color);
-  --select-option-background: var(--ground-back);
-  --select-option-active-color: var(--prime-color);
-  --select-option-focus-background: var(--secondary-back);
-  --select-disabled-color: var(--neutral-400);
-  --select-disabled-background: var(--neutral-700);
-  --select-invalid-color: var(--invalid-color);
-  --select-invalid-border-color: var(--invalid-border-color);
-  --select-text-muted: var(--neutral-400);
-  --select-tag-color: var(--main-color);
-  --select-tag-background: var(--neutral-800);
+  --c-select-background: var(--zinc-950);
+  --c-select-color: var(--c-main-color);
+  --c-select-border-color: var(--neutral-600);
+  --c-select-hover-border-color: var(--neutral-500);
+  --c-select-focus-border-color: var(--c-prime-color);
+  --c-select-placeholder-color: var(--neutral-400);
+  --c-select-option-color: var(--c-main-color);
+  --c-select-option-background: var(--c-ground-back);
+  --c-select-option-active-color: var(--c-prime-color);
+  --c-select-option-focus-background: var(--c-secondary-back);
+  --c-select-disabled-color: var(--neutral-400);
+  --c-select-disabled-background: var(--neutral-700);
+  --c-select-invalid-color: var(--c-invalid-color);
+  --c-select-invalid-border-color: var(--c-invalid-border-color);
+  --c-select-text-muted: var(--neutral-400);
+  --c-select-tag-color: var(--c-main-color);
+  --c-select-tag-background: var(--neutral-800);
 
   // filled
-  --select-filled-background: var(--secondary-back);
-  --select-filled-tag-background: var(--neutral-700);
-  --select-filled-disabled-tag-background: var(--neutral-800);
-
+  --c-select-filled-background: var(--c-secondary-back);
+  --c-select-filled-tag-background: var(--neutral-700);
+  --c-select-filled-disabled-tag-background: var(--neutral-800);
 
   ////////////////////////////
   ////// POPUP VARIABLES /////
   ////////////////////////////
-  --popup-background: var(--neutral-900);
-  --popup-border-color: var(--neutral-600);
-  --popup-shadow-color: var(--black);
-
+  --c-popup-background: var(--neutral-900);
+  --c-popup-border-color: var(--neutral-600);
+  --c-popup-shadow-color: var(--black);
 }
 
 :root {
@@ -471,17 +477,17 @@
 }
 
 :root {
-  --border-radius-none: 0;
-  --border-radius-xs: 2px;
-  --border-radius-sm: 4px;
-  --border-radius-md: 6px;
-  --border-radius-lg: 8px;
-  --border-radius-xl: 12px;
-  --border-radius-2xl: 15px;
-  --border-radius-full: 9999px;
+  --c-border-radius-none: 0;
+  --c-border-radius-xs: 2px;
+  --c-border-radius-sm: 4px;
+  --c-border-radius-md: 6px;
+  --c-border-radius-lg: 8px;
+  --c-border-radius-xl: 12px;
+  --c-border-radius-2xl: 15px;
+  --c-border-radius-full: 9999px;
 }
 
 :root {
-  --z-index-1000: 1000;
-  --z-index-1100: 1100;
+  --c-z-index-1000: 1000;
+  --c-z-index-1100: 1100;
 }

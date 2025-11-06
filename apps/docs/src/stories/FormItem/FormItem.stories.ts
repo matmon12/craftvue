@@ -268,7 +268,7 @@ export const Form: Story = {
       return { form, errors, submit, reset }
     },
     template: `
-      <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; width: 400px; padding: 20px; border: 1px solid var(--prime-color); border-radius: 8px;">
+        <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; width: 400px; padding: 20px; border: 1px solid var(--prime-color); border-radius: 8px;">
         <h3 style="margin-bottom: 20px; font-size: 20px;">Contact form</h3>
 
         <CFormItem label="Name" required :errorMessage="errors.name">

@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.1](https://www.npmjs.com/package/@craftvue/icons/v/1.2.1) (2025-11-06)
+
+#### Documentation
+
+- Fixed incorrect import examples in README
+
 ## [1.2.0](https://www.npmjs.com/package/@craftvue/icons/v/1.2.0) (2025-11-05)
 
 #### Features

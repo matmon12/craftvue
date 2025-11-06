@@ -2,7 +2,7 @@
 
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { CBadge, CButton, CIcon } from 'craftvue'
-import { DeleteIcon } from '@craftvue/icons'
+import DeleteIcon from '@craftvue/icons/delete'
 import { ref, watch } from 'vue'
 
 const meta = {
@@ -20,7 +20,7 @@ const meta = {
   },
   parameters: {
     controls: {
-      exclude: ['$slots']
+      exclude: ['$slots'],
     },
     layout: 'centered',
   },

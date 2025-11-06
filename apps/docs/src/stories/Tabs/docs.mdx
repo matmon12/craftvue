@@ -26,7 +26,13 @@ import { CustomSource } from 'docs/components/CustomSource/CustomSource'
     <h3>Импорт</h3>
 
     <CustomSource
-      code="import {CTabs, CTabList, CTab, CTabPanels, CTabPanel} from 'craftvue/tabs'"
+      code={`
+        import CTabs from 'craftvue/tabs'
+        import CTabList from 'craftvue/tablist'
+        import CTab from 'craftvue/tab'
+        import CTabPanels from 'craftvue/tabpanels'
+        import CTabPanel from 'craftvue/tabpanel'
+      `}
       actions={['copy']}
       parser="babel"
       language="javascript"
@@ -148,9 +154,9 @@ import { CustomSource } from 'docs/components/CustomSource/CustomSource'
     margin-top: 0;
   }
   .c-tabs{
-    --tabs-tablist-background: var(--ground-back);
-    --tabs-nav-button-background: var(--ground-back);
-    --tabs-tabpanel-background: var(--ground-back);
+    --c-tabs-tablist-background: var(--ground-back);
+    --c-tabs-nav-button-background: var(--ground-back);
+    --c-tabs-tabpanel-background: var(--ground-back);
   }
 `}
 </style>

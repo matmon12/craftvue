@@ -24,13 +24,8 @@
 
 <script setup lang="ts">
 import { equals } from '@/utils'
-import {
-  TabPanelProps,
-  TabPanelSlots,
-  TabsClasses,
-  TabsContext,
-  TabsInjectionKey,
-} from './CTabs.types'
+import { TabPanelProps, TabPanelSlots } from './CTabPanel.types'
+import { TabsClasses, TabsContext, TabsInjectionKey } from '@/components/Tabs'
 import { mergeProps, useAttrs, inject, computed } from 'vue'
 
 const inheritAttrs = useAttrs()

@@ -1,0 +1,36 @@
+.c-tab {
+  flex-shrink: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--c-tabs-tab-background);
+  color: var(--c-tabs-tab-color);
+  padding: 1rem 1rem;
+  // font-weight: 600;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  outline: none;
+  z-index: 1;
+
+  &:not(.is--disabled, .is--active):hover {
+    color: var(--c-tabs-tab-hover-color);
+  }
+
+  &.is--active {
+    background-color: var(--c-tabs-tab-active-background);
+    color: var(--c-tabs-tab-active-color);
+  }
+
+  &.is--disabled {
+    pointer-events: none;
+    opacity: var(--c-disabled-opacity);
+  }
+
+  &:not(.is--disabled):focus-visible {
+    z-index: 1;
+    box-shadow: none;
+    outline: 1px solid var(--c-tabs-tab-focus-ring-color);
+    outline-offset: -1px;
+  }
+}

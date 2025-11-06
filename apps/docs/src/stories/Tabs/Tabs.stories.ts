@@ -188,9 +188,9 @@ const meta = {
       template: `
     <div
       style="
-        --tabs-tablist-background: #0e0e0e;
-        --tabs-nav-button-background: #0e0e0e;
-        --tabs-tabpanel-background: #0e0e0e;
+        --c-tabs-tablist-background: #0e0e0e;
+        --c-tabs-nav-button-background: #0e0e0e;
+        --c-tabs-tabpanel-background: #0e0e0e;
       "
     >
       <story/>

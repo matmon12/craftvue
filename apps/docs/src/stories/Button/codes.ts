@@ -250,9 +250,9 @@ const buttonCodeTexts: CodeTexts<ButtonStoryName> = {
       <script setup>
         import { ref } from 'vue'
         import { AddIcon, CheckIcon, HomeIcon } from '@craftvue/icons'
-        import CTab from '@/components/Tabs/CTab.vue'
-        import CTabList from '@/components/Tabs/CTabList.vue'
-        import CTabs from '@/components/Tabs/CTabs.vue'
+        import CTab from 'craftvue/tab'
+        import CTabList from 'craftvue/tablist'
+        import CTabs from 'craftvue/tabs'
 
         const size = ref(undefined)
 

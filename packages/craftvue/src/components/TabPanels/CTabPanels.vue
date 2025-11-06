@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import {useAttrs} from "vue"
-import { TabPanelsSlots } from './CTabs.types'
+import { useAttrs } from 'vue'
+import { TabPanelsSlots } from './CTabPanels.types'
 
 const inheritAttrs = useAttrs()
 
@@ -16,4 +16,3 @@ defineOptions({
   inheritAttrs: false,
 })
 </script>
-

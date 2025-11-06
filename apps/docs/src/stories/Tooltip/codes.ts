@@ -14,7 +14,8 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
         </CTooltip>
       </template>
       <script setup>
-        import { CTooltip, CButton } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
       </script>
     `,
   },
@@ -109,7 +110,8 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
         </div>
       </template>
       <script setup>
-        import { CTooltip, CButton } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
       </script>
     `,
   },
@@ -134,7 +136,8 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
         </div>
       </template>
       <script setup>
-        import { CTooltip, CButton } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
       </script>
     `,
   },
@@ -159,7 +162,8 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
         </div>
       </template>
       <script setup>
-        import { CTooltip, CInput } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CInput from 'craftvue/input'
       </script>
     `,
   },
@@ -176,7 +180,8 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
         </CTooltip>
       </template>
       <script setup>
-        import { CTooltip, CButton } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
       </script>
     `,
   },
@@ -205,7 +210,9 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
         </CTooltip>
       </template>
       <script setup>
-        import { CIcon, CTooltip, CButton } from 'craftvue'
+        import CIcon from 'craftvue/icon'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
       </script>
     `,
   },
@@ -232,7 +239,9 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
         </CTooltip>
       </template>
       <script setup>
-        import { CTooltip, CButton, CIcon } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
+        import CIcon from 'craftvue/icon'
       </script>
     `,
   },
@@ -264,7 +273,9 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import { CTooltip, CButton, CInput } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
+        import CInput from 'craftvue/input'
 
         const isOpen = ref(false)
 
@@ -285,7 +296,8 @@ const tooltipCodeTexts: CodeTexts<TooltipStoryName> = {
       </template>
       <script setup>
         import { useTemplateRef } from 'vue'
-        import { CTooltip, CButton } from 'craftvue'
+        import CTooltip from 'craftvue/tooltip'
+        import CButton from 'craftvue/button'
 
         const rootElRef = useTemplateRef('rootElRef')
       </script>

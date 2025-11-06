@@ -1,6 +1,3 @@
+export { default } from './CTabs.vue'
 export { default as CTabs } from './CTabs.vue'
-export { default as CTab } from './CTab.vue'
-export { default as CTabList } from './CTabList.vue'
-export { default as CTabPanel } from './CTabPanel.vue'
-export { default as CTabPanels } from './CTabPanels.vue'
 export * from './CTabs.types'

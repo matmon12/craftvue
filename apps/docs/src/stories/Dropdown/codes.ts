@@ -27,7 +27,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { ref, useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const show = ref(false)
         const rootElRef = useTemplateRef('rootElRef')
@@ -95,7 +96,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const rootElRef1 = useTemplateRef('rootElRef1')
         const rootElRef2 = useTemplateRef('rootElRef2')
@@ -132,7 +134,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { ref, useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const show = ref(false)
         const rootElRef = useTemplateRef('rootElRef')
@@ -168,7 +171,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { ref, useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const show = ref(false)
         const rootElRef = useTemplateRef('rootElRef')
@@ -212,7 +216,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const rootElRef1 = useTemplateRef('rootElRef1')
         const rootElRef2 = useTemplateRef('rootElRef2')
@@ -265,7 +270,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { ref, useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const show = ref(false)
         const input = ref('')
@@ -334,7 +340,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const rootElRef1 = useTemplateRef('rootElRef1')
         const rootElRef2 = useTemplateRef('rootElRef2')
@@ -387,7 +394,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const rootElRef1 = useTemplateRef('rootElRef1')
         const rootElRef2 = useTemplateRef('rootElRef2')
@@ -446,7 +454,8 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       </template>
       <script setup>
         import { useTemplateRef } from "vue"
-        import { CButton, CDropdown } from "craftvue"
+        import CButton from "craftvue/button"
+        import CDropdown from "craftvue/dropdown"
 
         const rootElRef1 = useTemplateRef('rootElRef1')
         const rootElRef2 = useTemplateRef('rootElRef2')

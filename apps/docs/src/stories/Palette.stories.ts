@@ -360,22 +360,22 @@ const basic = [
   {
     title: 'Основный цвет',
     colors: {
-      '--prime-color-light': '#cdbc99',
-      '--prime-color': '#bea87b',
-      '--prime-color-dark': '#5a503a',
+      '--c-prime-color-light': '#cdbc99',
+      '--c-prime-color': '#bea87b',
+      '--c-prime-color-dark': '#5a503a',
     },
   },
   {
     title: 'Второстепенный цвет',
-    colors: { '--secondary-text-color': '#a1a1aa', '--secondary-back': '#262626' },
+    colors: { '--c-secondary-text-color': '#a1a1aa', '--c-secondary-back': '#262626' },
   },
   {
     title: 'Цвет ошибки',
-    colors: { 'invalid-border-color': '#fca5a5', '--invalid-color': '#f87171' },
+    colors: { '--c-invalid-border-color': '#fca5a5', '--c-invalid-color': '#f87171' },
   },
   {
     title: 'Базовые цвета',
-    colors: { '--main-color': '#ffffff', '--ground-back': '#171717' },
+    colors: { '--c-main-color': '#ffffff', '--c-ground-back': '#171717' },
   },
 ]
 

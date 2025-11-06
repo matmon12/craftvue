@@ -7,8 +7,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--border-radius-md);
-  padding: 0 .4375rem;
+  border-radius: var(--c-border-radius-md);
+  padding: 0 0.4375rem;
   min-width: 1.125rem;
   height: 1.125rem;
   font-size: 0.6875rem;
@@ -49,16 +49,16 @@
 }
 
 .c-badge--primary {
-  color: var(--badge-primary-color);
-  background-color: var(--badge-primary-back);
+  color: var(--c-badge-primary-color);
+  background-color: var(--c-badge-primary-back);
 }
 
 .c-badge--secondary {
-  color: var(--badge-secondary-color);
-  background-color: var(--badge-secondary-back);
+  color: var(--c-badge-secondary-color);
+  background-color: var(--c-badge-secondary-back);
 }
 
 .c-badge--contrast {
-  color: var(--badge-contrast-color);
-  background-color: var(--badge-contrast-back);
+  color: var(--c-badge-contrast-color);
+  background-color: var(--c-badge-contrast-back);
 }

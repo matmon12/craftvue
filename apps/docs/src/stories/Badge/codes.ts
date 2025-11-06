@@ -82,7 +82,7 @@ const badgeCodeTexts: CodeTexts<BadgeStoryName> = {
         </div>
       </template>
       <script setup>
-        import { CIcon } from 'craftvue'
+        import CIcon from 'craftvue/icon'
       </script>
     `,
   },
@@ -125,7 +125,8 @@ const badgeCodeTexts: CodeTexts<BadgeStoryName> = {
         </div>
       </template>
       <script setup>
-        import { CButton, CIcon } from 'craftvue'
+        import CButton from 'craftvue/button'
+        import CIcon from 'craftvue/icon'
       </script>
     `,
   },
@@ -178,7 +179,7 @@ const badgeCodeTexts: CodeTexts<BadgeStoryName> = {
         </div>
       </template>
       <script setup>
-        import { CButton } from 'craftvue'
+        import CButton from 'craftvue/button'
       </script>
     `,
   },
@@ -195,8 +196,8 @@ const badgeCodeTexts: CodeTexts<BadgeStoryName> = {
         </div>
       </template>
       <script setup>
-        import { CButton } from 'craftvue'
-        import { DeleteIcon } from '@craftvue/icons'
+        import CButton from 'craftvue/button'
+        import DeleteIcon from '@craftvue/icons/delete'
       </script>
     `,
   },

@@ -1,116 +1,38 @@
 <template>
   <div class="playground">
     <div class="demo-section">
-      <button ref="triggerRef" @click="showSelect = !showSelect">12345678910jhkhhkh</button>
-
-      <CFormItem label="Email" required for="email">
-        <CInput id="email" v-model="input" clearable variant="filled"> </CInput>
-      </CFormItem>
-
       <CTabs value="1">
         <CTabList>
           <CTab value="1">Tab 1</CTab>
           <CTab value="2">Tab 2</CTab>
           <CTab value="3">Tab 3</CTab>
         </CTabList>
+        <CTabPanels>
+          <CTabPanel value="1">Panel 1</CTabPanel>
+          <CTabPanel value="2">Panel 2</CTabPanel>
+          <CTabPanel value="3">Panel 3</CTabPanel>
+        </CTabPanels>
       </CTabs>
-
-      <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci! -->
-
-      <CFormItem label="Выберите страну" for="country">
-        <CSelect
-          v-if="showSelect"
-          v-model="selectedCountry"
-          :options="countries"
-          option-value="value"
-          option-label="label"
-          option-disabled="disabled"
-          style="width: 200px; margin-left: auto"
-        >
-        </CSelect>
-      </CFormItem>
-
-      <div ref="root">Root</div>
-
-      <CTooltip content="Tooltip content">
-        <CButton>Tooltip</CButton>
-      </CTooltip>
-
-      <CButton ref="buttonRef">dfgdfg</CButton>
-      <CDropdown :root-el="buttonRef">ssdfgdsfgdfg</CDropdown>
-
-      <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore officia, culpa nam hic quibusdam assumenda ipsa. Tempora qui dignissimos rerum, enim odit repudiandae itaque consequatur nobis, doloremque, iure adipisci! -->
-
-      <!-- <CFormItem label="Множественный выбор" for="multiple">
-        <CSelect
-          v-model="selectedCountries"
-          :options="countries"
-          placeholder="Выберите страны"
-          multiple
-          clearable
-        />
-      </CFormItem>
-
-      <CFormItem label="С поиском" for="searchable">
-        <CSelect
-          v-model="searchableCountry"
-          :options="countries"
-          placeholder="Найдите страну"
-          searchable
-          clearable
-        />
-      </CFormItem> -->
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// import CloseIcon from '@craftvue/icons/close'
-// import { CButton, CInput, CTab, CTabList, CTabs, CFormItem, CIcon } from 'craftvue'
+// import { CTabs, CTabList, CTab, CTabPanels, CTabPanel } from 'craftvue'
+// import { CTabs } from 'craftvue/tabs'
+// import { CTabList } from 'craftvue/tablist'
+// import { CTab } from 'craftvue/tab'
+// import { CTabPanels } from 'craftvue/tabpanels'
+// import { CTabPanel } from 'craftvue/tabpanel'
 
 // import {HomeIcon} from "icons-dev"
 import {
-  CInput,
   CTab,
   CTabList,
+  CTabPanel,
+  CTabPanels,
   CTabs,
-  CFormItem,
-  CSelect,
-  CTooltip,
-  CButton,
-  CDropdown,
 } from 'craftvue-dev'
-
-const showSelect = ref(true)
-const triggerRef = ref<HTMLElement | null>(null)
-const buttonRef = ref<HTMLElement | null>(null)
-const root = ref<HTMLElement | null>(null)
-const input = ref('')
-const selectedCountry = ref('ru')
-// const selectedCountries = ref([])
-// const searchableCountry = ref(null)
-
-const countries = ref([
-  { label: 'Россия', value: 'ru', disabled: true },
-  { label: 'США', value: 'us' },
-  { label: 'Япония', value: 'jp' },
-  { label: 'Китай', value: 'cn', disabled: true },
-  { label: 'Бразилия', value: 'br' },
-])
 </script>
 
 <style scoped>

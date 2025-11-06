@@ -17,7 +17,7 @@ export default defineConfig({
       docs: fileURLToPath(new URL('./src', import.meta.url)),
       '@': fileURLToPath(new URL('../../packages/craftvue/src', import.meta.url)),
       craftvue: fileURLToPath(new URL('../../packages/craftvue/src', import.meta.url)),
-      '@craftvue/icons': fileURLToPath(new URL('../../packages/icons/src', import.meta.url)),
+      // '@craftvue/icons': fileURLToPath(new URL('../../packages/icons/dist', import.meta.url)),
     },
   },
   test: {

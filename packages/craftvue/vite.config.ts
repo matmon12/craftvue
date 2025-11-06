@@ -35,18 +35,30 @@ export default defineConfig({
         'components/Tabs/index': fileURLToPath(
           new URL('./src/components/Tabs/index.ts', import.meta.url),
         ),
+        'components/TabList/index': fileURLToPath(
+          new URL('./src/components/TabList/index.ts', import.meta.url),
+        ),
+        'components/Tab/index': fileURLToPath(
+          new URL('./src/components/Tab/index.ts', import.meta.url),
+        ),
+        'components/TabPanels/index': fileURLToPath(
+          new URL('./src/components/TabPanels/index.ts', import.meta.url),
+        ),
+        'components/TabPanel/index': fileURLToPath(
+          new URL('./src/components/TabPanel/index.ts', import.meta.url),
+        ),
         'components/Tooltip/index': fileURLToPath(
-          new URL('./src/components/Tooltip/index.ts', import.meta.url)
+          new URL('./src/components/Tooltip/index.ts', import.meta.url),
         ),
         'components/Select/index': fileURLToPath(
-          new URL('./src/components/Select/index.ts', import.meta.url)
+          new URL('./src/components/Select/index.ts', import.meta.url),
         ),
         'components/Dropdown/index': fileURLToPath(
-          new URL('./src/components/Dropdown/index.ts', import.meta.url)
+          new URL('./src/components/Dropdown/index.ts', import.meta.url),
         ),
         'components/Popup/index': fileURLToPath(
-          new URL('./src/components/Popup/index.ts', import.meta.url)
-        )
+          new URL('./src/components/Popup/index.ts', import.meta.url),
+        ),
       },
       name: 'CraftVue',
       formats: ['es', 'cjs'],
@@ -58,6 +70,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue'],
       output: {
+        exports: 'named',
         globals: { vue: 'Vue' },
         chunkFileNames: 'chunks/[name]-[hash].js',
         assetFileNames: (assetInfo) => {

@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { CBadge, CInput } from 'craftvue'
-import { SearchIcon } from '@craftvue/icons'
+import SearchIcon from '@craftvue/icons/search'
 import { getImageUrl } from 'docs/utils'
 import { ref } from 'vue'
 import { BASE_PATH } from 'docs/constants'

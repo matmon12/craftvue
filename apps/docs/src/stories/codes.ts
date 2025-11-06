@@ -10,7 +10,7 @@ yarn add craftvue
 pnpm add craftvue
 `,
   globalReg: `
-    import { CButton } from "craftvue";
+    import CButton from "craftvue/button";
 
     const app = createApp(App);
     app.component("CButton", CButton);
@@ -24,8 +24,8 @@ pnpm add craftvue
     <script setup>
       import { CButton, CBadge } from "craftvue";
       // или импорт по отдельности
-      import { CButton } from "craftvue/button";
-      import { CBadge } from "craftvue/badge";
+      import CButton from "craftvue/button";
+      import CBadge from "craftvue/badge";
     </script>
   `,
   autoImport: `
@@ -66,14 +66,14 @@ pnpm add @craftvue/icons
     <script setup>
       import { SearchIcon, CloseIcon } from '@craftvue/icons'
       // импорт по отдельности
-      import { SearchIcon } from '@craftvue/icons/search'
-      import { CloseIcon } from '@craftvue/icons/close'
+      import SearchIcon from '@craftvue/icons/search'
+      import CloseIcon from '@craftvue/icons/close'
     </script>
   `,
   themingFont: `
     <style>
       :root{
-        --font-family-base: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+        --c-font-family-base: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
       }
     </style>
   `,
@@ -90,27 +90,27 @@ pnpm add @craftvue/icons
   themingColorBasic: `
     <style>
       :root {
-        --main-color: var(--white);
-        --ground-back: var(--neutral-900);
-        --prime-color: #bea87b;
-        --prime-color-light: color-mix(in srgb, var(--prime-color) 100%, #fff 30%);
-        --prime-color-dark: color-mix(in srgb, var(--prime-color) 90%, #000 100%);
-        --secondary-back: var(--neutral-800);
-        --secondary-text-color: var(--zinc-400);
-        --invalid-color: var(--red-400);
+        --c-main-color: var(--white);
+        --c-ground-back: var(--neutral-900);
+        --c-prime-color: #bea87b;
+        --c-prime-color-light: color-mix(in srgb, var(--c-prime-color) 100%, #fff 30%);
+        --c-prime-color-dark: color-mix(in srgb, var(--c-prime-color) 90%, #000 100%);
+        --c-secondary-back: var(--neutral-800);
+        --c-secondary-text-color: var(--zinc-400);
+        --c-invalid-color: var(--red-400);
       }
     </style>
   `,
   themingColorComponent: `
     <style>
       :root {
-        --badge-primary-back: var(--prime-color);
-        --badge-primary-color: var(--black);
-        --badge-secondary-back: var(--secondary-back);
-        --badge-secondary-color: var(--white);
-        --badge-contrast-back: var(--prime-color-dark);
-        --badge-contrast-color: var(--white);
-        --badge-outline-color: var(--ground-back);
+        --c-badge-primary-back: var(--c-prime-color);
+        --c-badge-primary-color: var(--black);
+        --c-badge-secondary-back: var(--c-secondary-back);
+        --c-badge-secondary-color: var(--white);
+        --c-badge-contrast-back: var(--c-prime-color-dark);
+        --c-badge-contrast-color: var(--white);
+        --c-badge-outline-color: var(--c-ground-back);
       }
     </style>
   `,
@@ -127,17 +127,17 @@ pnpm add @craftvue/icons
   themingCssProperties: `
     <style>
       :root {
-        --border-radius-none: 0;
-        --border-radius-xs: 2px;
-        --border-radius-sm: 4px;
-        --border-radius-md: 6px;
-        --border-radius-lg: 8px;
-        --border-radius-xl: 12px;
-        --border-radius-2xl: 15px;
-        --border-radius-full: 9999px;
+        --c-border-radius-none: 0;
+        --c-border-radius-xs: 2px;
+        --c-border-radius-sm: 4px;
+        --c-border-radius-md: 6px;
+        --c-border-radius-lg: 8px;
+        --c-border-radius-xl: 12px;
+        --c-border-radius-2xl: 15px;
+        --c-border-radius-full: 9999px;
 
-        --z-index-1000: 1000;
-        --z-index-1100: 1100;
+        --c-z-index-1000: 1000;
+        --c-z-index-1100: 1100;
       }
     </style>
   `,

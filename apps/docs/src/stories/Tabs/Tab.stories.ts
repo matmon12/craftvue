@@ -12,8 +12,8 @@ const meta = {
   },
   parameters: {
     controls: {
-      exclude: ['$slots']
-    }
+      exclude: ['$slots'],
+    },
   },
   argTypes: {
     value: {

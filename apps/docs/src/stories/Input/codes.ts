@@ -46,7 +46,7 @@ const inputCodeTexts: CodeTexts<InputStoryName> = {
       </template>
       <script setup lang="ts">
         import {ref} from "vue"
-        import { SearchIcon } from '@craftvue/icons'
+        import SearchIcon from '@craftvue/icons/search'
 
         const value1 = ref('')
         const value2 = ref('')
@@ -109,7 +109,7 @@ const inputCodeTexts: CodeTexts<InputStoryName> = {
       </template>
       <script setup lang="ts">
         import {ref} from "vue"
-        import { DeleteIcon } from '@craftvue/icons'
+        import DeleteIcon from '@craftvue/icons/delete'
 
         const modelValue = ref('Custom clear icon')
       </script>
@@ -196,7 +196,7 @@ const inputCodeTexts: CodeTexts<InputStoryName> = {
       <script setup lang="ts">
         import {ref} from "vue"
         import { DeleteIcon, SearchIcon } from '@craftvue/icons'
-        import { CIcon } from 'craftvue'
+        import CIcon from 'craftvue/icon'
 
         const value1 = ref('')
         const value2 = ref('')
@@ -251,8 +251,8 @@ const inputCodeTexts: CodeTexts<InputStoryName> = {
       </template>
       <script setup lang="ts">
         import {ref} from "vue"
-        import { SearchIcon } from '@craftvue/icons'
-        import { CButton } from 'craftvue'
+        import SearchIcon from '@craftvue/icons/search'
+        import CButton from 'craftvue/button'
 
         const value1 = ref('')
         const value2 = ref('')

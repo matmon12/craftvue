@@ -1,0 +1,7 @@
+.c-tabpanel {
+  &:focus-visible {
+    box-shadow: none;
+    outline: 1px solid var(--c-tabs-tabpanel-focus-ring-color);
+    outline-offset: 2px;
+  }
+}

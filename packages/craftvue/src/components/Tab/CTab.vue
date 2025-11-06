@@ -12,17 +12,11 @@
 </template>
 
 <script setup lang="ts">
-import {useAttrs, inject, computed} from "vue"
+import { useAttrs, inject, computed } from 'vue'
 import { ButtonHTMLAttributes, mergeProps, VNodeProps } from 'vue'
-import {
-  TabListContext,
-  TabListInjectionKey,
-  TabProps,
-  TabsClasses,
-  TabsContext,
-  TabsInjectionKey,
-  TabSlots,
-} from './CTabs.types'
+import type { TabProps, TabSlots } from './CTab.types'
+import { TabListContext, TabListInjectionKey } from '@/components/TabList'
+import { TabsClasses, TabsContext, TabsInjectionKey } from '@/components/Tabs'
 import { equals, findSingle, focus, getAttribute } from '@/utils'
 
 const attrsRoot = useAttrs()

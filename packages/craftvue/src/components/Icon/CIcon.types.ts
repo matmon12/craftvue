@@ -1,5 +1,4 @@
-import * as icons from '@craftvue/icons'
-import { Component, VNode } from 'vue'
+import { VNode } from 'vue'
 
 export interface IconProps {
   /** Название иконки для динамического импорта */
@@ -10,11 +9,23 @@ export interface IconProps {
   color?: string
 }
 
-export type IconName = {
-  [K in keyof typeof icons]: K extends `${infer Name}Icon` ? Lowercase<Name> : never
-}[keyof typeof icons]
-
-export type IconsMap = Record<IconName, Component>
+export type IconName =
+  | 'close'
+  | 'search'
+  | 'spinner'
+  | 'eye'
+  | 'eyeslash'
+  | 'nextarrow'
+  | 'prevarrow'
+  | 'uparrow'
+  | 'downarrow'
+  | 'check'
+  | 'edit'
+  | 'save'
+  | 'delete'
+  | 'home'
+  | 'add'
+  | 'envelope'
 
 export interface IconSlots {
   default(): VNode[]

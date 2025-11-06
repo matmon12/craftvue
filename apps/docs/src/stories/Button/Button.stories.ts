@@ -2,7 +2,7 @@
 import { ref, markRaw } from 'vue'
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
-import IconLogo from "docs/components/IconLogo.vue"
+import IconLogo from 'docs/components/IconLogo.vue'
 import { CButton, CTab, CTabList, CTabs } from 'craftvue'
 import type { BaseButtonProps, ButtonEmits, ButtonSlots } from 'craftvue'
 import { AddIcon, DeleteIcon, EditIcon, SaveIcon, CheckIcon, HomeIcon } from '@craftvue/icons'

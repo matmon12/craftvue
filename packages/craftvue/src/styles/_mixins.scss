@@ -7,8 +7,8 @@
 @mixin Scroll(
   $height,
   $width,
-  $colorTrack: var(--scroll-track-color),
-  $colorThumb: var(--scroll-thumb-color)
+  $colorTrack: var(--c-scroll-track-color),
+  $colorThumb: var(--c-scroll-thumb-color)
 ) {
   &::-webkit-scrollbar {
     height: $height;

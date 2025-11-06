@@ -6,40 +6,40 @@
 
   &:not(.is--disabled).is--invalid {
     & .c-input__wrapper:not(.is--focus, :hover) {
-      border-color: var(--input-invalid-border-color);
+      border-color: var(--c-input-invalid-border-color);
     }
     & .c-input__inner {
       &::placeholder {
-        color: var(--input-invalid-placeholder-color);
+        color: var(--c-input-invalid-placeholder-color);
       }
     }
   }
 
   &.is--filled {
     & .c-input__wrapper {
-      background-color: var(--input-filled-background);
-      border-color: var(--input-filled-background);
+      background-color: var(--c-input-filled-background);
+      border-color: var(--c-input-filled-background);
     }
     &.is--disabled .c-input__wrapper {
-      border-color: var(--input-disabled-background);
+      border-color: var(--c-input-disabled-background);
     }
     &:not(.is--disabled) {
       &.is--invalid .c-input__wrapper {
-        border-color: var(--input-filled-background);
+        border-color: var(--c-input-filled-background);
       }
       & .c-input__wrapper {
         &:hover {
-          border-color: var(--input-hover-border-color);
+          border-color: var(--c-input-hover-border-color);
         }
 
         &.is--focus {
-          border-color: var(--input-focus-border-color);
+          border-color: var(--c-input-focus-border-color);
         }
       }
     }
     & .c-input-group__prepend,
     .c-input-group__append {
-      background-color: var(--input-filled-group-background);
+      background-color: var(--c-input-filled-group-background);
       border: none;
     }
   }
@@ -47,19 +47,19 @@
   &.is--disabled {
     & .c-input__wrapper {
       cursor: not-allowed;
-      background-color: var(--input-disabled-background);
-      border-color: var(--input-border-color);
+      background-color: var(--c-input-disabled-background);
+      border-color: var(--c-input-border-color);
     }
     & .c-input__inner {
       cursor: not-allowed;
-      color: var(--input-disabled-color);
+      color: var(--c-input-disabled-color);
       &::placeholder {
-        color: var(--input-placeholder-color);
+        color: var(--c-input-placeholder-color);
       }
     }
     & .c-input__prefix,
     .c-input__suffix {
-      color: var(--input-disabled-color);
+      color: var(--c-input-disabled-color);
     }
   }
 
@@ -70,7 +70,7 @@
       padding-inline: 0.625rem;
     }
     &:not(.c-input-group--prepend, .c-input-group--append) .c-input__wrapper {
-      border-radius: var(--border-radius-md);
+      border-radius: var(--c-border-radius-md);
     }
   }
 
@@ -90,30 +90,30 @@
   align-items: center;
   padding-block: 0.5rem;
   padding-inline: 0.75rem;
-  background-color: var(--input-background);
-  border-radius: var(--border-radius);
+  background-color: var(--c-input-background);
+  border-radius: var(--c-border-radius);
   cursor: text;
   transition: border-color 0.3s;
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--c-input-border-color);
 
   &:hover {
-    border-color: var(--input-hover-border-color);
+    border-color: var(--c-input-hover-border-color);
   }
 
   &.is--focus {
-    border-color: var(--input-focus-border-color);
+    border-color: var(--c-input-focus-border-color);
   }
 }
 
 .c-input__inner {
   width: 100%;
   flex-grow: 1;
-  color: var(--input-color);
+  color: var(--c-input-color);
   font-size: inherit;
   height: 100%;
 
   &::placeholder {
-    color: var(--input-placeholder-color);
+    color: var(--c-input-placeholder-color);
   }
 }
 
@@ -122,7 +122,7 @@
   white-space: nowrap;
   flex-shrink: 0;
   height: 100%;
-  color: var(--input-icon-color);
+  color: var(--c-input-icon-color);
   padding-left: 8px;
 
   &-inner {
@@ -138,7 +138,7 @@
   white-space: nowrap;
   flex-shrink: 0;
   height: 100%;
-  color: var(--input-icon-color);
+  color: var(--c-input-icon-color);
   padding-right: 8px;
 
   &-inner {
@@ -183,17 +183,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--border-radius);
+  border-radius: var(--c-border-radius);
   min-height: 100%;
   padding: 0 1rem;
   white-space: nowrap;
-  background-color: var(--input-group-background);
-  color: var(--input-group-color);
+  background-color: var(--c-input-group-background);
+  color: var(--c-input-group-color);
   overflow: hidden;
 }
 
 .c-input-group__prepend {
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--c-input-border-color);
   border-right: 0;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -201,7 +201,7 @@
 }
 
 .c-input-group__append {
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--c-input-border-color);
   border-left: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;

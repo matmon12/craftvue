@@ -345,8 +345,9 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
       </template>
       <script setup>
         import { ref } from "vue"
-        import { AddIcon } from "@craftvue/icons"
-        import { CIcon, CButton } from "craftvue"
+        import AddIcon from "@craftvue/icons/add"
+        import CIcon from "craftvue/icon"
+        import CButton from "craftvue/button"
 
         const value = ref(null)
         const countries = ref([
@@ -383,7 +384,8 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
       <template>
       <script setup>
         import { ref } from "vue"
-        import { CFormItem, CButton } from "craftvue"
+        import CFormItem from "craftvue/form-item"
+        import CButton from "craftvue/button"
 
         const value = ref(null)
         const error = ref('')
@@ -399,8 +401,8 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
           error.value = value.value ? '' : 'Необходимо выбрать город'
         }
       </script>
-    `
-  }
+    `,
+  },
 }
 
 export default selectCodeTexts

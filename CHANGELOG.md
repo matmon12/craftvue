@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://www.npmjs.com/package/craftvue/v/1.3.0) (2025-11-06)
+
+#### Features
+
+- Added default exports for all components
+- Added `c` prefix for style vars
+
+#### Refactors
+
+- Added dynamic import of icons in `CIcon` component
+- Added `Tab`, `TabList`, `TabPanels`, `TabPanel` directories
+- Added entry points for `tab`, `tablist`, `tabpanels`, `tabpanel` components
+- Changed imports in `README`
+
 ## [1.2.1](https://www.npmjs.com/package/craftvue/v/1.2.1) (2025-11-05)
 
 #### Bug fixes

@@ -2,15 +2,15 @@
 
 .c-select {
   width: 14rem;
-  font-family: var(--font-family-base);
+  font-family: var(--c-font-family-base);
   position: relative;
   display: flex;
   align-items: center;
   min-height: 2.25rem;
   padding: 0.4375rem 0.6563rem;
-  border: 1px solid var(--select-border-color);
-  background-color: var(--select-background);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--c-select-border-color);
+  background-color: var(--c-select-background);
+  border-radius: var(--c-border-radius);
   cursor: pointer;
   transition:
     border-color 0.3s ease,
@@ -18,11 +18,11 @@
 
   &:focus-within:not(.is--disabled) {
     outline: none;
-    border-color: var(--select-focus-border-color);
+    border-color: var(--c-select-focus-border-color);
   }
 
   &:hover:not(.is--disabled, :focus-within) {
-    border-color: var(--select-hover-border-color);
+    border-color: var(--c-select-hover-border-color);
   }
 
   &__value {
@@ -31,12 +31,12 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    color: var(--select-color);
+    color: var(--c-select-color);
     font-size: 0.875rem;
     line-height: 1.25rem;
 
     &--placeholder {
-      color: var(--select-placeholder-color);
+      color: var(--c-select-placeholder-color);
     }
   }
 
@@ -52,9 +52,9 @@
     display: inline-flex;
     align-items: center;
     padding: 0.3125rem 0.5rem;
-    background-color: var(--select-tag-background);
-    color: var(--select-tag-color);
-    border-radius: var(--border-radius-sm);
+    background-color: var(--c-select-tag-background);
+    color: var(--c-select-tag-color);
+    border-radius: var(--c-border-radius-sm);
     font-size: 0.75rem;
     line-height: 1;
     gap: 0.25rem;
@@ -82,14 +82,14 @@
     align-items: center;
     justify-content: center;
     font-size: 0.875rem;
-    color: var(--select-text-muted);
+    color: var(--c-select-text-muted);
     transition: all 0.2s ease;
 
     &--clear {
       cursor: pointer;
 
       &:hover {
-        color: var(--select-color);
+        color: var(--c-select-color);
       }
     }
 
@@ -128,17 +128,17 @@
     cursor: pointer;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    border-radius: var(--border-radius-md);
+    border-radius: var(--c-border-radius-md);
     transition: color 0.3s ease;
-    background-color: var(--select-option-background);
+    background-color: var(--c-select-option-background);
 
     &.is--selected:not(.c-select__option--checkmark) {
       font-weight: 500;
-      color: var(--select-option-active-color);
+      color: var(--c-select-option-active-color);
     }
 
     &.is--focused {
-      background-color: var(--select-option-focus-background);
+      background-color: var(--c-select-option-focus-background);
     }
 
     &.is--disabled {
@@ -151,40 +151,40 @@
   &__option__checkmark {
     flex-shrink: 0;
     font-size: 1.25rem;
-    color: var(--select-option-active-color);
+    color: var(--c-select-option-active-color);
     stroke-width: 0.5px;
-    stroke: var(--select-option-active-color);
+    stroke: var(--c-select-option-active-color);
   }
 
   &__no-options {
     padding: 1rem 0.75rem;
     text-align: center;
     font-size: 0.875rem;
-    color: var(--select-text-muted);
+    color: var(--c-select-text-muted);
   }
 
   // Variants
   &.c-select--filled {
-    background-color: var(--select-filled-background);
+    background-color: var(--c-select-filled-background);
     border-color: transparent;
 
     & .c-select__tag {
-      background-color: var(--select-filled-tag-background);
+      background-color: var(--c-select-filled-tag-background);
     }
 
     &.is--disabled {
       .c-select__tag {
-        background-color: var(--select-filled-disabled-tag-background);
+        background-color: var(--c-select-filled-disabled-tag-background);
       }
     }
 
     &.is--invalid:not(.is--disabled) {
       &:focus-within:not(.is--disabled) {
-        border-color: var(--select-focus-border-color);
+        border-color: var(--c-select-focus-border-color);
       }
 
       &:hover:not(.is--disabled, :focus-within) {
-        border-color: var(--select-hover-border-color);
+        border-color: var(--c-select-hover-border-color);
       }
     }
   }
@@ -197,31 +197,31 @@
   }
 
   &.is--disabled {
-    background-color: var(--select-disabled-background);
+    background-color: var(--c-select-disabled-background);
     cursor: not-allowed;
 
     & .c-select__value {
-      color: var(--select-disabled-color);
+      color: var(--c-select-disabled-color);
     }
 
     & .c-select__tag {
-      color: var(--select-disabled-color);
+      color: var(--c-select-disabled-color);
     }
   }
 
   &.is--invalid:not(.is--disabled) {
-    border-color: var(--select-invalid-border-color);
+    border-color: var(--c-select-invalid-border-color);
 
     &:focus-within:not(.is--disabled) {
-      border-color: var(--select-focus-border-color);
+      border-color: var(--c-select-focus-border-color);
     }
 
     &:hover:not(.is--disabled, :focus-within) {
-      border-color: var(--select-hover-border-color);
+      border-color: var(--c-select-hover-border-color);
     }
 
     & .c-select__value {
-      color: var(--select-invalid-color);
+      color: var(--c-select-invalid-color);
     }
   }
 

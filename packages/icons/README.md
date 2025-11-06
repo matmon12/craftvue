@@ -25,7 +25,7 @@ The easiest way to use icons is through the `CIcon` component from `craftvue`:
 </template>
 
 <script setup>
-  import { CIcon } from 'craftvue'
+  import CIcon from 'craftvue/icon'
 </script>
 ```
 
@@ -38,9 +38,9 @@ import { SearchIcon, CloseIcon, SpinnerIcon } from '@craftvue/icons'
 ### Import specific icon
 
 ```typescript
-import { SearchIcon } from '@craftvue/icons/search'
-import { CloseIcon } from '@craftvue/icons/close'
-import { SpinnerIcon } from '@craftvue/icons/spinner'
+import SearchIcon from '@craftvue/icons/search'
+import CloseIcon from '@craftvue/icons/close'
+import SpinnerIcon from '@craftvue/icons/spinner'
 ```
 
 ## Requirements

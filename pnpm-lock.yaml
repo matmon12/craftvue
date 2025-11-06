@@ -53,6 +53,9 @@ importers:
 
   apps/docs:
     dependencies:
+      '@craftvue/icons':
+        specifier: ^1.2.0
+        version: 1.2.0(vue@3.5.22(typescript@5.8.3))
       '@formkit/auto-animate':
         specifier: ^0.9.0
         version: 0.9.0
@@ -144,13 +147,13 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^6.0.1
-        version: 6.0.1(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))
+        version: 6.0.1(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))
       unplugin-auto-import:
         specifier: ^19.3.0
         version: 19.3.0(@vueuse/core@14.0.0(vue@3.5.22(typescript@5.8.3)))
       vite-plugin-checker:
         specifier: ^0.10.2
-        version: 0.10.3(eslint@9.36.0(jiti@2.6.0))(optionator@0.9.4)(typescript@5.8.3)(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue-tsc@3.1.0(typescript@5.8.3))
+        version: 0.10.3(eslint@9.36.0(jiti@2.6.0))(optionator@0.9.4)(typescript@5.8.3)(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue-tsc@3.1.0(typescript@5.8.3))
       vue-tsc:
         specifier: ^3.0.4
         version: 3.1.0(typescript@5.8.3)
@@ -158,8 +161,8 @@ importers:
   packages/craftvue:
     dependencies:
       '@craftvue/icons':
-        specifier: 1.2.0
-        version: 1.2.0(vue@3.5.22(typescript@5.8.3))
+        specifier: workspace:*
+        version: link:../icons
       '@vueuse/core':
         specifier: ^13.9.0
         version: 13.9.0(vue@3.5.22(typescript@5.8.3))
@@ -175,7 +178,7 @@ importers:
         version: 4.17.20
       '@vitejs/plugin-vue':
         specifier: ^6.0.1
-        version: 6.0.1(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))
+        version: 6.0.1(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))
       '@vueuse/components':
         specifier: ^14.0.0
         version: 14.0.0(vue@3.5.22(typescript@5.8.3))
@@ -187,7 +190,7 @@ importers:
         version: 0.27.5(@babel/parser@7.28.4)(rollup@4.52.5)(vue@3.5.22(typescript@5.8.3))
       vite-plugin-dts:
         specifier: ^4.5.4
-        version: 4.5.4(@types/node@22.18.6)(rollup@4.52.5)(typescript@5.8.3)(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))
+        version: 4.5.4(@types/node@22.18.6)(rollup@4.52.5)(typescript@5.8.3)(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))
 
   packages/icons:
     dependencies:
@@ -197,10 +200,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^6.0.1
-        version: 6.0.1(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))
+        version: 6.0.1(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))
       vite-plugin-dts:
         specifier: ^4.5.4
-        version: 4.5.4(@types/node@22.18.6)(rollup@4.52.5)(typescript@5.8.3)(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))
+        version: 4.5.4(@types/node@22.18.6)(rollup@4.52.5)(typescript@5.8.3)(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))
 
 packages:
 
@@ -3002,8 +3005,8 @@ packages:
       yaml:
         optional: true
 
-  vite@7.2.0:
-    resolution: {integrity: sha512-C/Naxf8H0pBx1PA4BdpT+c/5wdqI9ILMdwjSMILw7tVIh3JsxzZqdeTLmmdaoh5MYUEOyBnM9K3o0DzoZ/fe+w==}
+  vite@7.2.1:
+    resolution: {integrity: sha512-qTl3VF7BvOupTR85Zc561sPEgxyUSNSvTQ9fit7DEMP7yPgvvIGm5Zfa1dOM+kOwWGNviK9uFM9ra77+OjK7lQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -4015,10 +4018,10 @@ snapshots:
       vite: 7.1.7(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)
       vue: 3.5.22(typescript@5.8.3)
 
-  '@vitejs/plugin-vue@6.0.1(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))':
+  '@vitejs/plugin-vue@6.0.1(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue@3.5.22(typescript@5.8.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.29
-      vite: 7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)
+      vite: 7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)
       vue: 3.5.22(typescript@5.8.3)
 
   '@vitest/browser@3.2.4(playwright@1.55.1)(vite@7.1.7(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vitest@3.2.4)':
@@ -5829,7 +5832,7 @@ snapshots:
       - tsx
       - yaml
 
-  vite-plugin-checker@0.10.3(eslint@9.36.0(jiti@2.6.0))(optionator@0.9.4)(typescript@5.8.3)(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue-tsc@3.1.0(typescript@5.8.3)):
+  vite-plugin-checker@0.10.3(eslint@9.36.0(jiti@2.6.0))(optionator@0.9.4)(typescript@5.8.3)(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2))(vue-tsc@3.1.0(typescript@5.8.3)):
     dependencies:
       '@babel/code-frame': 7.27.1
       chokidar: 4.0.3
@@ -5839,7 +5842,7 @@ snapshots:
       strip-ansi: 7.1.2
       tiny-invariant: 1.3.3
       tinyglobby: 0.2.15
-      vite: 7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)
+      vite: 7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)
       vscode-uri: 3.1.0
     optionalDependencies:
       eslint: 9.36.0(jiti@2.6.0)
@@ -5847,7 +5850,7 @@ snapshots:
       typescript: 5.8.3
       vue-tsc: 3.1.0(typescript@5.8.3)
 
-  vite-plugin-dts@4.5.4(@types/node@22.18.6)(rollup@4.52.5)(typescript@5.8.3)(vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)):
+  vite-plugin-dts@4.5.4(@types/node@22.18.6)(rollup@4.52.5)(typescript@5.8.3)(vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)):
     dependencies:
       '@microsoft/api-extractor': 7.52.13(@types/node@22.18.6)
       '@rollup/pluginutils': 5.3.0(rollup@4.52.5)
@@ -5860,7 +5863,7 @@ snapshots:
       magic-string: 0.30.19
       typescript: 5.8.3
     optionalDependencies:
-      vite: 7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)
+      vite: 7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -5881,7 +5884,7 @@ snapshots:
       sass: 1.93.2
       sass-embedded: 1.93.2
 
-  vite@7.2.0(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2):
+  vite@7.2.1(@types/node@22.18.6)(jiti@2.6.0)(sass-embedded@1.93.2)(sass@1.93.2):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)

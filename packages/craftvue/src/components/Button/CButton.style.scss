@@ -5,13 +5,13 @@
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
-  border-radius: var(--border-radius);
+  border-radius: var(--c-border-radius);
   transition:
     background-color 0.3s,
     color 0.3s;
 
   &:disabled {
-    opacity: var(--disabled-opacity);
+    opacity: var(--c-disabled-opacity);
     pointer-events: none;
     cursor: default;
   }
@@ -20,7 +20,7 @@
 .c-button--sm {
   padding: 0.375rem 0.625rem;
   font-size: 0.75rem;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--c-border-radius-md);
 
   .c-button__icon {
     font-size: 1rem;
@@ -66,96 +66,96 @@
 
 .c-button--primary {
   &.c-button--filled {
-    color: var(--button-primary-filled-color);
-    background-color: var(--button-primary-filled-back);
+    color: var(--c-button-primary-filled-color);
+    background-color: var(--c-button-primary-filled-back);
     font-weight: 500;
 
     &:hover {
-      background-color: var(--button-primary-filled-back-hover);
+      background-color: var(--c-button-primary-filled-back-hover);
     }
   }
 
   &.c-button--outlined {
-    color: var(--button-primary-outlined-color);
-    border: 1px solid var(--button-primary-outlined-border-color);
+    color: var(--c-button-primary-outlined-color);
+    border: 1px solid var(--c-button-primary-outlined-border-color);
 
     &:hover {
-      background-color: var(--button-primary-outlined-back-hover);
+      background-color: var(--c-button-primary-outlined-back-hover);
     }
   }
 
   &.c-button--text {
-    color: var(--button-primary-text-color);
+    color: var(--c-button-primary-text-color);
 
     &:hover {
-      background-color: var(--button-primary-text-hover-background);
+      background-color: var(--c-button-primary-text-hover-background);
     }
   }
 }
 
 .c-button--secondary {
   &.c-button--filled {
-    color: var(--button-secondary-filled-color);
-    background-color: var(--button-secondary-filled-back);
+    color: var(--c-button-secondary-filled-color);
+    background-color: var(--c-button-secondary-filled-back);
 
     &:hover {
-      background-color: var(--button-secondary-filled-back-hover);
+      background-color: var(--c-button-secondary-filled-back-hover);
     }
   }
 
   &.c-button--outlined {
-    color: var(--button-secondary-outlined-color);
-    border: 1px solid var(--button-secondary-outlined-border-color);
+    color: var(--c-button-secondary-outlined-color);
+    border: 1px solid var(--c-button-secondary-outlined-border-color);
 
     &:hover {
-      background-color: var(--button-secondary-outlined-back-hover);
+      background-color: var(--c-button-secondary-outlined-back-hover);
     }
   }
 
   &.c-button--text {
-    color: var(--button-secondary-text-color);
+    color: var(--c-button-secondary-text-color);
 
     &:hover {
-      background-color: var(--button-secondary-text-hover-background);
+      background-color: var(--c-button-secondary-text-hover-background);
     }
   }
 }
 
 .c-button--contrast {
   &.c-button--filled {
-    color: var(--button-contrast-filled-color);
-    background-color: var(--button-contrast-filled-back);
+    color: var(--c-button-contrast-filled-color);
+    background-color: var(--c-button-contrast-filled-back);
     font-weight: 500;
 
     &:hover {
-      background-color: var(--button-contrast-filled-back-hover);
+      background-color: var(--c-button-contrast-filled-back-hover);
     }
   }
 
   &.c-button--outlined {
-    color: var(--button-contrast-outlined-color);
-    border: 1px solid var(--button-contrast-outlined-border-color);
+    color: var(--c-button-contrast-outlined-color);
+    border: 1px solid var(--c-button-contrast-outlined-border-color);
 
     &:hover {
-      background-color: var(--button-contrast-outlined-hover-background);
+      background-color: var(--c-button-contrast-outlined-hover-background);
     }
   }
 
   &.c-button--text {
-    color: var(--button-contrast-text-color);
+    color: var(--c-button-contrast-text-color);
 
     &:hover {
-      background-color: var(--button-contrast-text-hover-background);
+      background-color: var(--c-button-contrast-text-hover-background);
     }
   }
 }
 
 .c-button--rounded {
-  border-radius: var(--border-radius-full);
+  border-radius: var(--c-border-radius-full);
 }
 
 .c-button--raised {
-  box-shadow: var(--button-raised-shadow);
+  box-shadow: var(--c-button-raised-shadow);
 }
 
 .c-button--vertical {

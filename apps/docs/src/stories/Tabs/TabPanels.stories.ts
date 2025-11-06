@@ -6,8 +6,8 @@ const meta = {
   component: CTabPanels,
   parameters: {
     controls: {
-      exclude: ['$slots']
-    }
+      exclude: ['$slots'],
+    },
   },
   argTypes: {
     default: {
